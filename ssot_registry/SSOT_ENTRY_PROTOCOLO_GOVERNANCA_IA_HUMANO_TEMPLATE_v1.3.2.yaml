@@ -1,0 +1,14 @@
+ssot_entry:
+  artifact:
+    markdown: PROTOCOLO_GOVERNANCA_IA_HUMANO_TEMPLATE_v1.3.2.md
+    yaml: PROTOCOLO_GOVERNANCA_IA_HUMANO_TEMPLATE_v1.3.2.yaml
+  version: 1.3.2
+  sha256:
+    markdown: 273e9ce927eaa532e53696cb0fb9cf2fd6324c94bf7e3e61dda85a038236e856
+    yaml: 888def0795aa8641c6f7c953c6e8319e72423f50927bb99a3f13c520f0004021
+  registered_at: '2025-11-02T20:52:37.406122Z'
+  registry_path: /governance/meta/templates/
+  maintainer: Orquestrador_Humano
+  organization: Vicenzo_Corp
+  validated_by: Junta Validadora
+  notes: Registro automático consolidado — versão completa e bilíngue

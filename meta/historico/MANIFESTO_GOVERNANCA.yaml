@@ -1,0 +1,93 @@
+# ===========================================================
+# MANIFESTO_GOVERNANCA.yaml
+# ===========================================================
+# Versão Corporativa de Governança IA-Humano
+# Documento gerado em 2025-11-02
+# Autoridade: Junta Corporativa + Orquestrador Humano
+# ===========================================================
+
+versao_manifesto: 1.0
+ultima_atualizacao: "2025-11-02"
+status_global: "Ativo"
+governanca_master: "PROTOCOLO_METODOLOGICO_CORPORATIVO_IA_HUMANO_v1.0.md"
+
+organizacao:
+  nome: "CorpIA Technologies"
+  modelo_operacional: "IA-Humano Orquestrado"
+  auditoria:
+    mecanismo: "IA_Auditor_v2"
+    logs_path: "/governance/auditoria/"
+    retencao_anos: 5
+  infraestrutura:
+    pipelines_dir: "/infra/pipelines/"
+    observabilidade: "Prometheus + Grafana + ELK"
+    seguranca: "Rotação de tokens, sandboxing, isolamento de contexto"
+
+protocolos_corporativos:
+  - nome: "PROTOCOLO_METODOLOGICO_CORPORATIVO_IA_HUMANO"
+    versao: "v1.0"
+    caminho: "/governance/meta/PROTOCOLO_METODOLOGICO_CORPORATIVO_IA_HUMANO_v1.0.md"
+    escopo: "Metodologia Universal"
+    aplicacao: "Todos os novos projetos"
+  - nome: "PROTOCOLO_GOVERNANCA_IA_HUMANO"
+    versao: "v1.3"
+    caminho: "/projetos/dockmanager/protocolos/PROTOCOLO_GOVERNANCA_IA_HUMANO_v1.3.md"
+    escopo: "Governança de Projeto"
+    aplicacao: "DockManager"
+
+projetos_ativos:
+  - id: "dockmanager"
+    nome: "DockManager"
+    descricao: "Plataforma de recebimento logístico inteligente com governança IA-Humano"
+    status: "Em desenvolvimento"
+    protocolo_utilizado: "PROTOCOLO_GOVERNANCA_IA_HUMANO_v1.3"
+    blueprint:
+      blocos:
+        - nome: "Bloco 1 - Motor de Workflows"
+          arquivo: "/projetos/dockmanager/blueprint/BLUEPRINT_DOCKMANAGER_BLOCO1_MOTOR.md"
+        - nome: "Bloco 2 - MCP Integration Studio"
+          arquivo: "/projetos/dockmanager/blueprint/BLUEPRINT_DOCKMANAGER_BLOCO2_MCP.md"
+        - nome: "Bloco 3 - Governança e Auditoria"
+          arquivo: "/projetos/dockmanager/blueprint/BLUEPRINT_DOCKMANAGER_BLOCO3_GOV.md"
+    documentos:
+      master: "/projetos/dockmanager/documentos/DOCK_MANAGER_v13_CONCEITO_TECH.md"
+      derivados:
+        - "/projetos/dockmanager/documentos/DOCK_MANAGER_v13_TECH.md"
+        - "/projetos/dockmanager/documentos/DOCK_MANAGER_v13_EXT_FISCAL.md"
+    auditoria:
+      ultimo_hash: "sha256:e3f1a8f...b72d9"
+      ultima_validacao: "2025-10-31"
+      validado_por: "Junta Validadora (Sistemas, Logística, Contábil, Compliance)"
+
+  - id: "future_project_A"
+    nome: "Future Project A"
+    descricao: "Reservado para próxima implantação IA-Humano"
+    status: "Planejado"
+    protocolo_utilizado: "PROTOCOLO_METODOLOGICO_CORPORATIVO_IA_HUMANO_v1.0"
+    documentos:
+      master_placeholder: "TBD"
+      derivados_placeholder: []
+
+hierarquia_ssot:
+  - master: "/projetos/dockmanager/documentos/DOCK_MANAGER_v13_CONCEITO_TECH.md"
+    derivados:
+      - "/projetos/dockmanager/documentos/DOCK_MANAGER_v13_TECH.md"
+      - "/projetos/dockmanager/documentos/DOCK_MANAGER_v13_EXT_FISCAL.md"
+    protocolo: "/projetos/dockmanager/protocolos/PROTOCOLO_GOVERNANCA_IA_HUMANO_v1.3.md"
+    auditavel: true
+    hash_integridade: "sha256:b1af9d...c09e7"
+
+pipelines:
+  - nome: "pipeline_ia_orchestrator"
+    tipo: "coordenação multiagente"
+    caminho: "/infra/pipelines/pipeline_ia_orchestrator.yaml"
+  - nome: "pipeline_auditor"
+    tipo: "verificação de integridade e hashes"
+    caminho: "/infra/pipelines/pipeline_auditor.yaml"
+  - nome: "pipeline_blueprint_builder"
+    tipo: "geração de blueprint técnico"
+    caminho: "/infra/pipelines/pipeline_blueprint_builder.yaml"
+
+# ===========================================================
+# FIM DO MANIFESTO
+# ===========================================================

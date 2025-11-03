@@ -1,0 +1,34 @@
+manifesto_version: '1.3'
+issued: '2025-11-02T19:35:57.999888Z'
+description: Manifesto de Governança Corporativa IA-Humano — versão consolidada com
+  registro raiz da organização vicenzo_corp.
+governance_root:
+  org_id: vicenzo_corp
+  version: '1.0'
+  registered_by: Orquestrador_Humano
+  manifest_path: /governance/README_GOVERNANCE_ROOT.md
+  ssot_registry:
+  - path: /governance/ssot_registry/governance_root_record.yaml
+    artifact_type: governance_root_readme
+    audit_level: critical
+    integrity: verified
+    validation_chain:
+    - ia_auditor
+    - human_validator
+  auditoria:
+  - path: /governance/auditoria/governance_root_record.log
+    hash_source: governance_root_record.yaml
+    timestamp_sync: true
+  pipelines:
+    trigger_on_commit: true
+    validation_agents:
+    - IA_Auditor
+    - IA_Governance
+    - Junta_Validadora
+  compliance_policies:
+  - ssot_integrity
+  - dual_validation
+  - traceability_hash
+  description: Manifesto de governança raiz da organização vicenzo_corp. Este registro
+    estabelece o ponto de partida universal da governança corporativa IA-Humano e
+    habilita a rastreabilidade completa de todos os protocolos e projetos ativos.

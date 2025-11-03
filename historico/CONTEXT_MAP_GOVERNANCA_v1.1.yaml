@@ -1,0 +1,97 @@
+# ===============================================================
+# CONTEXT_MAP_GOVERNANCA_v1.1.yaml
+# ---------------------------------------------------------------
+# Mapa de contexto e estrutura universal de governança corporativa
+# Compatível com pipelines de automação, ingestão de IA e auditoria
+# ===============================================================
+
+org_id: vicenzo_corp
+org_scope: "corporate_framework"
+org_mutability: "portable"
+version: 1.1
+created_at: 2025-11-02
+maintainer: "Orquestrador Humano"
+
+context_hierarchy:
+  level_1: "Governança Corporativa (meta + manifesto + protocolos)"
+  level_2: "Portfólio de Projetos (cada projeto tem manifesto, conceito e blueprints)"
+  level_3: "Artefatos e Derivados (documentos, logs, relatórios, auditorias)"
+
+directories:
+  governance_root: "/governance"
+  meta: "/governance/meta"
+  projects: "/governance/projects"
+  ssot_registry: "/governance/ssot_registry"
+  templates: "/governance/templates"
+  auditoria: "/governance/auditoria"
+
+core_documents:
+  manifesto_master: "MANIFESTO_GOVERNANCA_v1.2.yaml"
+  protocol_methodological: "PROTOCOLO_METODOLOGICO_CORPORATIVO_IA_HUMANO_v1.0.md"
+  protocol_governance_ia_humano: "PROTOCOLO_GOVERNANCA_IA_HUMANO_v1.3.md"
+  meta_readme: "README_GOVERNANCA_CORPORATIVA.md"
+
+project_structure:
+  base_path: "/governance/projects"
+  default_dirs:
+    - "conceito"      # contém versões DOCX evolutivas e conceitos originais
+    - "documentos"    # arquivos .md derivados (CONCEITO_TECH, TECH, EXT_FISCAL etc.)
+    - "blueprints"    # planos técnicos (a serem gerados)
+    - "auditoria"     # relatórios e pareceres da junta
+  required_files:
+    - "README_DOCKMANAGER_v13.md"
+    - "MEMORANDO_HOMOLOGACAO_V13.md"
+
+ai_roles:
+  ia_architect: "interpreta conceito master e gera blueprints técnicos"
+  ia_developer: "executa codificação e integração de sistemas"
+  ia_fiscal: "atua sobre módulos tributários e conformidade"
+  ia_auditor: "valida integridade, gera diffs e auditorias SHA256"
+  human_orchestrator: "controla interações, valida entregas e aprova produção"
+
+context_management:
+  ingestion_scope:
+    - meta
+    - ssot_registry
+    - projects/<active_project>/documentos
+  context_pack_limit: 500  # palavras por IA
+  derived_from_header: true
+  ssot_hierarchy:
+    master: "CONCEITO_TECH.md"
+    derived:
+      - "TECH.md"
+      - "EXT_FISCAL.md"
+  context_refresh_policy: "on_commit"  # recarrega contexto após cada merge
+
+automation_hooks:
+  ci_cd_provider: "gitlab"
+  on_commit:
+    - "trigger_auditor_validation"
+    - "sync_ssot_registry"
+    - "rebuild_markdown_derivatives"
+  on_approval:
+    - "archive_to_ssot_registry"
+    - "notify_human_orchestrator"
+
+audit_trail:
+  enabled: true
+  mechanism: "SHA256_diff_log"
+  retention_years: 5
+  output_dir: "/governance/auditoria"
+  traceability_level: "document + context + pipeline"
+
+compliance_policies:
+  - "SSoT (Single Source of Truth)"
+  - "Traceable Governance (via SHA256 logs)"
+  - "AI-Human Collaborative Control"
+  - "Iterative Validation and Correction Loop"
+  - "Dynamic Role Assignment per Project"
+
+usage_notes: |
+  Este arquivo é o ponto de entrada da estrutura de governança corporativa.
+  Ele permite que uma IA, pipeline CI/CD ou auditor leia e compreenda toda a topologia
+  sem necessidade de busca adicional.
+  Cada novo projeto deve registrar seu manifesto e protocolos específicos
+  dentro de /governance/projects/<project_name>.
+
+checksum: "e88b9d242edfd469f1ef69194e9b392b0c3c81ff46d34a6240dd317f7a2ec522"

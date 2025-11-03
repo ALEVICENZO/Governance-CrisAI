@@ -1,0 +1,23 @@
+ssot_entry:
+  artifact: "README_GOVERNANCE_ROOT.md"
+  version: "1.4"
+  sha256: "208416c0c6c41e1087caaae3b4f36ff580f997e53c7a026d4a8c37506f3f2af4"
+  registered_at: "2025-11-03T00:41:30Z"
+  registry_path: "/governance/"
+  maintainer: "Orquestrador_Humano"
+  organization: "Vicenzo_Corp"
+  validated_by:
+    - "IA_Governance"
+    - "Orquestrador_Humano"
+  notes: |
+    README Governance Root v1.4 - Ponto de entrada universal.
+    Estabelece o ponto de origem da Governança Corporativa IA-Humano.
+    Define estrutura hierárquica, papéis fundamentais e fluxo de automação.
+  framework_version: "1.4"
+  document_type: "readme_governance_root"
+  audit_level: "critical"
+  purpose: "Entry point for governance framework"
+  audience:
+    - "Humanos (novos usuários)"
+    - "IAs (inicialização)"
+    - "Pipelines (automação)"

@@ -1,0 +1,50 @@
+manifesto:
+  version: 1.2
+  description: Manifesto corporativo consolidado de governança IA-Humano
+
+organizacao:
+  governanca_master: "meta/PROTOCOLO_METODOLOGICO_CORPORATIVO_IA_HUMANO_v1.0.md"
+  auditor_ia: "meta/IA_AUDITOR_v2"
+  pipelines:
+    infra: "infra/pipelines.yaml"
+    observabilidade: "infra/observability.yaml"
+  repositories:
+    meta: "governance/meta/"
+    ssot_registry: "governance/ssot_registry/"
+    projetos: "governance/projetos/"
+    conceito_global: "governance/conceito/"
+  description: >
+    Estrutura corporativa de governança universal para projetos IA-Humano.
+    Este manifesto unifica o modelo metodológico (meta) com os registros de projeto (SSoT)
+    e a rastreabilidade das versões conceituais em DOCX.
+
+protocolos_corporativos:
+  metodologico: "meta/PROTOCOLO_METODOLOGICO_CORPORATIVO_IA_HUMANO_v1.0.md"
+  projetos_ativos:
+    - nome: "DockManager"
+      manifesto_local: "governance/projetos/dockmanager/MANIFESTO_PROJETO_DOCKMANAGER_v1.0.yaml"
+      ssot_master: "governance/projetos/dockmanager/documentos/DOCK_MANAGER_v13_CONCEITO_TECH.md"
+      status: "validado"
+      ultima_validacao: "2025-11-02"
+      historico_conceitual:
+        - "governance/projetos/dockmanager/conceito/DOCK_MANAGER_11.docx"
+        - "governance/projetos/dockmanager/conceito/DOCK_MANAGER_12.docx"
+        - "governance/projetos/dockmanager/conceito/DOCK_MANAGER_13.docx"
+    - nome: "future_project_A"
+      manifesto_local: "governance/projetos/future_project_A/MANIFESTO_PROJETO_FUTURE_A_v1.0.yaml"
+      status: "em planejamento"
+
+diretorios_corporativos:
+  meta: "governance/meta"
+  ssot_registry: "governance/ssot_registry"
+  projetos: "governance/projetos"
+  conceito: "governance/conceito"
+  infra: "infra"
+
+governance_policies:
+  - name: "policy_ssot_integrity"
+    description: "Garante consistência entre documentos master e derivados."
+  - name: "policy_validation_chain"
+    description: "Estabelece o ciclo Junta → Orquestrador → Arquiteto → Revalidação."
+  - name: "policy_context_limiter"
+    description: "Define limites de contexto e tokens para IAs conforme papel."

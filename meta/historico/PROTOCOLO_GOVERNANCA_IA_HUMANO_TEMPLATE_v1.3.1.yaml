@@ -1,0 +1,34 @@
+version: 1.3.1
+title_pt: PROTOCOLO DE GOVERNANÇA IA-HUMANO (TEMPLATE CONSOLIDADO)
+title_en: AI–HUMAN GOVERNANCE PROTOCOL (CONSOLIDATED TEMPLATE)
+language_support:
+- pt-BR
+- en-US
+derived_from:
+- PROTOCOLO_GOVERNANCA_IA_HUMANO_TEMPLATE_v1.0.md
+- PROTOCOLO_GOVERNANCA_IA_HUMANO_TEMPLATE_v1.3.md
+organization: Vicenzo_Corp
+maintainer: Orquestrador_Humano
+status: Aprovado
+last_review: '2025-11-02'
+ssot_registry_hint: /governance/ssot_registry/
+roles:
+  default:
+  - Orquestrador_Humano
+  - IA_Architect
+  - IA_Developer
+  - IA_Auditor
+  optional:
+  - IA_QA
+  - IA_Fiscal
+sla:
+  human_review_hours: 48
+  max_review_cycles: 2
+  agent_context_words: 500
+versioning:
+  hash: SHA256
+  registry_path: /governance/ssot_registry/
+instantiation_example: /governance/projects/{{project_name}}/protocolos/PROTOCOLO_GOVERNANCA_IA_HUMANO_{{project_name}}_v1.0.md
+backward_compatible_with:
+- v1.0
+- v1.3

@@ -1,0 +1,62 @@
+# =========================================================
+# PROTOCOLO_GOVERNANCA_IA_HUMANO_TEMPLATE_v1.0.yaml
+# Template de instância de protocolo derivado do corporativo
+# =========================================================
+
+version: "1.0"
+derived_from: "/governance/meta/PROTOCOLO_METODOLOGICO_CORPORATIVO_IA_HUMANO_v1.0.md"
+governance_level: "L2 - Instância de Projeto"
+
+default_structure:
+  - "PROPÓSITO"
+  - "CONTEXTO E ESCOPO"
+  - "PAPÉIS E AGENTES"
+  - "FASES DO PROJETO"
+  - "SLAs E CHECKPOINTS"
+  - "AUDITORIA E RASTREABILIDADE"
+  - "RELAÇÃO COM O MANIFESTO"
+  - "POLÍTICA DE ATUALIZAÇÃO"
+  - "HOMOLOGAÇÃO"
+
+required_fields:
+  - project_name
+  - project_code
+  - created_by
+  - approved_by
+  - created_at
+  - status
+  - registry_path
+
+governance_rules:
+  sla_revision_humana: "48h"
+  sla_auditoria_ia: "12h"
+  context_pack_limit: "500 palavras"
+  max_component_duration: "16h"
+
+agents_base:
+  ia:
+    - IA_Architect
+    - IA_Developer
+    - IA_QA
+    - IA_Auditor
+  human:
+    - Human_Orchestrator
+    - Human_Reviewer
+    - Human_Stakeholder
+
+registry_target: "/governance/projects/<NOME_DO_PROJETO>/protocolo/"
+audit_target: "/governance/auditoria/<NOME_DO_PROJETO>/v<versao>/"
+ssot_registry: "/governance/ssot_registry/"
+
+pipeline_hooks:
+  - validate_structure
+  - register_manifest
+  - create_audit_log
+  - generate_hash_sha256
+
+notes: |
+  Este YAML serve como base para a automação de criação de protocolos de projeto.
+  Ele deve ser consumido por pipelines CI/CD que instanciam a estrutura Markdown
+  e registram automaticamente o protocolo no Manifesto de Governança.
+
+# =========================================================

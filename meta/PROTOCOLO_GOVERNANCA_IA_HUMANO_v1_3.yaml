@@ -1,0 +1,391 @@
+# ===============================================================
+# PROTOCOLO_GOVERNANCA_IA_HUMANO_v1.3.yaml
+# ===============================================================
+# Metadados estruturados do Protocolo de Governança IA-Humano v1.3
+# Consumível por IAs, pipelines CI/CD e sistemas de auditoria
+# ===============================================================
+# Bloco de Identidade CrisAI Adicionado
+framework_name: "CrisAI"
+framework_acronym: "CRIS"
+framework_meaning: "Cognitive Responsible Innovation System"
+framework_tagline: "Inovação Cognitiva com Responsabilidade e Propósito"
+framework_version: "1.4"
+framework_named_for: "Cris Vicenzo"
+protocol_metadata:
+  document_type: "protocolo_governanca_ia_humano"
+  document_status: "active"
+  scope_type: "universal"
+  created_at: "2025-11"
+  last_updated: "2025-11-02"
+  next_review: "2026-04"
+  compatibility_note: |
+    Protocolo v1.3 compatível com framework v1.4.
+    Aplicável a todos os projetos da organização vicenzo_corp.
+    Projetos específicos podem herdar e estender este protocolo.
+
+# ===============================================================
+# ORGANIZAÇàO
+# ===============================================================
+organization:
+  org_id: "vicenzo_corp"
+  maintainer: "Orquestrador_Humano"
+  approved_by:
+    - "Junta_Validadora"
+    - "Orquestrador_Humano"
+
+# ===============================================================
+# OBJETIVO
+# ===============================================================
+objective: |
+  Garantir a construção segura, rastreável e eficiente de sistemas complexos
+  por múltiplas IAs sob orquestração humana. Define regras, papéis, fluxos
+  e SLAs para o desenvolvimento colaborativo entre agentes IA e especialistas humanos.
+
+# ===============================================================
+# PAPÉIS E RESPONSABILIDADES
+# ===============================================================
+roles:
+  # Papéis obrigatórios (presentes em todos os projetos)
+  mandatory:
+    human_orchestrator:
+      description: "Define escopo, supervisiona contexto e aprova entregas"
+      access: "Todos os artefatos"
+      nature: "Humano"
+      responsibility: "Supervisão, decisões estratégicas, aprovação final"
+    
+    ia_architect:
+      description: "Interpreta conceito master e gera blueprints técnicos"
+      access: "CONCEITO_TECH.md, README.md"
+      nature: "IA"
+      responsibility: "Estruturação arquitetural e tradução conceito → técnica"
+    
+    ia_developer:
+      description: "Executa codificação e integração de sistemas"
+      access: "TECH.md ou derivados técnicos"
+      nature: "IA"
+      responsibility: "Implementação de código, testes, integrações"
+    
+    ia_auditor:
+      description: "Valida integridade, gera diffs e auditorias SHA256"
+      access: "Todos os artefatos"
+      nature: "IA"
+      responsibility: "Auditoria contínua, hash validation, conformidade técnica"
+    
+    ia_governance:
+      description: "Monitora conformidade com protocolos e mantém consistência documental"
+      access: "Todos os artefatos corporativos e de projeto"
+      nature: "IA"
+      responsibility: "Conformidade protocolar, consistência, alinhamento com padrões"
+  
+  # Papéis opcionais (definidos por projeto)
+  optional:
+    ia_fiscal:
+      description: "Gere módulos tributários, fiscais e regulatórios"
+      access: "EXT_FISCAL.md"
+      nature: "IA"
+      when_to_use: "Projetos com requisitos fiscais/tributários"
+    
+    ia_infra:
+      description: "Configura pipelines, containerização e monitoração"
+      access: "Blueprints de infra, logs de CI/CD"
+      nature: "IA"
+      when_to_use: "Projetos com necessidade de gestão de infraestrutura"
+    
+    ia_security:
+      description: "Segurança, pentest, LGPD"
+      access: "Documentos de segurança"
+      nature: "IA"
+      when_to_use: "Projetos com requisitos de segurança avançados"
+    
+    ia_data:
+      description: "Ciência de dados, ML, analytics"
+      access: "Documentos de dados"
+      nature: "IA"
+      when_to_use: "Projetos com necessidade de analytics"
+    
+    ia_qa:
+      description: "Testes automatizados, qualidade"
+      access: "Planos de teste"
+      nature: "IA"
+      when_to_use: "Projetos com necessidade de testes especializados"
+
+# ===============================================================
+# COMPONENTIZAÇàO
+# ===============================================================
+componentization:
+  max_duration_ia: "16h"
+  atomic_delivery: true
+  input:
+    - "Contexto YAML"
+    - "Trecho do master"
+  output:
+    - "Arquivo .md versionado"
+    - "SHA256 hash"
+  validation:
+    - "IA Auditor (automática)"
+    - "IA Governance (protocolar)"
+    - "Humano (dupla camada)"
+
+# ===============================================================
+# CONTEXT PACK E TOKENS
+# ===============================================================
+context_management:
+  context_pack_limit: 500  # palavras por agente IA
+  token_economy_target: 60  # % de economia esperada
+  benefits:
+    - "Economia de até 60% de tokens"
+    - "Controle semântico e contextual"
+    - "Isolamento entre agentes"
+
+# ===============================================================
+# FLUXO DE ENTREGA MULTIAGENTE
+# ===============================================================
+workflow:
+  mandatory_flow:
+    - stage: 1
+      agent: "IA_Architect"
+      action: "Cria blueprint a partir do conceito master"
+    
+    - stage: 2
+      agent: "IA_Developer"
+      action: "Implementa blocos técnicos conforme blueprint"
+    
+    - stage: 3
+      agent: "IA_Auditor"
+      action: "Valida integridade, SHA256 e diffs"
+    
+    - stage: 4
+      agent: "IA_Governance"
+      action: "Verifica conformidade com protocolos e padrões"
+    
+    - stage: 5
+      agent: "Human_Orchestrator"
+      action: "Revisa e aprova para release"
+  
+  optional_agents:
+    note: "Papéis opcionais (IA_Infra, IA_Fiscal, etc.) entram após IA_Auditor"
+    validation_chain: "IA_Auditor → Papel_Opcional → IA_Governance → Human_Orchestrator"
+
+# ===============================================================
+# SLAs (Service Level Agreements)
+# ===============================================================
+slas:
+  execution_to_review:
+    responsible: "Human_Orchestrator"
+    time: "48h"
+    action: "Feedback obrigatório"
+  
+  rework:
+    responsible: "Mesma IA"
+    time: "24h"
+    action: "Novo commit com diff log"
+  
+  continuous_audit:
+    responsible: "IA_Auditor"
+    time: "72h"
+    action: "Emissão de relatório automático"
+  
+  governance_validation:
+    responsible: "IA_Governance"
+    time: "24h"
+    action: "Verificação de protocolos"
+  
+  infra_observability:
+    responsible: "IA_Infra"
+    time: "24h"
+    action: "Atualização de dashboard"
+    applicable_when: "Projeto inclui papel IA_Infra"
+
+# ===============================================================
+# POLÍTICA DE ROLLBACK
+# ===============================================================
+rollback_policy:
+  trigger: "Inconsistência detectada"
+  actions:
+    - action: "Criar branch rollback/[data]/[hash]"
+    - action: "Restauração automática via SHA256"
+    - action: "Log completo em /governance/auditoria/rollback/"
+    - action: "IA_Auditor notifica Human_Orchestrator"
+    - action: "Bloqueio de branch de release até revisão"
+    - action: "IA_Governance documenta incidente"
+
+# ===============================================================
+# SEGURANÇA E GOVERNANÇA DE TOKENS
+# ===============================================================
+security:
+  token_rotation: "automatic_per_cycle"
+  context_masking: true
+  masked_by: "IA_Auditor"
+  log_policy: "metadata_only_no_content"
+  execution_environment: "sandboxed_isolated"
+  monitoring: "IA_Governance"
+
+# ===============================================================
+# RASTREABILIDADE E AUDITORIA
+# ===============================================================
+auditability:
+  enabled: true
+  hash_algorithm: "SHA256"
+  log_retention: "5_years"
+  audit_trail_location: "/governance/auditoria/"
+  traceability_level: "document + context + pipeline"
+  
+  audit_process:
+    - step: "SHA256 no rodapé de cada entrega"
+    - step: "Auditoria automática via IA_Auditor"
+    - step: "Validação de conformidade via IA_Governance"
+    - step: "Registro em /governance/auditoria/[projeto]/[release]/"
+    - step: "Rastreamento até commit Git original"
+  
+  audit_report_format: "markdown"
+  audit_status_codes: ["✅", "❌"]
+
+# ===============================================================
+# CRITÉRIOS DE ACEITE
+# ===============================================================
+acceptance_criteria:
+  mandatory_validations:
+    - "Cumpre escopo YAML"
+    - "Passa em validação IA_Auditor (integridade técnica)"
+    - "Passa em validação IA_Governance (conformidade protocolar)"
+    - "Está dentro dos SLAs definidos"
+    - "Confirmado via hash por 2 entidades (IA + humano)"
+    - "Documentação está completa e atualizada"
+
+# ===============================================================
+# GOVERNANÇA MULTIAGENTE
+# ===============================================================
+multiagent_governance:
+  parallel_execution: true
+  context_isolation: "by_namespace"
+  synchronization_mechanism: "governance_bus"
+  
+  governance_bus:
+    purpose: "Consistência de contexto entre agentes"
+    features:
+      - "Prevenção de conflitos de escrita"
+      - "Rastreabilidade de interações entre IAs"
+      - "Auditoria de comunicações multiagente"
+    coordinator: "IA_Governance"
+
+# ===============================================================
+# HIERARQUIA SSoT
+# ===============================================================
+ssot_hierarchy:
+  master_document:
+    format: "<PROJETO>_CONCEITO_TECH.md"
+    role: "Single Source of Truth do projeto"
+    content: "Conceito integral, todas as seções e apêndices"
+    editing: "Apenas humanos (com aprovação)"
+  
+  derived_documents:
+    examples:
+      - "<PROJETO>_TECH.md"
+      - "<PROJETO>_EXT_<ESPECIALIDADE>.md"
+    generation: "Automatizada via IA sob auditoria"
+    header_requirement: "derived_from field apontando para master"
+    validation:
+      - "IA_Auditor"
+      - "IA_Governance"
+  
+  governance_rules:
+    - "Apenas master pode ser editado manualmente"
+    - "Derivados são reconstruídos automaticamente quando master muda"
+    - "Logs e hashes mantidos em /governance/auditoria/ssot/"
+    - "IA_Governance valida consistência da hierarquia"
+    - "IA_Auditor verifica integridade via SHA256"
+
+# ===============================================================
+# PROTOCOLOS ESPECÍFICOS DE PROJETO
+# ===============================================================
+project_protocols:
+  inheritance: true
+  base_protocol: "PROTOCOLO_GOVERNANCA_IA_HUMANO_v1.3.md"
+  
+  extension_structure:
+    inherits_from: "PROTOCOLO_GOVERNANCA_IA_HUMANO_v1.3.md"
+    can_extend:
+      - "Papéis adicionais (IA_Fiscal, IA_Infra, etc.)"
+      - "Regras específicas de tecnologia"
+      - "SLAs customizados"
+      - "Fluxos especializados"
+  
+  example_project_protocol: "PROTOCOLO_GOVERNANCA_IA_HUMANO_DOCKMANAGER_v1.3.md"
+
+# ===============================================================
+# VERSIONAMENTO E COMPATIBILIDADE
+# ===============================================================
+versioning:
+  current_version: "v1.3"
+  framework_compatibility: "v1.4"
+  previous_versions: ["v1.2", "v1.1", "v1.0"]
+  backward_compatible: true
+  breaking_changes: false
+  
+  changelog:
+    v1.3:
+      date: "2025-11"
+      changes:
+        - "Adição da Seção 16 – Hierarquia SSoT"
+        - "Papel IA_Governance adicionado como obrigatório"
+        - "Escopo universalizado (não mais específico de projeto)"
+        - "Compatibilidade com framework v1.4 declarada"
+    v1.2:
+      date: "2025-11"
+      changes:
+        - "Inclusão do Bloco 5 - IA Infra"
+        - "Segurança e observabilidade"
+    v1.1:
+      date: "2025-11"
+      changes:
+        - "Adição de SLAs"
+        - "Política de rollback"
+    v1.0:
+      date: "2025-10"
+      changes:
+        - "Criação do protocolo"
+
+# ===============================================================
+# COMPLIANCE POLICIES
+# ===============================================================
+compliance_policies:
+  - "SSoT (Single Source of Truth)"
+  - "Traceable Governance (via SHA256 logs)"
+  - "AI-Human Collaborative Control"
+  - "Iterative Validation and Correction Loop"
+  - "Dynamic Role Assignment per Project"
+  - "Backward Compatibility (v1.0 → v1.4)"
+  - "Universal Portability (any domain, any stack)"
+
+# ===============================================================
+# APLICABILIDADE
+# ===============================================================
+applicability:
+  scope: "universal"
+  domains: "any"
+  technology_stacks: "any"
+  project_types: "any"
+  extensible: true
+  auditable: true
+  evolutionary: true
+
+# ===============================================================
+# CHECKSUMS E VALIDAÇàO
+# ===============================================================
+checksum: "pending_commit_sha256"
+validated_by:
+  - "Orquestrador_Humano"
+  - "IA_Auditor"
+  - "IA_Governance"
+  - "Junta_Validadora"
+next_review_date: "2026-04"
+
+# ===============================================================
+# REFERÊNCIAS CRUZADAS
+# ===============================================================
+related_documents:
+  markdown_version: "PROTOCOLO_GOVERNANCA_IA_HUMANO_v1.3.md"
+  manifesto: "MANIFESTO_GOVERNANCA_v1.4.yaml"
+  context_map: "CONTEXT_MAP_GOVERNANCA_v1.4.yaml"
+  methodological_protocol: "PROTOCOLO_METODOLOGICO_CORPORATIVO_IA_HUMANO_v1.0.md"
+  readme_root: "README_GOVERNANCE_ROOT_v1.4.md"

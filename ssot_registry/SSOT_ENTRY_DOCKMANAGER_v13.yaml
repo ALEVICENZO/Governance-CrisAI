@@ -1,0 +1,167 @@
+ssot_entry:
+  project: "DockManager v13"
+  status: "homologado"
+  approval_status: "100_percent_integrity"
+  version: "v13_release_candidate"
+  registered_at: "2025-11-03T01:30:00Z"
+  registry_path: "/governance/projects/dockmanager/"
+  maintainer: "Orquestrador_Humano"
+  organization: "Vicenzo_Corp"
+  
+  framework_compatibility:
+    protocol_version: "v1.3"
+    framework_version: "v1.4"
+    backward_compatible: true
+  
+  documents:
+    # Master Document (SSoT)
+    - artifact: "DOCK_MANAGER_v13_CONCEITO_TECH.md"
+      role: "master"
+      purpose: "Single Source of Truth - Documento completo"
+      sha256: "671f4928d7025785020410b835fb45d2dc040a4aa555544c41426645558ea3b6"
+      size: "41.7 KB (797 linhas, 41.262 caracteres)"
+      sections: "1-13 completas"
+      usage: ["IA_Architect", "Governança", "Auditoria"]
+      
+    # Derived Documents
+    - artifact: "DOCK_MANAGER_v13_TECH.md"
+      role: "derived"
+      purpose: "Subset técnico para IA Developer"
+      sha256: "652b24a9bbdc1da50e588acd87e3907c4f9e047a15846a844c55b7e6819d55c2"
+      size: "26.3 KB (702 linhas, 35.150 caracteres)"
+      derived_from: "DOCK_MANAGER_v13_CONCEITO_TECH.md"
+      context_scope: "Sections 2-11 (técnicas)"
+      token_economy: "40%"
+      usage: ["IA_Developer"]
+      
+    - artifact: "DOCK_MANAGER_v13_EXT_FISCAL.md"
+      role: "derived"
+      purpose: "Subset fiscal especializado"
+      sha256: "aca8c3d681544f4ab6142cd49e9f01c266aa0ea4c7335a8da5bc33d22d02d93b"
+      size: "5.2 KB (195 linhas, 5.073 caracteres)"
+      derived_from: "DOCK_MANAGER_v13_CONCEITO_TECH.md"
+      context_scope: "Módulo fiscal"
+      token_economy: "85%"
+      usage: ["IA_Fiscal", "IA_Compliance"]
+      
+    # Blueprint
+    - artifact: "Blueprint_Fase1_Motor_Workflows_v1_0.md"
+      role: "blueprint"
+      purpose: "Blueprint técnico executável - Fase 1"
+      sha256: "316362a06ac7f10abc47a1f724bbc9a37177d3e453f8ccbec38f745780c4b50f"
+      size: "5.9 KB"
+      based_on: "DOCK_MANAGER_v13_CONCEITO_TECH.md"
+      blocks:
+        - "ENGINE_CORE"
+        - "EVENT_BUS"
+        - "AUDIT_LAYER"
+      roadmap: ["v1.0", "v1.1", "v2.0"]
+      usage: ["IA_Developer", "IA_Architect"]
+      
+    # Protocol
+    - artifact: "PROTOCOLO_GOVERNANCA_IA_HUMANO_DOCKMANAGER_v1_3.md"
+      role: "protocol"
+      purpose: "Protocolo específico do projeto"
+      sha256: "9e54433be7ea9eed1267e4162ed9c09b2953296a396625f469b5c859d0f39239"
+      size: "7.4 KB"
+      protocol_version: "v1.3"
+      inherits_from: "PROTOCOLO_GOVERNANCA_IA_HUMANO_v1.3.md"
+      sections: 16
+      defines:
+        - "Papéis IA (Architect, Developer, Fiscal, Auditor, Infra)"
+        - "SLAs customizados"
+        - "Hierarquia SSoT (Seção 16)"
+        - "Context packs (500 palavras)"
+      
+    # Governance
+    - artifact: "README_DOCKMANAGER_v13.md"
+      role: "governance"
+      purpose: "Documentação de governança e hierarquia"
+      sha256: "4c6e01551923d95692b10116c96b3f24ec5b2b95e4c4b8c09659be1b817e1c70"
+      size: "2.6 KB"
+      framework_version: "v1.4"
+      documents_hierarchy: true
+      
+    # Homologation
+    - artifact: "MEMORANDO_HOMOLOGACAO_V13.md"
+      role: "homologation"
+      purpose: "Atestado oficial de 100% integridade"
+      sha256: "58283d94bd96dceab78ebe312ef7e364c52e59b92c0bcb65adf4da6c56a0a267"
+      size: "4.7 KB"
+      approval_status: "100_percent_integrity"
+      signed_by:
+        - "Junta Técnica de Validação"
+        - "Junta de Sistemas/Logística/Contábil/Compliance"
+      authorizes: "Fase 0.1 - Blueprint"
+
+  validation_results:
+    encoding_utf8: "100% correto"
+    ssot_hierarchy: "100% válida"
+    completeness: "100%"
+    homologation: "100% integridade"
+    conformity: "100%"
+    
+  metrics:
+    token_economy:
+      tech: "40%"
+      fiscal: "85%"
+      average: "62.5%"
+    
+    document_sizes:
+      master: "41.7 KB"
+      tech: "26.3 KB"
+      fiscal: "5.2 KB"
+  
+  project_value:
+    role: "Projeto Piloto"
+    purpose: "Prova de conceito do framework v1.4"
+    status: "Bem-sucedido"
+    validates:
+      - "SSoT hierarchy"
+      - "Context packs"
+      - "Componentização (#BLOCK)"
+      - "Junta validadora"
+      - "Auditoria SHA256"
+      - "Metodologia IA-Humano"
+  
+  lessons_learned:
+    - "Separação master → derivados funciona perfeitamente"
+    - "Context packs reduzem custos significativamente (40-85%)"
+    - "Especialização (fiscal) é valiosa"
+    - "Junta validadora é essencial para qualidade"
+    - "YAML headers facilitam automação"
+    - "Homologação rigorosa garante confiança"
+  
+  template_generation:
+    blueprint_template: "Derivado de Blueprint_Fase1"
+    protocol_template: "Derivado de PROTOCOLO_v1.3"
+    readme_template: "Derivado de README estrutura"
+    abstractions_applied:
+      - "Placeholders <> criados"
+      - "Exemplos genéricos gerados"
+      - "Stack tecnológico parametrizado"
+  
+  validated_by:
+    - "IA_Auditor"
+    - "Junta Técnica de Validação"
+    - "Junta de Sistemas/Logística/Contábil/Compliance"
+    - "Orquestrador_Humano"
+  
+  notes: |
+    DockManager v13 é o projeto piloto que validou todo o framework de
+    governança IA-Humano. Serviu de base para criação dos templates
+    genéricos do framework v1.4.
+    
+    Homologação oficial: 100% integridade
+    Status: Release Candidate → Pronto para Produção
+    Economia de tokens comprovada: 40-85%
+    
+    Este projeto comprova a viabilidade e eficácia da metodologia
+    proposta no framework v1.4.
+  
+  framework_version: "1.4"
+  document_type: "project_collection"
+  audit_level: "critical"
+  scope: "project_pilot"
+  
+  next_phase: "Blueprint Fase 0.1 - Índice Estrutural (autorizado)"

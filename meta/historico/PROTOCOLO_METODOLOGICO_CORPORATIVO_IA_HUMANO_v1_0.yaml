@@ -1,0 +1,403 @@
+# ===============================================================
+# PROTOCOLO_METODOLOGICO_CORPORATIVO_IA_HUMANO_v1.0.yaml
+# ===============================================================
+# Metadados estruturados do Protocolo Metodológico Corporativo
+# Guia normativo para criação e execução de protocolos de projeto
+# Consumível por IAs, pipelines CI/CD e sistemas de auditoria
+# ===============================================================
+
+protocol_metadata:
+  protocol_version: "v1.0"
+  framework_version: "1.4"
+  document_type: "protocolo_metodologico"
+  document_status: "active"
+  scope_type: "universal"
+  created_at: "2025-11-02"
+  last_updated: "2025-11-02"
+  next_review: "2026-05-02"
+  compatibility_note: |
+    Protocolo metodológico v1.0 compatível com framework v1.4.
+    Define como criar protocolos de projeto, não o conteúdo de projetos específicos.
+
+# ===============================================================
+# ORGANIZAÇÃO
+# ===============================================================
+organization:
+  org_id: "vicenzo_corp"
+  author: "Junta Validadora + Orquestrador Humano"
+  maintainer: "Orquestrador_Humano"
+  approved_by:
+    - "Junta_Validadora"
+    - "Orquestrador_Humano"
+  repository_path: "/governance/meta/"
+
+# ===============================================================
+# PROPÓSITO
+# ===============================================================
+purpose: |
+  Formalizar o método de desenvolvimento colaborativo IA-Humano adotado pela organização,
+  consolidando as práticas de sucesso aplicadas no projeto DockManager como padrão
+  corporativo para futuros projetos. Define COMO CRIAR PROTOCOLOS DE PROJETO,
+  não o conteúdo de um projeto específico.
+
+# ===============================================================
+# PRINCÍPIOS FUNDAMENTAIS
+# ===============================================================
+fundamental_principles:
+  - name: "Colaboração Simbiótica"
+    description: "IA e humanos não competem; se complementam"
+  
+  - name: "Governança Iterativa"
+    description: "Toda decisão automatizada é revisável por um humano"
+  
+  - name: "Auditabilidade Completa"
+    description: "Nenhum artefato é aceito sem trilha de auditoria"
+  
+  - name: "Fonte Única da Verdade (SSoT)"
+    description: "Cada protocolo tem um documento master e seus derivados controlados"
+  
+  - name: "Autonomia e Contexto Limitado"
+    description: "Cada IA trabalha dentro de escopo delimitado e rastreável"
+
+# ===============================================================
+# HIERARQUIA DOCUMENTAL
+# ===============================================================
+document_hierarchy:
+  master: "CONCEITO_TECH.md"
+  derived:
+    - "TECH.md"
+    - "EXT_FISCAL.md"
+    - "EXT_<ESPECIALIDADE>.md"
+  governance:
+    - "PROTOCOLO_GOVERNANCA_IA_HUMANO_v1.3.md"
+    - "PROTOCOLO_METODOLOGICO_CORPORATIVO_IA_HUMANO_v1.0.md"
+  
+  rules:
+    - "Cada projeto deve declarar explicitamente sua hierarquia documental"
+    - "Rastreabilidade obrigatória entre master e derivados"
+    - "Headers YAML devem conter derived_from quando aplicável"
+
+# ===============================================================
+# PROCESSO DE CRIAÇÃO DE PROTOCOLOS
+# ===============================================================
+protocol_creation_process:
+  - step: 1
+    name: "Ideação"
+    responsible: "Orquestrador Humano"
+    action: "Define o propósito e escopo"
+  
+  - step: 2
+    name: "Modelagem de Contexto"
+    responsible: "IA Architect"
+    action: "Cria o modelo conceitual"
+  
+  - step: 3
+    name: "Extração de Seções"
+    responsible: "IAs Especializadas"
+    action: "Geram documentos derivados (técnico, fiscal, etc.) seguindo o SSoT"
+  
+  - step: 4
+    name: "Validação e Revisão"
+    responsible: "Junta Multidisciplinar + IA Auditor + IA Governance"
+    action: "Verificam coerência, integridade e rastreabilidade"
+  
+  - step: 5
+    name: "Publicação"
+    responsible: "IA Governance"
+    action: "Protocolo é versionado e movido para o repositório oficial"
+
+# ===============================================================
+# GOVERNANÇA E PAPÉIS
+# ===============================================================
+roles:
+  # Papéis obrigatórios
+  mandatory:
+    orquestrador_humano:
+      responsibility: "Coordena IAs, aprova versões e conduz a estratégia"
+      nature: "Humano"
+    
+    ia_architect:
+      responsibility: "Cria e mantém a estrutura conceitual"
+      nature: "IA"
+    
+    ia_developer:
+      responsibility: "Implementa os módulos derivados"
+      nature: "IA"
+    
+    ia_auditor:
+      responsibility: "Verifica integridade documental e gera hashes"
+      nature: "IA"
+    
+    ia_governance:
+      responsibility: "Monitora conformidade com protocolos e mantém consistência documental"
+      nature: "IA"
+    
+    junta_multidisciplinar:
+      responsibility: "Valida coerência, riscos e compliance"
+      nature: "Humano"
+  
+  # Papéis opcionais (definidos por projeto)
+  optional:
+    - "IA Fiscal (tributação, compliance fiscal)"
+    - "IA Infra (DevOps, containerização, monitoramento)"
+    - "IA Security (segurança, pentest, LGPD)"
+    - "IA Data (ciência de dados, ML, analytics)"
+    - "IA QA (testes automatizados, qualidade)"
+
+# ===============================================================
+# PIPELINE METODOLÓGICO
+# ===============================================================
+pipeline:
+  stages:
+    - stage: "Ideação"
+      output: "Escopo e propósito definidos"
+    
+    - stage: "Modelagem de Contexto"
+      output: "Modelo conceitual"
+    
+    - stage: "Geração de Derivados"
+      output: "Documentos derivados"
+    
+    - stage: "Validação IA Auditor"
+      output: "Relatório de integridade técnica"
+    
+    - stage: "Validação IA Governance"
+      output: "Relatório de conformidade protocolar"
+    
+    - stage: "Junta Multidisciplinar"
+      output: "Aprovação humana"
+    
+    - stage: "Publicação e Versão"
+      output: "Protocolo versionado e publicado"
+    
+    - stage: "Feedback e Aprendizado Iterativo"
+      output: "Lições aprendidas documentadas"
+
+# ===============================================================
+# CONTEXTO E ECONOMIA DE TOKENS
+# ===============================================================
+context_management:
+  context_pack_max_words: 500
+  benefits:
+    - "Preserva coerência"
+    - "Aumenta eficiência"
+    - "Minimiza contaminação de contexto"
+  
+  token_economy:
+    target: "30-60%"
+    measurement: "Comparado a contextos completos"
+
+# ===============================================================
+# JUNTA MULTIDISCIPLINAR
+# ===============================================================
+validation_team:
+  principle: "Gate humano de qualidade antes da homologação final"
+  
+  mandatory_functions:
+    business:
+      name: "Validador de Negócio"
+      responsibility: "Garante alinhamento estratégico"
+    
+    technical:
+      name: "Validador Técnico"
+      responsibility: "Avalia integridade e eficiência técnica"
+    
+    compliance:
+      name: "Validador de Conformidade"
+      responsibility: "Assegura aderência normativa"
+    
+    user:
+      name: "Validador de Usuário"
+      responsibility: "Confirma aplicabilidade e valor percebido"
+    
+    auditor:
+      name: "IA Auditor"
+      responsibility: "Valida integridade e rastreabilidade documental"
+    
+    governance:
+      name: "IA Governance"
+      responsibility: "Verifica conformidade com protocolos corporativos"
+  
+  autonomy:
+    note: "Cada projeto define as especialidades correspondentes a essas funções"
+    example:
+      business: "Especialista em Operações e Produto"
+      technical: "Arquiteto de Sistemas"
+      compliance: "Analista de Riscos e Conformidade"
+      user: "Gestor de Experiência do Cliente"
+      auditor: "IA_Auditor"
+      governance: "IA_Governance"
+
+# ===============================================================
+# PROCESSO DE VALIDAÇÃO
+# ===============================================================
+validation_process:
+  flow:
+    - "IA Developer → IA Auditor"
+    - "IA Auditor → IA Governance"
+    - "IA Governance → Junta Multidisciplinar"
+    - "Junta Multidisciplinar → Orquestrador"
+    - "Orquestrador → Release"
+  
+  objectives:
+    - "Rastreabilidade total entre IA e decisões humanas"
+    - "Nenhuma entrega sem dupla validação (IA + Humano)"
+    - "Feedbacks e correções formalizados"
+    - "Equilíbrio entre automação e julgamento humano"
+
+# ===============================================================
+# CICLO DE REFINAMENTO ITERATIVO
+# ===============================================================
+iterative_refinement:
+  process: "IA ↔ Humano ↔ IA"
+  
+  sequence:
+    - "IA Developer envia entrega para validação"
+    - "IA Auditor valida integridade"
+    - "IA Governance valida conformidade"
+    - "Junta reporta inconsistências (se houver)"
+    - "Orquestrador define ajustes"
+    - "IA Architect repassa correções"
+    - "IA Developer implementa correções"
+    - "Nova iteração de validação"
+  
+  output_per_iteration:
+    - "Logs"
+    - "Hashes SHA256"
+    - "Versão incremental"
+
+# ===============================================================
+# AUDITORIA E RASTREABILIDADE
+# ===============================================================
+auditability:
+  requirements:
+    - "Hash SHA256 em todas as entregas"
+    - "Timestamp em todos os commits"
+    - "Logs imutáveis mantidos por 5 anos"
+    - "Auditorias automáticas (IA Auditor) por ciclo"
+    - "Auditorias humanas (Junta) por ciclo"
+    - "Verificação de conformidade (IA Governance) contínua"
+  
+  divergence_handling:
+    action: "Gerar diff-report automatizado"
+    notify: "Orquestrador Humano"
+    block: "Release até resolução"
+
+# ===============================================================
+# INFRAESTRUTURA DE EXECUÇÃO
+# ===============================================================
+infrastructure:
+  version_control: "Git + tagging semântico"
+  observability:
+    - "Prometheus"
+    - "Grafana"
+    - "ELK Stack"
+  security:
+    - "Rotação de tokens"
+    - "Sandboxing"
+    - "Isolamento de contexto"
+  orchestration: "Kubernetes ou ambiente equivalente"
+
+# ===============================================================
+# MÉTRICAS DE EFICIÊNCIA COLABORATIVA
+# ===============================================================
+metrics:
+  deliveries_without_rework:
+    description: "% de Entregas Validadas sem Retrabalho"
+    target: "> 90%"
+    measurement: "Acurácia IA + Junta"
+  
+  iteration_time:
+    description: "Tempo Médio de Iteração"
+    target: "< 48h"
+    measurement: "Tempo entre entrega e revalidação"
+  
+  token_economy:
+    description: "Economia de Tokens"
+    target: "> 30%"
+    measurement: "Eficiência contextual"
+  
+  ssot_adherence:
+    description: "Aderência a SSoT"
+    target: "100%"
+    measurement: "Conformidade documental"
+  
+  protocol_compliance:
+    description: "Conformidade Protocolar"
+    target: "100%"
+    measurement: "Validação IA Governance"
+
+# ===============================================================
+# EVOLUÇÃO E REVISÃO
+# ===============================================================
+evolution:
+  review_frequency: "6 meses"
+  review_authority: "Junta Corporativa"
+  versioning_scheme: "Semântico (ex: v1.1, v1.2)"
+  adoption_policy: "Novos projetos devem adotar a versão mais recente"
+  compatibility_maintenance: true
+
+# ===============================================================
+# VERSIONAMENTO
+# ===============================================================
+versioning:
+  current_version: "v1.0"
+  framework_compatibility: "v1.4"
+  breaking_changes: false
+  
+  changelog:
+    v1.0:
+      date: "2025-11-02"
+      changes:
+        - "Criação do protocolo metodológico"
+        - "Formalização dos princípios fundamentais"
+        - "Definição de papéis obrigatórios (incluindo IA_Governance)"
+        - "Estabelecimento do processo de criação de protocolos"
+        - "Compatibilidade com framework v1.4"
+
+# ===============================================================
+# APLICABILIDADE
+# ===============================================================
+applicability:
+  scope: "Corporativo universal"
+  usage: "Criação e execução de protocolos de projeto"
+  target_audience:
+    - "Orquestradores Humanos"
+    - "Arquitetos de IA"
+    - "Juntas Validadoras"
+    - "IAs de Governança"
+  replicable: true
+  scalable: true
+
+# ===============================================================
+# REFERÊNCIA AO PROJETO PILOTO
+# ===============================================================
+pilot_project:
+  name: "DockManager v13"
+  status: "Homologado"
+  contribution: "Validou o framework completo de ponta a ponta"
+  lessons_learned:
+    - "Metodologia replicável comprovada"
+    - "Templates derivados de casos reais são mais eficazes"
+    - "Junta multidisciplinar essencial para integridade"
+
+# ===============================================================
+# CHECKSUMS E VALIDAÇÃO
+# ===============================================================
+checksum: "pending_commit_sha256"
+validated_by:
+  - "Orquestrador_Humano"
+  - "Junta_Validadora"
+  - "IA_Governance"
+next_review_date: "2026-05-02"
+
+# ===============================================================
+# REFERÊNCIAS CRUZADAS
+# ===============================================================
+related_documents:
+  markdown_version: "PROTOCOLO_METODOLOGICO_CORPORATIVO_IA_HUMANO_v1.0.md"
+  governance_protocol: "PROTOCOLO_GOVERNANCA_IA_HUMANO_v1.3.md"
+  manifesto: "MANIFESTO_GOVERNANCA_v1.4.yaml"
+  context_map: "CONTEXT_MAP_GOVERNANCA_v1.4.yaml"
+  readme_root: "README_GOVERNANCE_ROOT_v1.4.md"
+  readme_corporate: "README_GOVERNANCA_CORPORATIVA_v1.4.md"

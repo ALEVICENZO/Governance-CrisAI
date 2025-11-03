@@ -1,0 +1,27 @@
+ssot_entry:
+  artifact:
+    markdown: "PROTOCOLO_METODOLOGICO_CORPORATIVO_IA_HUMANO_v1.0.md"
+    yaml: "PROTOCOLO_METODOLOGICO_CORPORATIVO_IA_HUMANO_v1.0.yaml"
+  version: "1.0"
+  sha256:
+    markdown: "22ae5bc3dc29b9e88ca0c35bd83606e1ec6c1dbec7b5d34387948cb7e080d2b6"
+    yaml: "6be3e2f4ad9279ba7f54f2dd1f493444b46dba746aa1d1701e281ca08c51ffd6"
+  registered_at: "2025-11-03T00:41:30Z"
+  registry_path: "/governance/meta/"
+  maintainer: "Orquestrador_Humano"
+  organization: "Vicenzo_Corp"
+  validated_by:
+    - "IA_Auditor"
+    - "IA_Governance"
+    - "Junta_Validadora"
+  notes: |
+    Protocolo Metodológico Corporativo v1.0 - Correção de encoding UTF-8.
+    Guia normativo para criação e execução de protocolos de projeto.
+    Define COMO criar protocolos, não o conteúdo específico de projetos.
+    Baseado no aprendizado do projeto piloto DockManager.
+  framework_version: "1.4"
+  protocol_version: "v1.0"
+  document_type: "protocolo_metodologico"
+  scope_type: "universal"
+  audit_level: "high"
+  purpose: "Methodological guide for protocol creation"

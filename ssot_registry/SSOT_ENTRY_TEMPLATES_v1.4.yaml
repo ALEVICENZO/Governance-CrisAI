@@ -1,0 +1,79 @@
+ssot_entry:
+  collection: "templates_governanca_v1.4"
+  version: "1.4"
+  registered_at: "2025-11-03T01:00:00Z"
+  registry_path: "/governance/templates/"
+  maintainer: "Orquestrador_Humano"
+  organization: "Vicenzo_Corp"
+  
+  templates:
+    - artifact: "modelo_blueprint.md"
+      purpose: "Template genérico para blueprints técnicos"
+      sha256: "790a05b9cf2cd163a07fa0a0a6828bd8d470d837a3552baf497276298564b10e"
+      status: "completo"
+      based_on: "DockManager Blueprint Fase 1"
+      
+    - artifact: "modelo_blueprint.yaml"
+      purpose: "Metadados estruturados do blueprint"
+      sha256: "1260991be47d4d0cc3b9d9f4e0587444228a7d369220341f26303f4534eed489"
+      status: "completo"
+      companion_of: "modelo_blueprint.md"
+      
+    - artifact: "modelo_protocolo_projeto.md"
+      purpose: "Template para protocolo específico de projeto"
+      sha256: "23dc5540b3a5a0cc58cb5d33a34d9503974c9a77bccdb664995947c9c4b32dfb"
+      status: "completo"
+      based_on: "Protocolo DockManager v1.3"
+      
+    - artifact: "modelo_manifesto_projeto.yaml"
+      purpose: "Template para manifesto de projeto (opcional)"
+      sha256: "83b095677e209ae4361d883b84b69aa906587b5c4a3f280d7a1aaf8d7a7a0c6e"
+      status: "completo"
+      usage: "Projetos complexos apenas"
+      
+    - artifact: "PROTOCOLO_GOVERNANCA_IA_HUMANO_TEMPLATE_v1_4.md"
+      purpose: "Template bilíngue (PT/EN) completo e consolidado"
+      sha256: "41e208b38861525438fadd7167d48533e25f1351c2ca1237e7e695ee2998b75a"
+      status: "completo"
+      bilingual: true
+      sections: 14
+      
+    - artifact: "PROTOCOLO_GOVERNANCA_IA_HUMANO_TEMPLATE_v1_4.yaml"
+      purpose: "Metadados estruturados do template de protocolo"
+      sha256: "82733b6bf3168b10e8d46cb731220831b86bcc5e3d98e41370b4bebde1d85f21"
+      status: "completo"
+      companion_of: "PROTOCOLO_GOVERNANCA_IA_HUMANO_TEMPLATE_v1_4.md"
+      
+    - artifact: "README_TEMPLATES_v1_4.md"
+      purpose: "Documentação completa dos templates"
+      sha256: "4ad426116e39611558083d839f46c87373af66eed29e256f367b48615fc28e42"
+      status: "completo"
+      sections: 9
+
+  validated_by:
+    - "IA_Auditor"
+    - "IA_Governance"
+    - "Orquestrador_Humano"
+  
+  notes: |
+    Templates corporativos v1.4 - Genéricos e portáveis.
+    Aplicáveis a qualquer domínio de negócio ou stack tecnológico.
+    Baseados no projeto piloto DockManager v13.
+    Todos com encoding UTF-8 correto e sem problemas.
+  
+  framework_version: "1.4"
+  document_type: "templates_collection"
+  audit_level: "high"
+  scope: "corporate_universal"
+  
+  usage_instructions:
+    - "Copiar template desejado para /governance/projects/<projeto>/"
+    - "Renomear seguindo convenções do README"
+    - "Substituir <PLACEHOLDERS> por valores reais"
+    - "Validar com Junta Validadora"
+    - "Registrar no manifesto corporativo"
+  
+  reference_project:
+    name: "DockManager v13"
+    location: "/governance/projects/dockmanager/"
+    note: "Consultar para exemplos práticos de uso dos templates"

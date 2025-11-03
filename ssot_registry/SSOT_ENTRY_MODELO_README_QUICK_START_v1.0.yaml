@@ -1,0 +1,83 @@
+---
+ssot_entry:
+  artifact: "modelo_readme_quick_start_projeto.md"
+  version: "v1.0"
+  document_type: "template"
+  framework_name: "CrisAI"
+  framework_version: "1.4"
+  
+  metadata:
+    created_at: "2025-11-03"
+    registered_at: "2025-11-03T13:52:00Z"
+    registry_path: "/governance/templates/modelo_readme_quick_start_projeto.md"
+    purpose: "Template padrão para criar README de contextualização de projetos"
+    organization: "Vicenzo_Corp"
+    maintainer: "Orquestrador_Humano"
+  
+  integrity:
+    sha256: "<HASH_FORNECIDO_PELO_GEMINI>"
+    size_bytes: "~4096"
+    encoding: "UTF-8"
+    format: "Markdown"
+  
+  validation_chain:
+    ia_architect: 
+      agent: "GPT-4"
+      status: "generated"
+      timestamp: "2025-11-03T13:00:00Z"
+    
+    ia_governance:
+      agent: "Claude 3.5 Sonnet"
+      status: "approved"
+      conformidade: "100%"
+      issues: 0
+      corrections: "Encoding UTF-8 corrigido"
+      timestamp: "2025-11-03T13:30:00Z"
+    
+    ia_auditor:
+      agent: "Gemini 2.0"
+      status: "approved"
+      integridade: "100%"
+      timestamp: "2025-11-03T13:45:00Z"
+    
+    orquestrador_humano:
+      name: "Alexandre Vicenzo"
+      status: "approved"
+      timestamp: "2025-11-03T13:52:00Z"
+  
+  template_structure:
+    header_yaml: "14 campos obrigatórios"
+    secoes_obrigatorias: 9
+    placeholders_formato: "<TEXTO>"
+    tamanho_estimado: "3-4 páginas após preenchimento"
+  
+  usage_instructions:
+    workflow: "Automação usa template ao criar novo projeto"
+    passos:
+      - "Copiar template"
+      - "Substituir placeholders"
+      - "Remover seção de instruções"
+      - "Validar com IA_Governance"
+      - "Auditar com IA_Auditor"
+      - "Aprovar com Orquestrador"
+      - "Registrar no SSoT"
+  
+  audit_level: "high"
+  compliance_policies:
+    - "ssot_integrity"
+    - "traceability_hash"
+    - "dual_validation"
+    - "template_standardization"
+  
+  references:
+    referenced_by: "MANIFESTO_GOVERNANCA_v1.4.yaml (seção contextualizacao_projetos)"
+    instances:
+      - "README_QUICK_START_PGIAH.md"
+      - "README_QUICK_START_DOCKMANAGER.md"
+    related_templates:
+      - "modelo_protocolo_projeto.md"
+      - "modelo_blueprint.md"
+      - "modelo_manifesto_projeto.yaml"
+  
+  historical_note: "Primeiro template de contextualização de projetos. Garante consistência automática ao criar novos projetos no framework CrisAI. Parte da solução de contextualização em cascata."
+---

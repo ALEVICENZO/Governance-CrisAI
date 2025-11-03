@@ -1,0 +1,372 @@
+# ===============================================================
+# MODELO_MANIFESTO_PROJETO.yaml
+# ---------------------------------------------------------------
+# Template para criação de manifestos de projetos individuais
+# Baseado no MANIFESTO_GOVERNANCA_v1.4.yaml (corporativo)
+# ===============================================================
+
+# ===============================================================
+# INSTRUÇÕES DE PREENCHIMENTO
+# ===============================================================
+# 1. Substitua <PLACEHOLDERS> pelos valores específicos do projeto
+# 2. Este manifesto é OPCIONAL - use apenas se o projeto precisar
+#    de registro independente (projetos grandes/complexos)
+# 3. Projetos simples podem usar apenas o README e protocolo
+# 4. Consulte DockManager como exemplo prático
+
+# ===============================================================
+# METADADOS BÁSICOS
+# ===============================================================
+framework_name: "CrisAI"
+framework_acronym: "CRIS"
+framework_meaning: "Cognitive Responsible Innovation System"
+framework_tagline: "Inovação Cognitiva com Responsabilidade e Propósito"
+framework_version: "1.4" 
+framework_named_for: "Cris Vicenzo"
+manifesto_version: '0.1'  # Incrementar a cada atualização significativa
+issued: '<YYYY-MM-DDTHH:MM:SSZ>'  # Timestamp UTC
+description: |
+  Manifesto do projeto <NOME_DO_PROJETO> - <breve descrição do propósito>
+
+# ===============================================================
+# IDENTIFICAÇÃO DO PROJETO
+# ===============================================================
+project:
+  name: '<NOME_DO_PROJETO>'
+  code: '<CODIGO_INTERNO>'  # Ex: DM, PG, INV (obrigatório em contexto corporativo)
+  version: 'v<X>'  # Versão atual do projeto
+  status: 'draft'  # draft | active | homologado | archived
+  
+  # Classificação
+  domain: '<dominio>'  # Ex: logistica, ecommerce, financeiro, saude
+  complexity: '<baixa|media|alta|critica>'
+  
+  # Datas
+  created_at: '<YYYY-MM-DD>'
+  homologated_at: '<YYYY-MM-DD>'  # Se já homologado
+  
+  # Ownership
+  registered_by: 'Orquestrador_Humano'
+  maintained_by: '<Nome do responsável>'
+  
+  # Framework
+  framework_version: 'v1.4'
+  framework_compatibility: ['v1.3', 'v1.4']
+  
+  # Referências cruzadas
+  protocol_reference: 'PROTOCOLO_GOVERNANCA_IA_HUMANO_<PROJETO>_v<X.Y>.md'
+
+# ===============================================================
+# PROPÓSITO E ESCOPO
+# ===============================================================
+purpose: |
+  <Descreva brevemente o propósito do projeto, problemas que resolve,
+  valor de negócio e stakeholders principais>
+
+scope:
+  business_objectives:
+    - '<Objetivo 1>'
+    - '<Objetivo 2>'
+    - '<Objetivo 3>'
+  
+  key_features:
+    - '<Funcionalidade 1>'
+    - '<Funcionalidade 2>'
+    - '<Funcionalidade 3>'
+  
+  out_of_scope:
+    - '<O que NÃO faz parte do escopo>'
+    - '<Limitações conhecidas>'
+
+# ===============================================================
+# ESTRUTURA DOCUMENTAL (SSoT)
+# ===============================================================
+documents:
+  # Documento Master (SSoT)
+  master:
+    file: '<PROJETO>_CONCEITO_TECH.md'
+    role: 'Single Source of Truth'
+    sections: '<1-X completas>'
+    size: '<linhas, caracteres>'
+    last_updated: '<YYYY-MM-DD>'
+  
+  # Documentos Derivados
+  derived:
+    - file: '<PROJETO>_TECH.md'
+      role: 'Subset técnico para IA Developer'
+      scope: 'Seções <X-Y>'
+      token_economy: '<X%>'
+      ia_role: 'IA_Developer'
+    
+    - file: '<PROJETO>_<ESPECIALIDADE>.md'
+      role: 'Subset especializado para IA_<Role>'
+      scope: '<Descrição do escopo>'
+      token_economy: '<X%>'
+      ia_role: 'IA_<Role>'
+  
+  # Blueprints
+  blueprints:
+    - file: 'Blueprint_<PROJETO>_Fase<X>_<Modulo>_v<X.Y>.md'
+      phase: 'Fase <X>'
+      component: '<Nome do componente/módulo>'
+      status: 'draft'  # draft | approved | implemented
+      created_at: '<YYYY-MM-DD>'
+  
+  # Protocolo Específico
+  protocol:
+    file: 'PROTOCOLO_GOVERNANCA_IA_HUMANO_<PROJETO>_v<X.Y>.md'
+    scope: 'project_specific'
+    inherits_from: 'PROTOCOLO_GOVERNANCA_IA_HUMANO_v1.3.md'
+    customizations:
+      - '<Customização 1>'
+      - '<Customização 2>'
+  
+  # Governança e Homologação
+  governance:
+    - file: 'README_<PROJETO>.md'
+      role: 'Documentação SSoT e hierarquia'
+    
+    - file: 'MEMORANDO_HOMOLOGACAO_<PROJETO>_v<X>.md'
+      role: 'Atestado de integridade e prontidão'
+      approval_status: '<pendente|100% integrity>'
+      signed_by:
+        - '<Junta 1>'
+        - '<Junta 2>'
+
+# ===============================================================
+# AGENTES IA
+# ===============================================================
+ai_agents:
+  # Agentes Universais (sempre presentes)
+  universal:
+    - role: 'IA_Architect'
+      context: '<PROJETO>_CONCEITO_TECH.md'
+      responsibility: 'Estruturação arquitetural'
+    
+    - role: 'IA_Developer'
+      context: '<PROJETO>_TECH.md'
+      responsibility: 'Implementação técnica'
+    
+    - role: 'IA_Auditor'
+    
+    - role: 'IA_Governance'
+      context: 'Todos os artefatos corporativos e de projeto'
+      responsibility: 'Monitoramento de conformidade protocolar e consistência documental'
+      context: 'Todos os documentos'
+      responsibility: 'Auditoria e conformidade'
+  
+  # Agentes Especializados (projeto-específico)
+  specialized:
+    - role: 'IA_<Role>'
+      context: '<PROJETO>_<ESPECIALIDADE>.md'
+      responsibility: '<Descrição da responsabilidade>'
+      justification: '<Por que este projeto precisa deste agente?>'
+
+# ===============================================================
+# STACK TECNOLÓGICO
+# ===============================================================
+stack:
+  backend:
+    language: '<linguagem>'
+    framework: '<framework>'
+    version: '<versão>'
+    db_primary: '<banco de dados principal>'
+    db_cache: '<sistema de cache>'
+  
+  frontend:
+    framework: '<framework>'
+    version: '<versão>'
+    styling: '<sistema de estilos>'
+    state_management: '<gerenciamento de estado>'
+  
+  messaging:
+    primary: '<sistema de mensageria>'
+    alternative: '<alternativa>'
+  
+  infrastructure:
+    containerization: '<Docker, Podman>'
+    orchestration: '<Kubernetes, Docker Swarm>'
+    ci_cd: '<GitLab CI, GitHub Actions, Jenkins>'
+    observability:
+      metrics: '<Prometheus, Datadog>'
+      dashboards: '<Grafana, Kibana>'
+      logs: '<ELK, Loki>'
+      tracing: '<Jaeger, OpenTelemetry>'
+
+# ===============================================================
+# JUNTA VALIDADORA
+# ===============================================================
+validation_team:
+  business:
+    name: '<Nome ou cargo>'
+    role: 'Validador de Negócio'
+    responsibility: 'Alinhamento estratégico e valor'
+  
+  technical:
+    name: '<Nome ou cargo>'
+    role: 'Validador Técnico'
+    responsibility: 'Integridade e eficiência técnica'
+  
+  compliance:
+    name: '<Nome ou cargo>'
+    role: 'Validador de Conformidade'
+    responsibility: 'Aderência normativa'
+  
+  user:
+    name: '<Nome ou cargo>'
+    role: 'Validador de Usuário'
+    responsibility: 'Aplicabilidade e UX'
+  
+  auditor:
+    name: 'IA_Auditor'
+    role: 'Validador Automático'
+    responsibility: 'Integridade documental e rastreabilidade'
+
+# ===============================================================
+# FASES DE DESENVOLVIMENTO
+# ===============================================================
+phases:
+  - phase_number: 1
+    name: '<Nome da Fase 1>'
+    description: '<Descrição do que será implementado>'
+    status: 'draft'  # draft | in_progress | completed
+    start_date: '<YYYY-MM-DD>'
+    target_date: '<YYYY-MM-DD>'
+    components:
+      - '<Componente 1>'
+      - '<Componente 2>'
+    blueprint: 'Blueprint_<PROJETO>_Fase1_<Modulo>_v1.0.md'
+  
+  - phase_number: 2
+    name: '<Nome da Fase 2>'
+    description: '<Descrição>'
+    status: 'planned'
+    dependencies:
+      - 'Fase 1'
+    components:
+      - '<Componente 3>'
+
+# ===============================================================
+# MÉTRICAS E KPIS
+# ===============================================================
+metrics:
+  business:
+    - name: '<Métrica de negócio 1>'
+      target: '<valor alvo>'
+      current: '<valor atual>'
+    
+    - name: '<Métrica de negócio 2>'
+      target: '<valor alvo>'
+      current: '<valor atual>'
+  
+  technical:
+    - name: 'Cobertura de testes'
+      target: '>80%'
+      current: '<X%>'
+    
+    - name: 'Performance (p95)'
+      target: '<X ms>'
+      current: '<X ms>'
+    
+    - name: 'Disponibilidade'
+      target: '99.9%'
+      current: '<X%>'
+
+# ===============================================================
+# AUDITORIA E RASTREABILIDADE
+# ===============================================================
+audit:
+  registry_path: '/governance/projects/<projeto>/auditoria/'
+  
+  ssot_integrity:
+    master_hash: '<sha256_do_master>'
+    last_verified: '<YYYY-MM-DDTHH:MM:SSZ>'
+    verified_by: 'IA_Auditor'
+  
+  derived_documents:
+    - file: '<PROJETO>_TECH.md'
+      hash: '<sha256>'
+      derived_from: '<PROJETO>_CONCEITO_TECH.md'
+      last_rebuilt: '<YYYY-MM-DD>'
+  
+  compliance:
+    - policy: 'SSoT Integrity'
+      status: 'compliant'
+    
+    - policy: 'Dual Validation'
+      status: 'compliant'
+    
+    - policy: 'Traceability Hash'
+      status: 'compliant'
+
+# ===============================================================
+# LIÇÕES APRENDIDAS
+# ===============================================================
+lessons_learned:
+  - phase: '<Fase X>'
+    date: '<YYYY-MM-DD>'
+    lesson: '<Descrição do aprendizado>'
+    action_taken: '<Ação corretiva ou melhoria aplicada>'
+
+# ===============================================================
+# RISCOS E MITIGAÇÕES
+# ===============================================================
+risks:
+  - id: '<RISK-001>'
+    description: '<Descrição do risco>'
+    impact: '<baixo|medio|alto|critico>'
+    probability: '<baixa|media|alta>'
+    mitigation: '<Estratégia de mitigação>'
+    status: '<identificado|em_tratamento|mitigado>'
+
+# ===============================================================
+# CHANGELOG DO PROJETO
+# ===============================================================
+changelog:
+  v<X.Y>:
+    date: '<YYYY-MM-DD>'
+    changes:
+      - '<Mudança 1>'
+      - '<Mudança 2>'
+    documents_updated:
+      - '<Documento atualizado>'
+
+# ===============================================================
+# REFERÊNCIAS E LINKS
+# ===============================================================
+references:
+  corporate_framework:
+    - 'PROTOCOLO_METODOLOGICO_CORPORATIVO_IA_HUMANO_v1.0.md'
+    - 'PROTOCOLO_GOVERNANCA_IA_HUMANO_v1.3.md'
+    - 'MANIFESTO_GOVERNANCA_v1.4.yaml'
+    - 'CONTEXT_MAP_GOVERNANCA_v1.4.yaml'
+  
+  project_documents:
+    - '<PROJETO>_CONCEITO_TECH.md'
+    - 'README_<PROJETO>.md'
+    - 'PROTOCOLO_GOVERNANCA_IA_HUMANO_<PROJETO>_v<X.Y>.md'
+  
+  external_references:
+    - name: '<Nome do recurso externo>'
+      url: '<URL>'
+      description: '<Descrição>'
+
+# ===============================================================
+# METADADOS FINAIS
+# ===============================================================
+checksum: 'pending_commit_sha256'
+validated_by: 'Orquestrador_Humano + Junta_Validadora'
+next_review_date: '<YYYY-MM-DD>'
+
+# ===============================================================
+# NOTAS DE USO
+# ===============================================================
+notes: |
+  Este manifesto é OPCIONAL. Use-o para projetos complexos que precisam
+  de registro independente e detalhado.
+  
+  Projetos simples podem usar apenas:
+  - README_<PROJETO>.md
+  - PROTOCOLO_GOVERNANCA_IA_HUMANO_<PROJETO>.md
+  
+  Consulte /governance/projects/dockmanager/ para exemplo real.

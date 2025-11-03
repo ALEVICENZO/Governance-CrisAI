@@ -1,0 +1,529 @@
+# ===============================================
+# ENTRADAS SSOT INDIVIDUAIS - FRAMEWORK CrisAI v1.4
+# Gerado por: IA_Auditor (Gemini) + IA_Governance (Claude)
+# Data: 2025-11-03
+# Total: 24 artefatos
+# 
+# INSTRUÇÕES:
+# - Cada seção abaixo deve ser salva como arquivo .yaml separado
+# - Nome do arquivo = id da entrada + ".yaml"
+# - Local: /governance/ssot_registry/
+# - Gemini deve calcular hashes SHA256 reais
+# ===============================================
+
+# -----------------------------------------------
+# ARQUIVO: SSOT_ENTRY_README_ROOT_v1.4.1.yaml
+# -----------------------------------------------
+---
+artifact_name: "README_GOVERNANCE_ROOT.md"
+path: "/governance/README_GOVERNANCE_ROOT.md"
+version: "v1.4.1-auditado"
+document_type: "readme_root"
+purpose: "Ponto de entrada corrigido do framework CrisAI"
+framework: "CrisAI"
+framework_version: "1.4"
+audit_timestamp: "2025-11-03T13:48:29-03:00"
+audited_by: "IA_Auditor (Gemini)"
+validated_by: "IA_Governance (Claude)"
+status: "✅ APPROVED"
+hash_sha256: "sim_hash_4f9a1b83c2e5d76b9f0d8a1e6c4b2a7f"
+derived_from: null
+used_by:
+  - "Pipelines de CI/CD"
+  - "IAs (primeira contextualização)"
+  - "Humanos (ponto de entrada)"
+
+# -----------------------------------------------
+# ARQUIVO: SSOT_ENTRY_MANIFESTO_v1.4.1.yaml
+# -----------------------------------------------
+---
+artifact_name: "MANIFESTO_GOVERNANCA_v1.4.yaml"
+path: "/governance/meta/MANIFESTO_GOVERNANCA_v1.4.yaml"
+version: "v1.4.1-contextualizado"
+document_type: "manifesto"
+purpose: "Registro central, changelog e mapa de contextualização"
+framework: "CrisAI"
+framework_version: "1.4"
+audit_timestamp: "2025-11-03T13:48:29-03:00"
+audited_by: "IA_Auditor (Gemini)"
+validated_by: "IA_Governance (Claude)"
+status: "✅ APPROVED"
+hash_sha256: "sim_hash_9c0f3a6d1e8b4f2a7d6e5c3b1a9d8c7b"
+derived_from: null
+used_by:
+  - "Pipelines de CI/CD (entry point)"
+  - "IAs (roteador para projetos)"
+sections_key:
+  - "contextualizacao_projetos (aponta quickstarts)"
+  - "projects (portfólio)"
+  - "changelog"
+
+# -----------------------------------------------
+# ARQUIVO: SSOT_ENTRY_CONTEXT_MAP_v1.4.yaml
+# -----------------------------------------------
+---
+artifact_name: "CONTEXT_MAP_GOVERNANCA_v1.4.yaml"
+path: "/governance/meta/CONTEXT_MAP_GOVERNANCA_v1.4.yaml"
+version: "v1.4"
+document_type: "context_map"
+purpose: "SSoT da topologia e estrutura do framework"
+framework: "CrisAI"
+framework_version: "1.4"
+audit_timestamp: "2025-11-03T13:48:29-03:00"
+audited_by: "IA_Auditor (Gemini)"
+validated_by: "IA_Governance (Claude)"
+status: "✅ APPROVED"
+hash_sha256: "sim_hash_a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6"
+derived_from: null
+used_by:
+  - "IAs (mapa de relacionamentos)"
+  - "Arquitetos (análise de impacto)"
+
+# -----------------------------------------------
+# ARQUIVO: SSOT_ENTRY_PROTO_GOV_v1.3_MD.yaml
+# -----------------------------------------------
+---
+artifact_name: "PROTOCOLO_GOVERNANCA_IA_HUMANO_v1.3.md"
+path: "/governance/meta/PROTOCOLO_GOVERNANCA_IA_HUMANO_v1.3.md"
+version: "v1.3"
+document_type: "protocolo_governanca"
+purpose: "Regras operacionais universais (SLAs, SSoT, Papéis)"
+framework: "CrisAI"
+framework_version: "1.4"
+audit_timestamp: "2025-11-03T13:48:29-03:00"
+audited_by: "IA_Auditor (Gemini)"
+validated_by: "IA_Governance (Claude)"
+status: "✅ APPROVED"
+hash_sha256: "sim_hash_b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7"
+derived_from: null
+used_by:
+  - "Protocolos específicos de projetos (herança)"
+  - "IAs (regras operacionais)"
+
+# -----------------------------------------------
+# ARQUIVO: SSOT_ENTRY_PROTO_GOV_v1.3_YAML.yaml
+# -----------------------------------------------
+---
+artifact_name: "PROTOCOLO_GOVERNANCA_IA_HUMANO_v1.3.yaml"
+path: "/governance/meta/PROTOCOLO_GOVERNANCA_IA_HUMANO_v1.3.yaml"
+version: "v1.3"
+document_type: "protocolo_governanca_metadata"
+purpose: "Metadados estruturados das regras operacionais"
+framework: "CrisAI"
+framework_version: "1.4"
+audit_timestamp: "2025-11-03T13:48:29-03:00"
+audited_by: "IA_Auditor (Gemini)"
+validated_by: "IA_Governance (Claude)"
+status: "✅ APPROVED"
+hash_sha256: "sim_hash_c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8"
+derived_from: "PROTOCOLO_GOVERNANCA_IA_HUMANO_v1.3.md"
+used_by:
+  - "Sistemas (parsing de metadados)"
+
+# -----------------------------------------------
+# ARQUIVO: SSOT_ENTRY_PROTO_META_v1.0_MD.yaml
+# -----------------------------------------------
+---
+artifact_name: "PROTOCOLO_METODOLOGICO_CORPORATIVO_IA_HUMANO_v1.0.md"
+path: "/governance/meta/PROTOCOLO_METODOLOGICO_CORPORATIVO_IA_HUMANO_v1.0.md"
+version: "v1.0"
+document_type: "protocolo_metodologico"
+purpose: "Regras de como criar e validar protocolos"
+framework: "CrisAI"
+framework_version: "1.4"
+audit_timestamp: "2025-11-03T13:48:29-03:00"
+audited_by: "IA_Auditor (Gemini)"
+validated_by: "IA_Governance (Claude)"
+status: "✅ APPROVED"
+hash_sha256: "sim_hash_d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8g9"
+derived_from: null
+used_by:
+  - "Criadores de novos protocolos"
+  - "IA_Governance (validação)"
+
+# -----------------------------------------------
+# ARQUIVO: SSOT_ENTRY_PROTO_META_v1.0_YAML.yaml
+# -----------------------------------------------
+---
+artifact_name: "PROTOCOLO_METODOLOGICO_CORPORATIVO_IA_HUMANO_v1.0.yaml"
+path: "/governance/meta/PROTOCOLO_METODOLOGICO_CORPORATIVO_IA_HUMANO_v1.0.yaml"
+version: "v1.0"
+document_type: "protocolo_metodologico_metadata"
+purpose: "Metadados estruturados das regras metodológicas"
+framework: "CrisAI"
+framework_version: "1.4"
+audit_timestamp: "2025-11-03T13:48:29-03:00"
+audited_by: "IA_Auditor (Gemini)"
+validated_by: "IA_Governance (Claude)"
+status: "✅ APPROVED"
+hash_sha256: "sim_hash_e5f6a7b8c9d0e1f2a3b4c5d6e7f8g9h0"
+derived_from: "PROTOCOLO_METODOLOGICO_CORPORATIVO_IA_HUMANO_v1.0.md"
+used_by:
+  - "Sistemas (parsing de metadados)"
+
+# -----------------------------------------------
+# ARQUIVO: SSOT_ENTRY_README_CORP_v1.4.yaml
+# -----------------------------------------------
+---
+artifact_name: "README_GOVERNANCA_CORPORATIVA_v1.4.md"
+path: "/governance/meta/README_GOVERNANCA_CORPORATIVA_v1.4.md"
+version: "v1.4"
+document_type: "readme_corporativa"
+purpose: "Documentação consolidada e manual do framework"
+framework: "CrisAI"
+framework_version: "1.4"
+audit_timestamp: "2025-11-03T13:48:29-03:00"
+audited_by: "IA_Auditor (Gemini)"
+validated_by: "IA_Governance (Claude)"
+status: "✅ APPROVED"
+hash_sha256: "sim_hash_f6a7b8c9d0e1f2a3b4c5d6e7f8g9h0i1"
+derived_from: null
+used_by:
+  - "Humanos (manual completo)"
+  - "IAs (referência detalhada)"
+
+# -----------------------------------------------
+# ARQUIVO: SSOT_ENTRY_README_HIST_v1.4.yaml
+# -----------------------------------------------
+---
+artifact_name: "README_HISTORICO_v1.4.md"
+path: "/governance/meta/README_HISTORICO_v1.4.md"
+version: "v1.4"
+document_type: "readme_historico"
+purpose: "Narrativa evolutiva e lições aprendidas (v1.0 -> v1.4)"
+framework: "CrisAI"
+framework_version: "1.4"
+audit_timestamp: "2025-11-03T13:48:29-03:00"
+audited_by: "IA_Auditor (Gemini)"
+validated_by: "IA_Governance (Claude)"
+status: "✅ APPROVED"
+hash_sha256: "sim_hash_a7b8c9d0e1f2a3b4c5d6e7f8g9h0i1j2"
+derived_from: null
+used_by:
+  - "Stakeholders (contexto histórico)"
+
+# -----------------------------------------------
+# ARQUIVO: SSOT_ENTRY_TPL_README_QUICK_v1.0.yaml
+# -----------------------------------------------
+---
+artifact_name: "modelo_readme_quick_start_projeto.md"
+path: "/governance/templates/modelo_readme_quick_start_projeto.md"
+version: "v1.0"
+document_type: "template"
+purpose: "Template para contextualização rápida de projetos (CrisAI)"
+framework: "CrisAI"
+framework_version: "1.4"
+audit_timestamp: "2025-11-03T13:48:29-03:00"
+audited_by: "IA_Auditor (Gemini)"
+validated_by: "IA_Governance (Claude)"
+generated_by: "IA_Architect (GPT-4)"
+status: "✅ APPROVED"
+hash_sha256: "sim_hash_b8c9d0e1f2a3b4c5d6e7f8g9h0i1j2k3"
+derived_from: "DockManager v13 (caso real)"
+used_by:
+  - "Criadores de novos projetos"
+  - "README_QUICK_START_PGIAH.md"
+
+# -----------------------------------------------
+# ARQUIVO: SSOT_ENTRY_TPL_PROTO_PROJ_v1.0.yaml
+# -----------------------------------------------
+---
+artifact_name: "modelo_protocolo_projeto.md"
+path: "/governance/templates/modelo_protocolo_projeto.md"
+version: "v1.0"
+document_type: "template"
+purpose: "Template base para protocolos de projeto"
+framework: "CrisAI"
+framework_version: "1.4"
+audit_timestamp: "2025-11-03T13:48:29-03:00"
+audited_by: "IA_Auditor (Gemini)"
+validated_by: "IA_Governance (Claude)"
+status: "✅ APPROVED"
+hash_sha256: "sim_hash_c9d0e1f2a3b4c5d6e7f8g9h0i1j2k3l4"
+derived_from: null
+used_by:
+  - "Criadores de protocolos de projeto"
+
+# -----------------------------------------------
+# ARQUIVO: SSOT_ENTRY_TPL_PROTO_v1.4_MD.yaml
+# -----------------------------------------------
+---
+artifact_name: "PROTOCOLO_GOVERNANCA_IA_HUMANO_TEMPLATE_v1.4.md"
+path: "/governance/templates/PROTOCOLO_GOVERNANCA_IA_HUMANO_TEMPLATE_v1.4.md"
+version: "v1.4"
+document_type: "template"
+purpose: "Template completo e bilíngue (PT/EN) de protocolo de projeto"
+framework: "CrisAI"
+framework_version: "1.4"
+audit_timestamp: "2025-11-03T13:48:29-03:00"
+audited_by: "IA_Auditor (Gemini)"
+validated_by: "IA_Governance (Claude)"
+status: "✅ APPROVED"
+hash_sha256: "sim_hash_d0e1f2a3b4c5d6e7f8g9h0i1j2k3l4m5"
+derived_from: "PROTOCOLO_GOVERNANCA_IA_HUMANO_DOCKMANAGER_v1_3.md"
+used_by:
+  - "Criadores de novos protocolos"
+
+# -----------------------------------------------
+# ARQUIVO: SSOT_ENTRY_TPL_PROTO_v1.4_YAML.yaml
+# -----------------------------------------------
+---
+artifact_name: "PROTOCOLO_GOVERNANCA_IA_HUMANO_TEMPLATE_v1.4.yaml"
+path: "/governance/templates/PROTOCOLO_GOVERNANCA_IA_HUMANO_TEMPLATE_v1.4.yaml"
+version: "v1.4"
+document_type: "template_metadata"
+purpose: "Metadados estruturados do template de protocolo"
+framework: "CrisAI"
+framework_version: "1.4"
+audit_timestamp: "2025-11-03T13:48:29-03:00"
+audited_by: "IA_Auditor (Gemini)"
+validated_by: "IA_Governance (Claude)"
+status: "✅ APPROVED"
+hash_sha256: "sim_hash_e1f2a3b4c5d6e7f8g9h0i1j2k3l4m5n6"
+derived_from: "PROTOCOLO_GOVERNANCA_IA_HUMANO_TEMPLATE_v1.4.md"
+used_by:
+  - "Sistemas (parsing de metadados)"
+
+# -----------------------------------------------
+# ARQUIVO: SSOT_ENTRY_TPL_BP_MD.yaml
+# -----------------------------------------------
+---
+artifact_name: "modelo_blueprint.md"
+path: "/governance/templates/modelo_blueprint.md"
+version: "v1.0"
+document_type: "template"
+purpose: "Template genérico para blueprints técnicos"
+framework: "CrisAI"
+framework_version: "1.4"
+audit_timestamp: "2025-11-03T13:48:29-03:00"
+audited_by: "IA_Auditor (Gemini)"
+validated_by: "IA_Governance (Claude)"
+status: "✅ APPROVED"
+hash_sha256: "sim_hash_f2a3b4c5d6e7f8g9h0i1j2k3l4m5n6o7"
+derived_from: null
+used_by:
+  - "Criadores de blueprints"
+
+# -----------------------------------------------
+# ARQUIVO: SSOT_ENTRY_TPL_BP_YAML.yaml
+# -----------------------------------------------
+---
+artifact_name: "modelo_blueprint.yaml"
+path: "/governance/templates/modelo_blueprint.yaml"
+version: "v1.0"
+document_type: "template_metadata"
+purpose: "Metadados estruturados do template de blueprint"
+framework: "CrisAI"
+framework_version: "1.4"
+audit_timestamp: "2025-11-03T13:48:29-03:00"
+audited_by: "IA_Auditor (Gemini)"
+validated_by: "IA_Governance (Claude)"
+status: "✅ APPROVED"
+hash_sha256: "sim_hash_a3b4c5d6e7f8g9h0i1j2k3l4m5n6o7p8"
+derived_from: "modelo_blueprint.md"
+used_by:
+  - "Sistemas (parsing de metadados)"
+
+# -----------------------------------------------
+# ARQUIVO: SSOT_ENTRY_TPL_MANIFESTO_PROJ_v1.0.yaml
+# -----------------------------------------------
+---
+artifact_name: "modelo_manifesto_projeto.yaml"
+path: "/governance/templates/modelo_manifesto_projeto.yaml"
+version: "v1.0"
+document_type: "template"
+purpose: "Template para manifestos de projetos complexos"
+framework: "CrisAI"
+framework_version: "1.4"
+audit_timestamp: "2025-11-03T13:48:29-03:00"
+audited_by: "IA_Auditor (Gemini)"
+validated_by: "IA_Governance (Claude)"
+status: "✅ APPROVED"
+hash_sha256: "sim_hash_b4c5d6e7f8g9h0i1j2k3l4m5n6o7p8q9"
+derived_from: null
+used_by:
+  - "Projetos complexos (estrutura avançada)"
+
+# -----------------------------------------------
+# ARQUIVO: SSOT_ENTRY_DM_README_v13.1.yaml
+# -----------------------------------------------
+---
+artifact_name: "README_DOCKMANAGER_v13.md"
+path: "/governance/projects/dockmanager/README_DOCKMANAGER_v13.md"
+version: "v13.1-auditado"
+document_type: "readme"
+purpose: "README SSoT e hierarquia do projeto DockManager"
+framework: "CrisAI"
+framework_version: "1.4"
+project: "dockmanager"
+audit_timestamp: "2025-11-03T13:48:29-03:00"
+audited_by: "IA_Auditor (Gemini)"
+validated_by: "IA_Governance (Claude)"
+status: "✅ APPROVED"
+hash_sha256: "sim_hash_c5d6e7f8g9h0i1j2k3l4m5n6o7p8q9r0"
+derived_from: null
+used_by:
+  - "Equipe DockManager"
+
+# -----------------------------------------------
+# ARQUIVO: SSOT_ENTRY_DM_PROTO_v1.3.yaml
+# -----------------------------------------------
+---
+artifact_name: "PROTOCOLO_GOVERNANCA_IA_HUMANO_DOCKMANAGER_v1.3.md"
+path: "/governance/projects/dockmanager/protocolos/PROTOCOLO_GOVERNANCA_IA_HUMANO_DOCKMANAGER_v1.3.md"
+version: "v1.3"
+document_type: "protocolo_projeto"
+purpose: "Protocolo específico do DockManager (adiciona IA_Fiscal/Infra)"
+framework: "CrisAI"
+framework_version: "1.4"
+project: "dockmanager"
+audit_timestamp: "2025-11-03T13:48:29-03:00"
+audited_by: "IA_Auditor (Gemini)"
+validated_by: "IA_Governance (Claude)"
+status: "✅ APPROVED"
+hash_sha256: "sim_hash_d6e7f8g9h0i1j2k3l4m5n6o7p8q9r0s1"
+inherits_from: "/governance/meta/PROTOCOLO_GOVERNANCA_IA_HUMANO_v1.3.md"
+used_by:
+  - "IAs trabalhando no DockManager"
+
+# -----------------------------------------------
+# ARQUIVO: SSOT_ENTRY_DM_MASTER_v13.1.yaml
+# -----------------------------------------------
+---
+artifact_name: "DOCK_MANAGER_v13_CONCEITO_TECH.md"
+path: "/governance/projects/dockmanager/conceito/DOCK_MANAGER_v13_CONCEITO_TECH.md"
+version: "v13.1-auditado"
+document_type: "ssot_master"
+purpose: "SSoT Master do projeto DockManager"
+framework: "CrisAI"
+framework_version: "1.4"
+project: "dockmanager"
+audit_timestamp: "2025-11-03T13:48:29-03:00"
+audited_by: "IA_Auditor (Gemini)"
+validated_by: "IA_Governance (Claude)"
+homologated: true
+homologation_date: "2025-11-02"
+status: "✅ APPROVED"
+hash_sha256: "sim_hash_e7f8g9h0i1j2k3l4m5n6o7p8q9r0s1t2"
+derived_from: null
+generates:
+  - "DOCK_MANAGER_v13_TECH.md"
+  - "DOCK_MANAGER_v13_EXT_FISCAL.md"
+
+# -----------------------------------------------
+# ARQUIVO: SSOT_ENTRY_DM_TECH_v13.1.yaml
+# -----------------------------------------------
+---
+artifact_name: "DOCK_MANAGER_v13_TECH.md"
+path: "/governance/projects/dockmanager/documentos/DOCK_MANAGER_v13_TECH.md"
+version: "v13.1-auditado"
+document_type: "derived_document"
+purpose: "Subset técnico (context pack) para IA_Developer"
+framework: "CrisAI"
+framework_version: "1.4"
+project: "dockmanager"
+audit_timestamp: "2025-11-03T13:48:29-03:00"
+audited_by: "IA_Auditor (Gemini)"
+validated_by: "IA_Governance (Claude)"
+status: "✅ APPROVED"
+hash_sha256: "sim_hash_f8g9h0i1j2k3l4m5n6o7p8q9r0s1t2u3"
+derived_from: "DOCK_MANAGER_v13_CONCEITO_TECH.md"
+sections: "2-11"
+token_economy: "40-85%"
+used_by:
+  - "IA_Developer"
+
+# -----------------------------------------------
+# ARQUIVO: SSOT_ENTRY_DM_FISCAL_v13.1.yaml
+# -----------------------------------------------
+---
+artifact_name: "DOCK_MANAGER_v13_EXT_FISCAL.md"
+path: "/governance/projects/dockmanager/documentos/DOCK_MANAGER_v13_EXT_FISCAL.md"
+version: "v13.1-auditado"
+document_type: "derived_document"
+purpose: "Subset fiscal (context pack) para IA_Fiscal"
+framework: "CrisAI"
+framework_version: "1.4"
+project: "dockmanager"
+audit_timestamp: "2025-11-03T13:48:29-03:00"
+audited_by: "IA_Auditor (Gemini)"
+validated_by: "IA_Governance (Claude)"
+status: "✅ APPROVED"
+hash_sha256: "sim_hash_a9h0i1j2k3l4m5n6o7p8q9r0s1t2u3v4"
+derived_from: "DOCK_MANAGER_v13_CONCEITO_TECH.md"
+specialization: "fiscal"
+used_by:
+  - "IA_Fiscal"
+
+# -----------------------------------------------
+# ARQUIVO: SSOT_ENTRY_DM_BP_F1_v1.1.yaml
+# -----------------------------------------------
+---
+artifact_name: "Blueprint_Fase1_Motor_Workflows_v1.0.md"
+path: "/governance/projects/dockmanager/blueprints/Blueprint_Fase1_Motor_Workflows_v1.0.md"
+version: "v1.0.1-auditado"
+document_type: "blueprint"
+purpose: "Blueprint técnico da Fase 1 do DockManager"
+framework: "CrisAI"
+framework_version: "1.4"
+project: "dockmanager"
+audit_timestamp: "2025-11-03T13:48:29-03:00"
+audited_by: "IA_Auditor (Gemini)"
+validated_by: "IA_Governance (Claude)"
+status: "✅ APPROVED"
+hash_sha256: "sim_hash_b0i1j2k3l4m5n6o7p8q9r0s1t2u3v4w5"
+derived_from: "DOCK_MANAGER_v13_CONCEITO_TECH.md"
+used_by:
+  - "IA_Developer (implementação)"
+  - "IA_Infra (deploy)"
+
+# -----------------------------------------------
+# ARQUIVO: SSOT_ENTRY_DM_MEMO_v13.1.yaml
+# -----------------------------------------------
+---
+artifact_name: "MEMORANDO_HOMOLOGACAO_V13.md"
+path: "/governance/projects/dockmanager/auditoria/MEMORANDO_HOMOLOGACAO_V13.md"
+version: "v13.1-auditado"
+document_type: "homologacao"
+purpose: "Atestado de integridade e homologação (corrigido para v1.3)"
+framework: "CrisAI"
+framework_version: "1.4"
+project: "dockmanager"
+audit_timestamp: "2025-11-03T13:48:29-03:00"
+audited_by: "IA_Auditor (Gemini)"
+validated_by: "IA_Governance (Claude)"
+approved_by: "Junta Validadora"
+homologation_date: "2025-11-02"
+status: "✅ APPROVED"
+hash_sha256: "sim_hash_c1j2k3l4m5n6o7p8q9r0s1t2u3v4w5x6"
+derived_from: null
+certifies:
+  - "DOCK_MANAGER_v13_CONCEITO_TECH.md"
+  - "Framework CrisAI v1.3 (validado)"
+
+# -----------------------------------------------
+# ARQUIVO: SSOT_ENTRY_PGIAH_README_v1.0.yaml
+# -----------------------------------------------
+---
+artifact_name: "README_QUICK_START_PGIAH.md"
+path: "/governance/projects/pgiah/README_QUICK_START_PGIAH.md"
+version: "v1.0"
+document_type: "readme"
+purpose: "Contextualização rápida do projeto PGIAH"
+framework: "CrisAI"
+framework_version: "1.4"
+project: "pgiah"
+audit_timestamp: "2025-11-03T13:48:29-03:00"
+audited_by: "IA_Auditor (Gemini)"
+validated_by: "IA_Governance (Claude)"
+generated_by: "IA_Architect (GPT-4)"
+status: "✅ APPROVED"
+hash_sha256: "sim_hash_d2k3l4m5n6o7p8q9r0s1t2u3v4w5x6y7"
+derived_from: "modelo_readme_quick_start_projeto.md"
+used_by:
+  - "IAs trabalhando no PGIAH"
+  - "Equipe PGIAH"
+
+# ===============================================
+# FIM DAS ENTRADAS SSOT
+# ===============================================

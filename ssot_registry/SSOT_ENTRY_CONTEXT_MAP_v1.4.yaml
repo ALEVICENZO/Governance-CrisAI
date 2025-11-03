@@ -1,0 +1,23 @@
+ssot_entry:
+  artifact: "CONTEXT_MAP_GOVERNANCA_v1.4.yaml"
+  version: "1.4"
+  sha256: "ae664d9f5318cfc5d2bac89b356c690cee2d85672907c3a17c75e99365e9d033"
+  registered_at: "2025-11-03T00:41:30Z"
+  registry_path: "/governance/meta/"
+  maintainer: "Orquestrador_Humano"
+  organization: "Vicenzo_Corp"
+  validated_by:
+    - "IA_Auditor"
+    - "IA_Governance"
+    - "Orquestrador_Humano"
+  notes: |
+    Atualizado de v1.1 para v1.4 - Correção de encoding UTF-8.
+    Mapa estrutural universal da governança corporativa.
+    Compatível com framework v1.4.
+  previous_version:
+    version: "1.1"
+    sha256: "e88b9d242edfd469f1ef69194e9b392b0c3c81ff46d34a6240dd317f7a2ec522"
+    registered_at: "2025-11-02T19:24:55Z"
+  framework_version: "1.4"
+  document_type: "context_map"
+  audit_level: "critical"

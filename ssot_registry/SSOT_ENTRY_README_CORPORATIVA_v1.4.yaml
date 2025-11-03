@@ -1,0 +1,26 @@
+ssot_entry:
+  artifact: "README_GOVERNANCA_CORPORATIVA_v1.4.md"
+  version: "1.4"
+  sha256: "323f332fcad223d4f2bc5f81dad7906a88730ea11c4f66f3626a6247dbbed37e"
+  registered_at: "2025-11-03T00:41:30Z"
+  registry_path: "/governance/meta/"
+  maintainer: "Orquestrador_Humano"
+  organization: "Vicenzo_Corp"
+  validated_by:
+    - "IA_Governance"
+    - "Junta_Validadora"
+  notes: |
+    README Governança Corporativa v1.4 - Correção de encoding UTF-8.
+    Documentação completa do framework universal de Governança IA-Humano.
+    Estabelece modelo de coautoria IA-Humano para todos os projetos.
+    Versão consolidada com projeto piloto DockManager integrado.
+  framework_version: "1.4"
+  document_type: "readme_framework"
+  audit_level: "high"
+  purpose: "Complete framework documentation"
+  audience:
+    - "Desenvolvedores"
+    - "Arquitetos"
+    - "Gestores"
+    - "IAs"
+  scope: "Corporate universal methodology"

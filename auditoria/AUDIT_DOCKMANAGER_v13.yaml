@@ -1,0 +1,45 @@
+version: v1.0
+audit_date: '2025-11-02T18:48:31Z'
+auditor_role: IA_Auditor + Junta Validadora
+verified_by: Alexandre Vicenzo
+project:
+  name: DockManager
+  version: v13
+  phase: Blueprint Fase 1 – Motor de Workflows
+governance_links:
+  manifesto: MANIFESTO_GOVERNANCA_v1.2.yaml
+  protocol_corporativo: PROTOCOLO_METODOLOGICO_CORPORATIVO_IA_HUMANO_v1.0.md
+  protocol_projeto: PROTOCOLO_GOVERNANCA_IA_HUMANO_v1.3.md
+ssot_registry:
+  master: DOCK_MANAGER_v13_CONCEITO_TECH.md
+  derivatives:
+  - DOCK_MANAGER_v13_TECH.md
+  - DOCK_MANAGER_v13_EXT_FISCAL.md
+  - README_DOCKMANAGER_v13.md
+  blueprints:
+  - Blueprint_Fase1_Motor_Workflows_v1.0.md
+integrity_hashes:
+  DOCK_MANAGER_v13_CONCEITO_TECH.md: 671f4928d7025785020410b835fb45d2dc040a4aa555544c41426645558ea3b6
+  DOCK_MANAGER_v13_TECH.md: 652b24a9bbdc1da50e588acd87e3907c4f9e047a15846a844c55b7e6819d55c2
+  DOCK_MANAGER_v13_EXT_FISCAL.md: aca8c3d681544f4ab6142cd49e9f01c266aa0ea4c7335a8da5bc33d22d02d93b
+  README_DOCKMANAGER_v13.md: 4eb6be1b2adcea3a6b0d5e34a6b142df6475cf9708118ef6acda9f34c4d17cfa
+  PROTOCOLO_GOVERNANCA_IA_HUMANO_v1.3.md: 9e54433be7ea9eed1267e4162ed9c09b2953296a396625f469b5c859d0f39239
+  MANIFESTO_GOVERNANCA_v1.2.yaml: d54c4f63516944b140f303c8a0a594b0e7ce55a96afa7f490aa5995c48d37c04
+  Blueprint_Fase1_Motor_Workflows_v1.0.md: 316362a06ac7f10abc47a1f724bbc9a37177d3e453f8ccbec38f745780c4b50f
+validation:
+  status: Aprovado
+  junta_validadora: Sistemas, Logística, Contábil, Compliance
+  criteria:
+  - Integridade documental verificada
+  - Relações recíprocas corretas
+  - Blueprint validado conforme protocolo
+  - SSoT referenciado com consistência
+next_action:
+- Commit do audit.yaml no repositório
+- Registrar hash do audit no manifesto
+- Liberar pipeline de engenharia do Blueprint Fase 1
+self_signature:
+  algorithm: SHA256
+  value: ba41f7f0e7ac2d2de92c15ba057f80c363bd44481e6fe26403f9730cf5b95b3b
+  signed_at: '2025-11-02T18:48:31Z'
+  signer: IA_Auditor + Alexandre Vicenzo

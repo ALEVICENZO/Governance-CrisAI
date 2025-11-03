@@ -1,0 +1,234 @@
+framework_name: "CrisAI"
+framework_acronym: "CRIS"
+framework_meaning: "Cognitive Responsible Innovation System"
+framework_tagline: "Inovação Cognitiva com Responsabilidade e Propósito"
+framework_version: "1.4" 
+framework_named_for: "Cris Vicenzo"
+title_pt: PROTOCOLO DE GOVERNANÇA IA-HUMANO (TEMPLATE CONSOLIDADO)
+title_en: AI–HUMAN GOVERNANCE PROTOCOL (CONSOLIDATED TEMPLATE)
+organization: Vicenzo_Corp
+maintainer: Orquestrador_Humano
+status: Aprovado
+framework_version: v1.4
+language_support:
+  - pt-BR
+  - en-US
+
+compatibility:
+  derived_from:
+    - PROTOCOLO_GOVERNANCA_IA_HUMANO_TEMPLATE_v1.0.md
+    - PROTOCOLO_GOVERNANCA_IA_HUMANO_TEMPLATE_v1.3.2.md
+  backward_compatible_with:
+    - v1.0
+    - v1.3
+    - v1.3.1
+    - v1.3.2
+
+# ===============================================================
+# BLOCO 1: SSoT (Single Source of Truth) E HIERARQUIA
+# Define ONDE os artefatos mestres estão e ONDE os novos serão instanciados.
+# ===============================================================
+ssot:
+  # O Protocolo Metodológico que define 'como' este template existe
+  master_template_source: "/governance/meta/PROTOCOLO_METODOLOGICO_CORPORATIVO_IA_HUMANO_v1.0.md"
+  
+  # O caminho onde o 'ssot_registry' corporativo pode ser encontrado
+  registry_path: "/governance/ssot_registry/"
+  
+  # O template de caminho para um NOVO protocolo de projeto instanciado
+  instantiation_path_template: "/governance/projects/{{project_name}}/protocolos/PROTOCOLO_GOVERNANCA_IA_HUMANO_{{project_name}}_v1.0.md"
+
+# ===============================================================
+# BLOCO 2: REGRAS DE GOVERNANÇA (Os Contratos)
+# Define as políticas e SLAs que todos os agentes (IA e Humanos) devem seguir.
+# ===============================================================
+governance_rules:
+  sla_human_review_hours: 48
+  sla_ia_rework_hours: 24
+  sla_auditoria_continua_hours: 72
+  max_component_duration_hours: 16
+  context_pack_limit_words: 500
+  
+  required_fields_on_instantiation:
+    - project_name
+    - project_code  # Obrigatório em contexto corporativo
+    - created_by
+    - approved_by
+    - created_at
+    - status
+    - registry_path
+    - context_scope
+  
+  optional_customizations:
+    - slas_customizados
+    - papeis_ia_adicionais
+    - stack_tecnologico
+    - criterios_aceite_adicionais
+
+# ===============================================================
+# BLOCO 3: AUTOMAÇÃO E PIPELINE (As Ações)
+# Define as ações técnicas que o pipeline de CI/CD deve executar.
+# ===============================================================
+automation:
+  # Hooks a serem disparados pelo pipeline
+  pipeline_hooks:
+    - validate_structure
+    - register_manifest
+    - create_audit_log
+    - generate_hash_sha256
+    - sync_ssot_registry
+    - rebuild_derivatives
+  
+  # Configuração do agente auditor
+  audit:
+    hash_method: SHA256
+    audit_frequency: per_commit
+    continuous_audit_enabled: true
+    retention_years: 5
+  
+  # Templates de diretório para o pipeline criar
+  registry_target_template: "/governance/projects/{{project_name}}/protocolo/"
+  audit_target_template: "/governance/auditoria/{{project_name}}/v{{version}}/"
+
+# ===============================================================
+# BLOCO 4: AGENTES (Os Atores)
+# Define os papéis padrão e opcionais para qualquer projeto instanciado.
+# ===============================================================
+agents:
+  # Agentes UNIVERSAIS (obrigatórios em qualquer projeto)
+  universal:
+    - role: Orquestrador_Humano
+      responsibility: "Supervisão e aprovação final"
+      context_scope: "Visão completa do projeto"
+    
+    - role: IA_Architect
+      responsibility: "Estruturação arquitetural"
+      context_scope: "<PROJETO>_CONCEITO_TECH.md (master completo)"
+    
+    - role: IA_Developer
+      responsibility: "Implementação técnica"
+      context_scope: "<PROJETO>_TECH.md (subset técnico)"
+    
+    - role: IA_Auditor
+    
+    - role: IA_Governance
+      responsibility: "Monitoramento de conformidade protocolar e consistência documental"
+      context_scope: "Todos os artefatos corporativos e de projeto"
+      nature: "IA"
+      responsibility: "Auditoria e conformidade"
+      context_scope: "Todos os artefatos"
+  
+  # Agentes OPCIONAIS (projeto-específico)
+  optional:
+    note: |
+      Projetos podem definir papéis adicionais conforme necessidade.
+      Exemplos: IA_Fiscal, IA_Payments, IA_Analytics, IA_Security, IA_Infra, etc.
+    definition_location: "Protocolo específico do projeto (Seção 3.2)"
+  
+  # Atores Humanos (Junta Validadora)
+  human_stakeholders:
+    - role: Validador_Negocio
+      responsibility: "Alinhamento estratégico"
+    
+    - role: Validador_Tecnico
+      responsibility: "Integridade técnica"
+    
+    - role: Validador_Conformidade
+      responsibility: "Aderência normativa"
+    
+    - role: Validador_Usuario
+      responsibility: "Aplicabilidade e UX"
+
+# ===============================================================
+# ESTRUTURA SSoT PADRÃO
+# ===============================================================
+ssot_structure:
+  master:
+    file_pattern: "<PROJETO>_CONCEITO_TECH.md"
+    role: "Single Source of Truth"
+    editable_by: "Humanos"
+  
+  derived:
+    file_pattern: "<PROJETO>_<TIPO>.md"
+    role: "Subconjuntos otimizados"
+    editable_by: "IA (sob auditoria)"
+    must_reference: "master via YAML header (derived_from)"
+
+# ===============================================================
+# COMPONENTIZAÇÃO PADRÃO
+# ===============================================================
+componentization:
+  max_duration_hours: 16
+  input:
+    - "context_yaml"
+    - "master_excerpt"
+    - "acceptance_criteria"
+  output:
+    format: "markdown"
+    versioned: true
+    hash: "SHA256"
+  validation:
+    automatic: "IA_Auditor"
+    human: "Junta_Validadora"
+
+# ===============================================================
+# POLÍTICAS DE COMPLIANCE
+# ===============================================================
+compliance:
+  - ssot_integrity
+  - dual_validation
+  - traceability_hash
+  - iterative_correction_loop
+  - backward_compatibility
+  - universal_portability
+
+# ===============================================================
+# ROLLBACK POLICY
+# ===============================================================
+rollback:
+  enabled: true
+  branch_pattern: "rollback/{{date}}/{{hash}}"
+  restoration_method: "SHA256"
+  log_location: "/audits/rollback/"
+  notification:
+    - Human_Orchestrator
+    - IA_Auditor
+  block_release_until: "human_review"
+
+# ===============================================================
+# METADADOS DE VERSIONAMENTO
+# ===============================================================
+version_info:
+  current_version: "1.4"
+  previous_versions: ["1.3.2", "1.3.1", "1.3", "1.0"]
+  
+  changes_from_v1_3_2:
+    - "Template completado (seções faltantes adicionadas)"
+    - "Formato bilíngue completo (PT/EN)"
+    - "Estrutura SSoT formalizada"
+    - "Agentes opcionais expandidos"
+    - "SLAs detalhados"
+    - "Observabilidade e segurança adicionadas"
+  
+  backward_compatible: true
+  breaking_changes: false
+
+# ===============================================================
+# USAGE NOTES
+# ===============================================================
+usage_notes: |
+  Este template deve ser usado para criar protocolos específicos de projetos.
+  
+  PASSOS:
+  1. Copiar este template para /governance/projects/<projeto>/protocolos/
+  2. Renomear para PROTOCOLO_GOVERNANCA_IA_HUMANO_<PROJETO>_v1.0.md
+  3. Substituir <PLACEHOLDERS> pelos valores do projeto
+  4. Adicionar papéis IA especializados (se necessário)
+  5. Customizar SLAs (se necessário)
+  6. Definir stack tecnológico
+  7. Validar com Junta Validadora
+  8. Registrar no MANIFESTO_GOVERNANCA_v1.4.yaml
+
+checksum: "pending_commit_sha256"
+validated_by: "Orquestrador_Humano + IA_Auditor"
+next_review_date: "2026-05-02"

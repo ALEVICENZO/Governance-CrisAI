@@ -1,0 +1,460 @@
+# Bloco de Identidade CrisAI Adicionado
+framework_name: "CrisAI"
+framework_acronym: "CRIS"
+framework_meaning: "Cognitive Responsible Innovation System"
+framework_tagline: "Inovação Cognitiva com Responsabilidade e Propósito"
+framework_version: "1.4"
+framework_named_for: "Cris Vicenzo"
+issued: '2025-11-02T20:00:00Z'
+description: |
+  Manifesto de Governança Corporativa IA-Humano – versão consolidada v1.4
+  Integra o projeto piloto DockManager v13, templates completos e versionamento unificado.
+  
+governance_root:
+  org_id: vicenzo_corp
+  version: '1.4'
+  registered_by: Orquestrador_Humano
+  manifest_path: /governance/README_GOVERNANCE_ROOT.md
+  
+  # ===============================================================
+  # INSTRUÇÕES DE CONTEXTUALIZAÇÃO
+  # ===============================================================
+  contextualizacao:
+    como_usar: |
+      Você acabou de ler este Manifesto e entende o framework CrisAI.
+      Para trabalhar em um projeto específico:
+      
+      1. Consulte a seção "projects" abaixo para ver projetos ativos
+      2. Cada projeto tem um campo "contextualizacao" com:
+         - quickstart: README de recontextualização rápida do projeto
+         - protocolo: Protocolo específico daquele projeto
+      3. Leia o quickstart do projeto (visão geral rápida)
+      4. Leia o protocolo do projeto (regras operacionais detalhadas)
+      5. Assuma seu papel e comece a trabalhar
+    
+    template_novos_projetos:
+      arquivo: "/governance/templates/modelo_readme_quick_start_projeto.md"
+      instrucao: "Use este template ao criar README_QUICK_START de novos projetos"
+  
+  # ===============================================================
+  # CHANGELOG DO FRAMEWORK (Histórico Estruturado)
+  # ===============================================================
+  framework_changelog:
+    v1.4:
+      date: '2025-11-02'
+      milestone: 'Consolidação DockManager + Templates Completos'
+      status: 'release'
+      breaking_changes: false
+      changes:
+        - 'Templates preenchidos com base no projeto piloto DockManager v13'
+        - 'Versionamento unificado de todos os artefatos corporativos'
+        - 'Integração completa do projeto piloto DockManager v13 no framework'
+        - 'Clarificação de propósitos: README_ROOT (entrada) vs README_CORPORATIVA (framework)'
+        - 'Expansão do README_HISTORICO com narrativa evolutiva completa'
+        - 'Contextualização proativa de projetos integrada'
+        - 'Projeto PGIAH adicionado ao portfólio'
+      documents_updated:
+        - artifact: 'CONTEXT_MAP_GOVERNANCA'
+          from_version: 'v1.1'
+          to_version: 'v1.4'
+          changes: 'Referências atualizadas, integração DockManager'
+        
+        - artifact: 'MANIFESTO_GOVERNANCA'
+          from_version: 'v1.3'
+          to_version: 'v1.4'
+          changes: 'Changelog estruturado, compatibilidade, registro de projetos, contextualização proativa'
+        
+        - artifact: 'README_GOVERNANCE_ROOT'
+          from_version: 'não versionado'
+          to_version: 'v1.4'
+          changes: 'Adição de versionamento YAML, clarificação de propósito'
+        
+        - artifact: 'README_GOVERNANCA_CORPORATIVA'
+          from_version: 'não versionado'
+          to_version: 'v1.4'
+          changes: 'Adição de versionamento YAML, exemplos DockManager'
+        
+        - artifact: 'Templates'
+          from_version: 'v1.3.2 (incompleto)'
+          to_version: 'v1.4'
+          changes: 'Preenchidos com conteúdo baseado no DockManager v13'
+      
+      projects_integrated:
+        - name: 'DockManager v13'
+          status: 'homologado'
+          contribution: 'Projeto piloto que validou o framework completo'
+        
+        - name: 'PGIAH v1.0'
+          status: 'desenvolvimento'
+          contribution: 'Implementação operacional do framework CrisAI'
+    
+    v1.3:
+      date: '2025-11'
+      milestone: 'Formalização SSoT'
+      status: 'archived'
+      breaking_changes: false
+      changes:
+        - 'Adição da Seção 16 no PROTOCOLO_GOVERNANCA_IA_HUMANO – Hierarquia SSoT'
+        - 'Formalização documental completa da hierarquia Master → Derived'
+        - 'Definição de governance_root no manifesto'
+      documents_updated:
+        - artifact: 'PROTOCOLO_GOVERNANCA_IA_HUMANO'
+          from_version: 'v1.2'
+          to_version: 'v1.3'
+          changes: 'Adição Seção 16 - SSoT Hierarchy'
+    
+    v1.2:
+      date: '2025-11'
+      milestone: 'Infraestrutura e Observabilidade'
+      status: 'archived'
+      breaking_changes: false
+      changes:
+        - 'Inclusão do Bloco 5 - IA Infra'
+        - 'Segurança: rotação de tokens, sandboxing, isolamento de contexto'
+        - 'Observabilidade: Prometheus, Grafana, ELK Stack'
+        - 'Definição de SLAs para IA Infra'
+      documents_updated:
+        - artifact: 'PROTOCOLO_GOVERNANCA_IA_HUMANO'
+          from_version: 'v1.1'
+          to_version: 'v1.2'
+          changes: 'Adição Seção 10 - Bloco 5 Infra'
+    
+    v1.1:
+      date: '2025-11'
+      milestone: 'SLAs e Rastreabilidade'
+      status: 'archived'
+      breaking_changes: false
+      changes:
+        - 'Adição de SLAs de execução e revisão (48h humano, 24h retrabalho IA)'
+        - 'Política de rollback com SHA256'
+        - 'Auditoria contínua formalizada'
+        - 'Componentização de entregas (máx 16h IA)'
+      lessons_learned:
+        - issue: 'Manifesto v1.1 quebrou contexto organizacional'
+          description: 'Manifesto foi restrito apenas ao DockManager, perdendo 80% do contexto'
+          resolution: 'v1.2 restaurou integridade completa e reintegrou portfólio'
+      documents_updated:
+        - artifact: 'PROTOCOLO_GOVERNANCA_IA_HUMANO'
+          from_version: 'v1.0'
+          to_version: 'v1.1'
+          changes: 'SLAs, rollback, componentização'
+    
+    v1.0:
+      date: '2025-10'
+      milestone: 'Criação do Framework'
+      status: 'archived'
+      breaking_changes: false
+      changes:
+        - 'Criação do PROTOCOLO_METODOLOGICO_CORPORATIVO_IA_HUMANO'
+        - 'Criação do PROTOCOLO_GOVERNANCA_IA_HUMANO inicial'
+        - 'Definição dos papéis: Orquestrador, IA Architect, Developer, Auditor'
+        - 'Princípios fundamentais: SSoT, Governança Iterativa, Auditabilidade'
+      documents_created:
+        - 'PROTOCOLO_METODOLOGICO_CORPORATIVO_IA_HUMANO_v1.0.md'
+        - 'PROTOCOLO_GOVERNANCA_IA_HUMANO_v1.0.md'
+        - 'CONTEXT_MAP_GOVERNANCA_v1.0.yaml'
+  
+  # ===============================================================
+  # MATRIZ DE COMPATIBILIDADE
+  # ===============================================================
+  compatibility:
+    v1.4:
+      compatible_with: ['v1.3', 'v1.2', 'v1.1', 'v1.0']
+      breaking_changes: false
+      migration_required: false
+      notes: 'Retrocompatível com todas as versões anteriores'
+    
+    v1.3:
+      compatible_with: ['v1.2', 'v1.1', 'v1.0']
+      breaking_changes: false
+      migration_required: false
+    
+    v1.2:
+      compatible_with: ['v1.1', 'v1.0']
+      breaking_changes: false
+      migration_required: false
+    
+    v1.1:
+      compatible_with: ['v1.0']
+      breaking_changes: false
+      migration_required: false
+      warnings:
+        - 'Manifesto v1.1 teve erro de escopo (corrigido em v1.2)'
+    
+    v1.0:
+      base_version: true
+      breaking_changes: false
+  
+  # ===============================================================
+  # PORTFÓLIO DE PROJETOS
+  # ===============================================================
+  projects:
+    dockmanager:
+      project_name: 'DockManager'
+      version: 'v13'
+      status: 'homologado'
+      framework_version: 'v1.3'
+      framework_compatibility: ['v1.3', 'v1.4']
+      created_at: '2025-11'
+      homologated_at: '2025-11-02'
+      
+      purpose: |
+        Plataforma Low-Code de Gestão Logística com motor de workflows,
+        integração ERP/WMS/TMS e módulo fiscal especializado.
+        Projeto piloto que validou todo o framework de governança IA-Humano.
+      
+      contextualizacao:
+        quickstart: "/governance/projects/dockmanager/README_QUICK_START_DOCKMANAGER.md"
+        protocolo: "/governance/projects/dockmanager/PROTOCOLO_GOVERNANCA_IA_HUMANO_DOCKMANAGER_v1_3.md"
+        instrucao: "Leia o quickstart primeiro para visão geral, depois o protocolo para detalhes operacionais"
+      
+      documents:
+        master:
+          file: 'DOCK_MANAGER_v13_CONCEITO_TECH.md'
+          role: 'SSoT - Single Source of Truth'
+          sections: '1-15 completas'
+          size: '797 linhas, 41.262 caracteres'
+        
+        derived:
+          - file: 'DOCK_MANAGER_v13_TECH.md'
+            role: 'Subset técnico para IA Developer'
+            scope: 'Seções 2-11'
+            token_economy: '40%'
+          
+          - file: 'DOCK_MANAGER_v13_EXT_FISCAL.md'
+            role: 'Subset fiscal para IA Fiscal'
+            scope: 'Módulo tributário especializado'
+            token_economy: '85%'
+        
+        blueprint:
+          - file: 'Blueprint_Fase1_Motor_Workflows_v1_0.md'
+            phase: 'Fase 1'
+            component: 'Motor de Workflows'
+            status: 'approved'
+        
+        protocol:
+          file: 'PROTOCOLO_GOVERNANCA_IA_HUMANO_DOCKMANAGER_v1_3.md'
+          scope: 'project_specific'
+          inherits_from: 'PROTOCOLO_GOVERNANCA_IA_HUMANO_v1.3.md'
+        
+        governance:
+          - file: 'README_DOCKMANAGER_v13.md'
+            role: 'Documentação SSoT e hierarquia'
+          
+          - file: 'MEMORANDO_HOMOLOGACAO_V13.md'
+            role: 'Atestado de integridade e prontidão'
+            approval_status: '100% integrity'
+            signed_by:
+              - 'Junta Técnica de Validação'
+              - 'Junta de Sistemas, Logística, Contábil e Compliance'
+      
+      ai_agents:
+        - role: 'IA_Architect'
+          context: 'DOCK_MANAGER_v13_CONCEITO_TECH.md'
+        - role: 'IA_Developer'
+          context: 'DOCK_MANAGER_v13_TECH.md'
+        - role: 'IA_Fiscal'
+          context: 'DOCK_MANAGER_v13_EXT_FISCAL.md'
+        - role: 'IA_Auditor'
+          context: 'Todos os documentos'
+        - role: 'IA_Infra'
+          context: 'Blueprint Fase 1'
+      
+      lessons_learned:
+        - 'Hierarquia SSoT Master → Derived funciona perfeitamente'
+        - 'Context packs de 500 palavras são eficientes (40-85% economia tokens)'
+        - 'Junta Validadora multidisciplinar essencial para integridade'
+        - 'Templates genéricos devem ser derivados de casos reais'
+    
+    pgiah:
+      project_name: 'PGIAH'
+      full_name: 'Plataforma de Governança IA-Humana'
+      version: 'v1.0'
+      status: 'desenvolvimento'
+      framework_version: 'v1.4'
+      framework_compatibility: ['v1.4']
+      created_at: '2025-11-03'
+      phase: '0_fundacao'
+      
+      purpose: |
+        Plataforma que implementa e executa o framework CrisAI.
+        Materializa os conceitos de governança IA-Humana em sistema operacional,
+        permitindo orquestração de múltiplas IAs com supervisão humana consciente.
+        Inclui MCP Server, pipeline CI/CD de governança e dashboard de auditoria.
+      
+      contextualizacao:
+        quickstart: "/governance/projects/pgiah/README_QUICK_START_PGIAH.md"
+        protocolo: "/governance/projects/pgiah/PROTOCOLO_GOVERNANCA_IA_HUMANO_PGIAH_v1.0.md"
+        instrucao: "Leia o quickstart primeiro para visão geral, depois o protocolo para detalhes operacionais"
+      
+      documents:
+        master:
+          file: 'PGIAH_CONCEITO_TECH.md'
+          role: 'SSoT - Single Source of Truth'
+          status: 'em_desenvolvimento'
+        
+        protocol:
+          file: 'PROTOCOLO_GOVERNANCA_IA_HUMANO_PGIAH_v1.0.md'
+          scope: 'project_specific'
+          inherits_from: 'PROTOCOLO_GOVERNANCA_IA_HUMANO_v1.3.md'
+          status: 'pendente'
+        
+        governance:
+          - file: 'README_QUICK_START_PGIAH.md'
+            role: 'Contextualização rápida do projeto'
+            status: 'aprovado'
+            registered_at: '2025-11-03'
+        
+        blueprints:
+          - file: 'Blueprint_Pipeline_CI_CD_v1_0.md'
+            phase: 'Fase 0'
+            component: 'Pipeline de governança manual'
+            status: 'planejado'
+          
+          - file: 'Blueprint_MCP_Server_Minimal_v1_0.md'
+            phase: 'Fase 1'
+            component: 'Servidor MCP para orquestração'
+            status: 'planejado'
+          
+          - file: 'Blueprint_UI_Dashboard_Basic_v1_0.md'
+            phase: 'Fase 1'
+            component: 'Dashboard de auditoria'
+            status: 'planejado'
+      
+      ai_agents:
+        - role: 'IA_Architect'
+          implementation: 'GPT-4'
+          context: 'Gera blueprints, artefatos e código'
+        
+        - role: 'IA_Governance'
+          implementation: 'Claude 3.5 Sonnet'
+          context: 'Valida conformidade e semântica'
+        
+        - role: 'IA_Auditor'
+          implementation: 'Gemini 2.0'
+          context: 'Audita integridade e estrutura'
+        
+        - role: 'Orquestrador_Humano'
+          name: 'Alexandre Vicenzo'
+          context: 'Direção, aprovação e registro SSoT'
+      
+      operation_mode:
+        current_phase: 'Fase 0 - Fundação Manual'
+        orchestration: 'manual_sequential'
+        workflow:
+          - 'IA_Architect gera artefato'
+          - 'IA_Governance valida conformidade'
+          - 'IA_Auditor audita integridade'
+          - 'Orquestrador_Humano aprova e registra'
+        
+        future_phases:
+          fase_1: 'MCP Server + Automação básica'
+          fase_2: 'Dashboard + Orquestração avançada'
+          fase_3: 'Plataforma completa operacional'
+      
+      stack_tecnologico:
+        backend:
+          - 'FastAPI'
+          - 'Celery'
+          - 'Redis'
+        
+        frontend:
+          - 'Next.js'
+          - 'shadcn/ui'
+          - 'TailwindCSS'
+        
+        ai_orchestration:
+          - 'LangChain / LlamaIndex'
+          - 'MCP (Model Context Protocol)'
+        
+        models:
+          - 'GPT-4 (OpenAI)'
+          - 'Claude 3.5 Sonnet (Anthropic)'
+          - 'Gemini 2.0 (Google)'
+      
+      lessons_learned:
+        - 'Framework CrisAI validado em operação real (este projeto)'
+        - 'Contextualização em cascata (Manifesto → Projeto) funciona'
+        - 'Template de README_QUICK_START garante consistência'
+        - 'Orquestração manual é viável para Fase 0'
+  
+  # ===============================================================
+  # SSOT REGISTRY (Referência ao Diretório Operacional)
+  # ===============================================================
+  ssot_registry:
+  - path: /governance/ssot_registry/governance_root_record.yaml
+    artifact_type: governance_root_readme
+    audit_level: critical
+    integrity: verified
+    validation_chain:
+    - ia_auditor
+    - human_validator
+  
+  - path: /governance/ssot_registry/CONTEXT_MAP_GOVERNANCA_v1_1_20251102T192455Z.yaml
+    artifact_type: context_map
+    audit_level: critical
+    note: 'Será atualizado para v1.4'
+  
+  - path: /governance/ssot_registry/SSOT_ENTRY_PROTOCOLO_GOVERNANCA_IA_HUMANO_TEMPLATE_v1_3_2.yaml
+    artifact_type: template
+    audit_level: high
+    note: 'Templates serão atualizados para v1.4'
+  
+  # ===============================================================
+  # AUDITORIA E RASTREABILIDADE
+  # ===============================================================
+  auditoria:
+  - path: /governance/auditoria/governance_root_record.log
+    hash_source: governance_root_record.yaml
+    timestamp_sync: true
+  
+  # ===============================================================
+  # PIPELINES DE AUTOMAÇÃO
+  # ===============================================================
+  pipelines:
+    trigger_on_commit: true
+    validation_agents:
+    - IA_Auditor
+    - IA_Governance
+    - Junta_Validadora
+    
+    hooks:
+      - validate_structure
+      - register_manifest
+      - create_audit_log
+      - generate_hash_sha256
+      - sync_ssot_registry
+  
+  # ===============================================================
+  # POLÍTICAS DE COMPLIANCE
+  # ===============================================================
+  compliance_policies:
+  - ssot_integrity
+  - dual_validation
+  - traceability_hash
+  - iterative_correction_loop
+  - ai_human_collaborative_control
+  
+  # ===============================================================
+  # METADADOS FINAIS
+  # ===============================================================
+  description: |
+    Manifesto de governança raiz da organização vicenzo_corp v1.4.
+    Este registro estabelece o ponto de partida universal da governança 
+    corporativa IA-Humano e habilita a rastreabilidade completa de todos 
+    os protocolos e projetos ativos.
+    
+    Versão v1.4 consolida:
+    - Projeto piloto DockManager v13 homologado
+    - Templates completos baseados em casos reais
+    - Versionamento unificado do framework
+    - Changelog estruturado e matriz de compatibilidade
+    - Contextualização proativa de projetos (Framework CrisAI)
+    - Projeto PGIAH em desenvolvimento
+
+# ===============================================================
+# CHECKSUMS E VALIDAÇÃO
+# ===============================================================
+checksum: "pending_commit_sha256"
+validated_by: "Orquestrador_Humano + Junta_Validadora"
+next_review_date: "2026-05-02"

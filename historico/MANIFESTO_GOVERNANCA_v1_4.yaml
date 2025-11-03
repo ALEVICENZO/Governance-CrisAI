@@ -1,0 +1,309 @@
+manifesto_version: '1.4'
+issued: '2025-11-02T20:00:00Z'
+description: |
+  Manifesto de Governança Corporativa IA-Humano — versão consolidada v1.4
+  Integra o projeto piloto DockManager v13, templates completos e versionamento unificado.
+  
+governance_root:
+  org_id: vicenzo_corp
+  version: '1.4'
+  registered_by: Orquestrador_Humano
+  manifest_path: /governance/README_GOVERNANCE_ROOT.md
+  
+  # ===============================================================
+  # CHANGELOG DO FRAMEWORK (Histórico Estruturado)
+  # ===============================================================
+  framework_changelog:
+    v1.4:
+      date: '2025-11-02'
+      milestone: 'Consolidação DockManager + Templates Completos'
+      status: 'release'
+      breaking_changes: false
+      changes:
+        - 'Templates preenchidos com base no projeto piloto DockManager v13'
+        - 'Versionamento unificado de todos os artefatos corporativos'
+        - 'Integração completa do projeto piloto DockManager v13 no framework'
+        - 'Clarificação de propósitos: README_ROOT (entrada) vs README_CORPORATIVA (framework)'
+        - 'Expansão do README_HISTORICO com narrativa evolutiva completa'
+      documents_updated:
+        - artifact: 'CONTEXT_MAP_GOVERNANCA'
+          from_version: 'v1.1'
+          to_version: 'v1.4'
+          changes: 'Referências atualizadas, integração DockManager'
+        
+        - artifact: 'MANIFESTO_GOVERNANCA'
+          from_version: 'v1.3'
+          to_version: 'v1.4'
+          changes: 'Changelog estruturado, compatibilidade, registro de projetos'
+        
+        - artifact: 'README_GOVERNANCE_ROOT'
+          from_version: 'não versionado'
+          to_version: 'v1.4'
+          changes: 'Adição de versionamento YAML, clarificação de propósito'
+        
+        - artifact: 'README_GOVERNANCA_CORPORATIVA'
+          from_version: 'não versionado'
+          to_version: 'v1.4'
+          changes: 'Adição de versionamento YAML, exemplos DockManager'
+        
+        - artifact: 'Templates'
+          from_version: 'v1.3.2 (incompleto)'
+          to_version: 'v1.4'
+          changes: 'Preenchidos com conteúdo baseado no DockManager v13'
+      
+      projects_integrated:
+        - name: 'DockManager v13'
+          status: 'homologado'
+          contribution: 'Projeto piloto que validou o framework completo'
+    
+    v1.3:
+      date: '2025-11'
+      milestone: 'Formalização SSoT'
+      status: 'archived'
+      breaking_changes: false
+      changes:
+        - 'Adição da Seção 16 no PROTOCOLO_GOVERNANCA_IA_HUMANO – Hierarquia SSoT'
+        - 'Formalização documental completa da hierarquia Master → Derived'
+        - 'Definição de governance_root no manifesto'
+      documents_updated:
+        - artifact: 'PROTOCOLO_GOVERNANCA_IA_HUMANO'
+          from_version: 'v1.2'
+          to_version: 'v1.3'
+          changes: 'Adição Seção 16 - SSoT Hierarchy'
+    
+    v1.2:
+      date: '2025-11'
+      milestone: 'Infraestrutura e Observabilidade'
+      status: 'archived'
+      breaking_changes: false
+      changes:
+        - 'Inclusão do Bloco 5 - IA Infra'
+        - 'Segurança: rotação de tokens, sandboxing, isolamento de contexto'
+        - 'Observabilidade: Prometheus, Grafana, ELK Stack'
+        - 'Definição de SLAs para IA Infra'
+      documents_updated:
+        - artifact: 'PROTOCOLO_GOVERNANCA_IA_HUMANO'
+          from_version: 'v1.1'
+          to_version: 'v1.2'
+          changes: 'Adição Seção 10 - Bloco 5 Infra'
+    
+    v1.1:
+      date: '2025-11'
+      milestone: 'SLAs e Rastreabilidade'
+      status: 'archived'
+      breaking_changes: false
+      changes:
+        - 'Adição de SLAs de execução e revisão (48h humano, 24h retrabalho IA)'
+        - 'Política de rollback com SHA256'
+        - 'Auditoria contínua formalizada'
+        - 'Componentização de entregas (máx 16h IA)'
+      lessons_learned:
+        - issue: 'Manifesto v1.1 quebrou contexto organizacional'
+          description: 'Manifesto foi restrito apenas ao DockManager, perdendo 80% do contexto'
+          resolution: 'v1.2 restaurou integridade completa e reintegrou portfólio'
+      documents_updated:
+        - artifact: 'PROTOCOLO_GOVERNANCA_IA_HUMANO'
+          from_version: 'v1.0'
+          to_version: 'v1.1'
+          changes: 'SLAs, rollback, componentização'
+    
+    v1.0:
+      date: '2025-10'
+      milestone: 'Criação do Framework'
+      status: 'archived'
+      breaking_changes: false
+      changes:
+        - 'Criação do PROTOCOLO_METODOLOGICO_CORPORATIVO_IA_HUMANO'
+        - 'Criação do PROTOCOLO_GOVERNANCA_IA_HUMANO inicial'
+        - 'Definição dos papéis: Orquestrador, IA Architect, Developer, Auditor'
+        - 'Princípios fundamentais: SSoT, Governança Iterativa, Auditabilidade'
+      documents_created:
+        - 'PROTOCOLO_METODOLOGICO_CORPORATIVO_IA_HUMANO_v1.0.md'
+        - 'PROTOCOLO_GOVERNANCA_IA_HUMANO_v1.0.md'
+        - 'CONTEXT_MAP_GOVERNANCA_v1.0.yaml'
+  
+  # ===============================================================
+  # MATRIZ DE COMPATIBILIDADE
+  # ===============================================================
+  compatibility:
+    v1.4:
+      compatible_with: ['v1.3', 'v1.2', 'v1.1', 'v1.0']
+      breaking_changes: false
+      migration_required: false
+      notes: 'Retrocompatível com todas as versões anteriores'
+    
+    v1.3:
+      compatible_with: ['v1.2', 'v1.1', 'v1.0']
+      breaking_changes: false
+      migration_required: false
+    
+    v1.2:
+      compatible_with: ['v1.1', 'v1.0']
+      breaking_changes: false
+      migration_required: false
+    
+    v1.1:
+      compatible_with: ['v1.0']
+      breaking_changes: false
+      migration_required: false
+      warnings:
+        - 'Manifesto v1.1 teve erro de escopo (corrigido em v1.2)'
+    
+    v1.0:
+      base_version: true
+      breaking_changes: false
+  
+  # ===============================================================
+  # PORTFÓLIO DE PROJETOS
+  # ===============================================================
+  projects:
+    dockmanager:
+      project_name: 'DockManager'
+      version: 'v13'
+      status: 'homologado'
+      framework_version: 'v1.3'
+      framework_compatibility: ['v1.3', 'v1.4']
+      created_at: '2025-11'
+      homologated_at: '2025-11-02'
+      
+      purpose: |
+        Plataforma Low-Code de Gestão Logística com motor de workflows,
+        integração ERP/WMS/TMS e módulo fiscal especializado.
+        Projeto piloto que validou todo o framework de governança IA-Humano.
+      
+      documents:
+        master:
+          file: 'DOCK_MANAGER_v13_CONCEITO_TECH.md'
+          role: 'SSoT - Single Source of Truth'
+          sections: '1-15 completas'
+          size: '797 linhas, 41.262 caracteres'
+        
+        derived:
+          - file: 'DOCK_MANAGER_v13_TECH.md'
+            role: 'Subset técnico para IA Developer'
+            scope: 'Seções 2-11'
+            token_economy: '40%'
+          
+          - file: 'DOCK_MANAGER_v13_EXT_FISCAL.md'
+            role: 'Subset fiscal para IA Fiscal'
+            scope: 'Módulo tributário especializado'
+            token_economy: '85%'
+        
+        blueprint:
+          - file: 'Blueprint_Fase1_Motor_Workflows_v1_0.md'
+            phase: 'Fase 1'
+            component: 'Motor de Workflows'
+            status: 'approved'
+        
+        protocol:
+          file: 'PROTOCOLO_GOVERNANCA_IA_HUMANO_DOCKMANAGER_v1_3.md'
+          scope: 'project_specific'
+          inherits_from: 'PROTOCOLO_GOVERNANCA_IA_HUMANO_v1.3.md'
+        
+        governance:
+          - file: 'README_DOCKMANAGER_v13.md'
+            role: 'Documentação SSoT e hierarquia'
+          
+          - file: 'MEMORANDO_HOMOLOGACAO_V13.md'
+            role: 'Atestado de integridade e prontidão'
+            approval_status: '100% integrity'
+            signed_by:
+              - 'Junta Técnica de Validação'
+              - 'Junta de Sistemas, Logística, Contábil e Compliance'
+      
+      ai_agents:
+        - role: 'IA_Architect'
+          context: 'DOCK_MANAGER_v13_CONCEITO_TECH.md'
+        - role: 'IA_Developer'
+          context: 'DOCK_MANAGER_v13_TECH.md'
+        - role: 'IA_Fiscal'
+          context: 'DOCK_MANAGER_v13_EXT_FISCAL.md'
+        - role: 'IA_Auditor'
+          context: 'Todos os documentos'
+        - role: 'IA_Infra'
+          context: 'Blueprint Fase 1'
+      
+      lessons_learned:
+        - 'Hierarquia SSoT Master → Derived funciona perfeitamente'
+        - 'Context packs de 500 palavras são eficientes (40-85% economia tokens)'
+        - 'Junta Validadora multidisciplinar essencial para integridade'
+        - 'Templates genéricos devem ser derivados de casos reais'
+  
+  # ===============================================================
+  # SSOT REGISTRY (Referência ao Diretório Operacional)
+  # ===============================================================
+  ssot_registry:
+  - path: /governance/ssot_registry/governance_root_record.yaml
+    artifact_type: governance_root_readme
+    audit_level: critical
+    integrity: verified
+    validation_chain:
+    - ia_auditor
+    - human_validator
+  
+  - path: /governance/ssot_registry/CONTEXT_MAP_GOVERNANCA_v1_1_20251102T192455Z.yaml
+    artifact_type: context_map
+    audit_level: critical
+    note: 'Será atualizado para v1.4'
+  
+  - path: /governance/ssot_registry/SSOT_ENTRY_PROTOCOLO_GOVERNANCA_IA_HUMANO_TEMPLATE_v1_3_2.yaml
+    artifact_type: template
+    audit_level: high
+    note: 'Templates serão atualizados para v1.4'
+  
+  # ===============================================================
+  # AUDITORIA E RASTREABILIDADE
+  # ===============================================================
+  auditoria:
+  - path: /governance/auditoria/governance_root_record.log
+    hash_source: governance_root_record.yaml
+    timestamp_sync: true
+  
+  # ===============================================================
+  # PIPELINES DE AUTOMAÇàO
+  # ===============================================================
+  pipelines:
+    trigger_on_commit: true
+    validation_agents:
+    - IA_Auditor
+    - IA_Governance
+    - Junta_Validadora
+    
+    hooks:
+      - validate_structure
+      - register_manifest
+      - create_audit_log
+      - generate_hash_sha256
+      - sync_ssot_registry
+  
+  # ===============================================================
+  # POLÍTICAS DE COMPLIANCE
+  # ===============================================================
+  compliance_policies:
+  - ssot_integrity
+  - dual_validation
+  - traceability_hash
+  - iterative_correction_loop
+  - ai_human_collaborative_control
+  
+  # ===============================================================
+  # METADADOS FINAIS
+  # ===============================================================
+  description: |
+    Manifesto de governança raiz da organização vicenzo_corp v1.4.
+    Este registro estabelece o ponto de partida universal da governança 
+    corporativa IA-Humano e habilita a rastreabilidade completa de todos 
+    os protocolos e projetos ativos.
+    
+    Versão v1.4 consolida:
+    - Projeto piloto DockManager v13 homologado
+    - Templates completos baseados em casos reais
+    - Versionamento unificado do framework
+    - Changelog estruturado e matriz de compatibilidade
+
+# ===============================================================
+# CHECKSUMS E VALIDAÇàO
+# ===============================================================
+checksum: "pending_commit_sha256"
+validated_by: "Orquestrador_Humano + Junta_Validadora"
+next_review_date: "2026-05-02"

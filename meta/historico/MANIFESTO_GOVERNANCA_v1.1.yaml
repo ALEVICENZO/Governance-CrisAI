@@ -1,0 +1,23 @@
+manifesto:
+  version: 1.1
+  description: Manifesto de governança universal
+  documents:
+    - README_GOVERNANCA_CORPORATIVA.md
+    - PROTOCOLO_METODOLOGICO_CORPORATIVO_IA_HUMANO_v1.0.md
+
+# -----------------------------------------------------
+# 🔽 Registro de projetos ativos e seus SSoT
+# -----------------------------------------------------
+ssot_registry:
+  dockmanager:
+    master: "projetos/dockmanager/documentos/DOCK_MANAGER_v13_CONCEITO_TECH.md"
+    derived:
+      - "projetos/dockmanager/documentos/DOCK_MANAGER_v13_TECH.md"
+      - "projetos/dockmanager/documentos/DOCK_MANAGER_v13_EXT_FISCAL.md"
+    source_original:
+      - "projetos/dockmanager/conceito/DOCK_MANAGER_11.docx"
+      - "projetos/dockmanager/conceito/DOCK_MANAGER_12.docx"
+      - "projetos/dockmanager/conceito/DOCK_MANAGER_13.docx"
+    validation_record: "projetos/dockmanager/documentos/MEMORANDO_HOMOLOGACAO_V13.md"
+    last_validation: "2025-11-02"
+    status: "validated"

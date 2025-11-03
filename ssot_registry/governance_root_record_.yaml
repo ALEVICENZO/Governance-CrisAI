@@ -1,0 +1,173 @@
+# ================================================
+# GOVERNANCE ROOT RECORD - Framework CrisAI v1.4
+# ================================================
+# Este arquivo registra o ponto de entrada universal 
+# da governança e lista todos os artefatos validados
+# ================================================
+
+artifact_type: governance_root_readme
+artifact_name: "README_GOVERNANCE_ROOT.md"
+org_id: vicenzo_corp
+version: 1.4
+framework_version: "1.4"
+hash_sha256: 208416c0c6c41e1087caaae3b4f36ff580f997e53c7a026d4a8c37506f3f2af4
+registered_by: Orquestrador_Humano
+timestamp_utc: 2025-11-03T00:41:30Z
+
+last_update:
+  previous_hash: f84f7364c704aa86f341e687f86aff588a9f40acd81eb8180b69c30ff2b2f969
+  previous_timestamp: 2025-11-02T19:32:05.840723Z
+  change_reason: "Atualização para framework v1.4 - Versionamento unificado"
+
+purpose: "Definir o ponto de partida universal da governança corporativa IA-Humano."
+audit_level: "critical"
+
+ai_roles_scope:
+  - ia_architect
+  - ia_auditor
+  - ia_developer
+  - ia_governance
+
+compliance_policies:
+  - ssot_integrity
+  - traceability_hash
+  - dual_validation
+
+validated_by:
+  - "IA_Auditor"
+  - "IA_Governance"
+  - "Orquestrador_Humano"
+
+# ================================================
+# ARTEFATOS REGISTRADOS NO SSOT REGISTRY
+# ================================================
+
+registered_artifacts:
+  
+  # --- Documentos Corporativos (Meta) ---
+  
+  - id: "CONTEXT_MAP_v1.4"
+    artifact: "CONTEXT_MAP_GOVERNANCA_v1.4.yaml"
+    type: "mapa_estrutural"
+    path: "/governance/meta/"
+    status: "active"
+    audit_level: "critical"
+  
+  - id: "MANIFESTO_v1.4"
+    artifact: "MANIFESTO_GOVERNANCA_v1.4.yaml"
+    type: "manifesto"
+    path: "/governance/meta/"
+    status: "active"
+    audit_level: "critical"
+    
+  - id: "MANIFESTO_SECTION_CONTEXTUALIZACAO_v1.0"
+    artifact: "manifesto_section_contextualizacao.yaml"
+    type: "manifesto_section"
+    path: "/governance/meta/"
+    status: "active"
+    audit_level: "critical"
+    parent: "MANIFESTO_GOVERNANCA_v1.4.yaml"
+    registered_at: "2025-11-03T13:52:00Z"
+    ssot_entry: "SSOT_ENTRY_MANIFESTO_SECTION_CONTEXTUALIZACAO_v1.0.yaml"
+    note: "Seção de contextualização de projetos - framework proativo"
+  
+  - id: "PROTOCOLO_GOVERNANCA_v1.3"
+    artifact: "PROTOCOLO_GOVERNANCA_IA_HUMANO_v1.3.md"
+    type: "protocolo"
+    path: "/governance/protocolos/"
+    status: "active"
+    audit_level: "critical"
+  
+  - id: "PROTOCOLO_METODOLOGICO_v1.0"
+    artifact: "PROTOCOLO_METODOLOGICO_CORPORATIVO_IA_HUMANO_v1.0.md"
+    type: "protocolo"
+    path: "/governance/protocolos/"
+    status: "active"
+    audit_level: "high"
+  
+  - id: "README_GOVERNANCE_ROOT"
+    artifact: "README_GOVERNANCE_ROOT.md"
+    type: "readme"
+    path: "/governance/"
+    status: "active"
+    audit_level: "critical"
+  
+  - id: "README_GOVERNANCA_CORPORATIVA_v1.4"
+    artifact: "README_GOVERNANCA_CORPORATIVA_v1.4.md"
+    type: "readme"
+    path: "/governance/meta/"
+    status: "active"
+    audit_level: "high"
+  
+  # --- Templates ---
+  
+  - id: "TEMPLATE_PROTOCOLO_PROJETO"
+    artifact: "modelo_protocolo_projeto.md"
+    type: "template"
+    path: "/governance/templates/"
+    status: "active"
+    audit_level: "high"
+  
+  - id: "TEMPLATE_BLUEPRINT"
+    artifact: "modelo_blueprint.md"
+    type: "template"
+    path: "/governance/templates/"
+    status: "active"
+    audit_level: "high"
+  
+  - id: "TEMPLATE_MANIFESTO_PROJETO"
+    artifact: "modelo_manifesto_projeto.yaml"
+    type: "template"
+    path: "/governance/templates/"
+    status: "active"
+    audit_level: "high"
+  
+  - id: "TEMPLATE_README_QUICK_START_v1.0"
+    artifact: "modelo_readme_quick_start_projeto.md"
+    type: "template"
+    path: "/governance/templates/"
+    status: "active"
+    audit_level: "high"
+    registered_at: "2025-11-03T13:52:00Z"
+    ssot_entry: "SSOT_ENTRY_MODELO_README_QUICK_START_v1.0.yaml"
+    note: "Template de contextualização de projetos - framework proativo"
+  
+  # --- Projetos ---
+  
+  - id: "README_QUICK_START_PGIAH_v1.0"
+    artifact: "README_QUICK_START_PGIAH.md"
+    type: "readme"
+    path: "/governance/projects/pgiah/"
+    status: "active"
+    audit_level: "high"
+    project: "PGIAH"
+    registered_at: "2025-11-03T12:00:00Z"
+
+# ================================================
+# ESTATÍSTICAS DO REGISTRY
+# ================================================
+
+statistics:
+  total_artifacts: 13
+  by_type:
+    manifesto: 1
+    manifesto_section: 1
+    protocolo: 2
+    template: 4
+    readme: 4
+    mapa_estrutural: 1
+  by_audit_level:
+    critical: 5
+    high: 8
+  framework_version: "1.4"
+  last_registry_update: "2025-11-03T13:52:00Z"
+
+# ================================================
+# NOTAS DE ATUALIZAÇÃO
+# ================================================
+
+update_notes:
+  - date: "2025-11-03T13:52:00Z"
+    change: "Adicionados 2 artefatos: manifesto_section_contextualizacao.yaml e modelo_readme_quick_start_projeto.md"
+    reason: "Implementação de contextualização proativa do framework CrisAI"
+    validated_by: ["IA_Architect (GPT-4)", "IA_Governance (Claude 3.5)", "IA_Auditor (Gemini 2.0)", "Orquestrador_Humano (Alexandre Vicenzo)"]

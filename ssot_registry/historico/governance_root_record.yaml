@@ -1,0 +1,27 @@
+artifact_type: governance_root_readme
+artifact_name: "README_GOVERNANCE_ROOT.md"
+org_id: vicenzo_corp
+version: 1.4
+framework_version: "1.4"
+hash_sha256: 208416c0c6c41e1087caaae3b4f36ff580f997e53c7a026d4a8c37506f3f2af4
+registered_by: Orquestrador_Humano
+timestamp_utc: 2025-11-03T00:41:30Z
+last_update:
+  previous_hash: f84f7364c704aa86f341e687f86aff588a9f40acd81eb8180b69c30ff2b2f969
+  previous_timestamp: 2025-11-02T19:32:05.840723Z
+  change_reason: "Atualização para framework v1.4 - Versionamento unificado"
+purpose: "Definir o ponto de partida universal da governança corporativa IA-Humano."
+audit_level: "critical"
+ai_roles_scope:
+  - ia_architect
+  - ia_auditor
+  - ia_developer
+  - ia_governance
+compliance_policies:
+  - ssot_integrity
+  - traceability_hash
+  - dual_validation
+validated_by:
+  - "IA_Auditor"
+  - "IA_Governance"
+  - "Orquestrador_Humano"

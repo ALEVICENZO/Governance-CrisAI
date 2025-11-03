@@ -1,0 +1,91 @@
+version: 1.3.2
+title_pt: PROTOCOLO DE GOVERNANÇA IA-HUMANO (TEMPLATE CONSOLIDADO)
+title_en: AI–HUMAN GOVERNANCE PROTOCOL (CONSOLIDATED TEMPLATE)
+organization: Vicenzo_Corp
+maintainer: Orquestrador_Humano
+status: Aprovado
+language_support:
+  - pt-BR
+  - en-US
+compatibility:
+  derived_from:
+    - PROTOCOLO_GOVERNANCA_IA_HUMANO_TEMPLATE_v1.0.md
+    - PROTOCOLO_GOVERNANCA_IA_HUMANO_TEMPLATE_v1.3.md
+  backward_compatible_with:
+    - v1.0
+    - v1.3
+    - v1.3.1
+
+# ===============================================================
+# BLOCO 1: SSoT (Single Source of Truth) E HIERARQUIA
+# Define ONDE os artefatos mestres estão e ONDE os novos serão instanciados.
+# Referências: v1.0, v1.3
+# ===============================================================
+ssot:
+  # O Protocolo Metodológico que define 'como' este template existe
+  master_template_source: "/governance/meta/PROTOCOLO_METODOLOGICO_CORPORATIVO_IA_HUMANO_v1.0.md"
+  
+  # O caminho onde o 'ssot_registry' corporativo pode ser encontrado
+  registry_path: "/governance/ssot_registry/"
+  
+  # O template de caminho para um NOVO protocolo de projeto instanciado
+  instantiation_path_template: "/governance/projects/{{project_name}}/protocolos/PROTOCOLO_GOVERNANCA_IA_HUMANO_{{project_name}}_v1.0.md"
+
+# ===============================================================
+# BLOCO 2: REGRAS DE GOVERNANÇA (Os Contratos)
+# Define as políticas e SLAs que todos os agentes (IA e Humanos) devem seguir.
+# Referências: v1.0, v1.3.1
+# ===============================================================
+governance_rules:
+  sla_human_review_hours: 48
+  sla_auditoria_ia_hours: 12
+  max_component_duration_hours: 16
+  context_pack_limit_words: 500
+  required_fields_on_instantiation:
+    - project_name
+    - project_code
+    - created_by
+    - approved_by
+    - created_at
+    - status
+    - registry_path
+
+# ===============================================================
+# BLOCO 3: AUTOMAÇÃO E PIPELINE (As Ações)
+# Define as ações técnicas que o pipeline de CI/CD deve executar.
+# Referências: v1.0, v1.3
+# ===============================================================
+automation:
+  # Hooks a serem disparados pelo pipeline
+  pipeline_hooks:
+    - validate_structure
+    - register_manifest
+    - create_audit_log
+    - generate_hash_sha256
+    
+  # Configuração do agente auditor
+  audit:
+    hash_method: SHA256
+    audit_frequency: per_commit
+    
+  # Templates de diretório para o pipeline criar
+  registry_target_template: "/governance/projects/{{project_name}}/protocolo/"
+  audit_target_template: "/governance/auditoria/{{project_name}}/v{{version}}/"
+
+# ===============================================================
+# BLOCO 4: AGENTES (Os Atores)
+# Define os papéis padrão e opcionais para qualquer projeto instanciado.
+# Referências: v1.0, v1.3, v1.3.1
+# ===============================================================
+agents:
+  default:
+    - Orquestrador_Humano
+    - IA_Architect
+    - IA_Developer
+    - IA_Auditor
+  optional:
+    - IA_QA
+    - IA_Fiscal
+  human_stakeholders:
+    - Human_Reviewer
+    - Human_Stakeholder

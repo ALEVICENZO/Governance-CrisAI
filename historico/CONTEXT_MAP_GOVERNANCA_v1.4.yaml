@@ -1,0 +1,380 @@
+# ===============================================================
+# CONTEXT_MAP_GOVERNANCA_v1.4.yaml
+# ---------------------------------------------------------------
+# Mapa de contexto UNIVERSAL e PORTÁVEL de governança corporativa
+# Aplicável a qualquer tipo de projeto, stack tecnológico ou domínio
+# Compatível com pipelines de automação, ingestão de IA e auditoria
+# ===============================================================
+
+org_id: vicenzo_corp
+org_scope: "corporate_framework"
+org_mutability: "portable"
+version: 1.4
+created_at: 2025-11-02
+updated_at: 2025-11-02
+maintainer: "Orquestrador_Humano"
+
+# ===============================================================
+# DESCRIÇÃO E PROPÓSITO
+# ===============================================================
+description: |
+  Este mapa de contexto define a estrutura UNIVERSAL de governança corporativa
+  para orquestração de múltiplos agentes IA trabalhando com especialistas humanos.
+  
+  É GENÉRICO e PORTÁVEL: aplicável a qualquer domínio de negócio, stack tecnológico,
+  ou tipo de projeto (web, mobile, embedded, IA/ML, blockchain, etc.).
+  
+  Detalhes específicos de projetos individuais devem estar em /governance/projects/<projeto>/.
+
+purpose: |
+  - Definir a topologia universal da governança (diretórios, hierarquias, fluxos)
+  - Estabelecer papéis IA genéricos aplicáveis a qualquer projeto
+  - Mapear artefatos corporativos (manifestos, protocolos, templates)
+  - Referenciar projetos piloto como exemplos práticos (sem hardcode de detalhes)
+  - Habilitar ingestão automatizada por IAs e pipelines CI/CD
+
+# ===============================================================
+# HIERARQUIA DE CONTEXTO
+# ===============================================================
+context_hierarchy:
+  level_1: "Governança Corporativa (meta + manifesto + protocolos universais)"
+  level_2: "Portfólio de Projetos (cada projeto tem manifesto, conceito e blueprints)"
+  level_3: "Artefatos e Derivados (documentos, logs, relatórios, auditorias)"
+
+# ===============================================================
+# ESTRUTURA DE DIRETÓRIOS
+# ===============================================================
+directories:
+  governance_root: "/governance"
+  meta: "/governance/meta"
+  projects: "/governance/projects"
+  ssot_registry: "/governance/ssot_registry"
+  templates: "/governance/templates"
+  auditoria: "/governance/auditoria"
+  historico: "/governance/historico"
+
+# ===============================================================
+# MACROS DE PATH (PARAMETRIZAÇÃO CENTRALIZADA)
+# ===============================================================
+paths:
+  # Macro para root de projeto (usado em templates e pipelines)
+  project_root_macro: "{{project_path}}"
+  
+  # Templates de paths parametrizados
+  project_root_template: "/governance/projects/{{project_name}}"
+  project_protocolos_template: "{{project_path}}/protocolos"
+  project_blueprints_template: "{{project_path}}/blueprints"
+  project_documentos_template: "{{project_path}}/documentos"
+  project_auditoria_template: "{{project_path}}/auditoria"
+  
+  # Exemplos de uso
+  usage_example:
+    project_name: "dockmanager"
+    resolved_paths:
+      project_root: "/governance/projects/dockmanager"
+      protocolos: "/governance/projects/dockmanager/protocolos"
+      blueprints: "/governance/projects/dockmanager/blueprints"
+
+directory_purposes:
+  meta: "Protocolos, manifestos e documentação corporativa universal"
+  projects: "Portfólio de projetos individuais (cada um com sua estrutura)"
+  ssot_registry: "Audit trail automático - registros SHA256 e timestamps"
+  templates: "Modelos genéricos para criação de novos projetos"
+  auditoria: "Logs de auditoria, diffs, relatórios de conformidade"
+  historico: "Versões anteriores de documentos (arquivamento)"
+
+# ===============================================================
+# DOCUMENTOS CORPORATIVOS (CORE)
+# ===============================================================
+core_documents:
+  # Manifesto Corporativo
+  manifesto_master:
+    file: "MANIFESTO_GOVERNANCA_v1.4.yaml"
+    purpose: "Registro central da governança, changelog, portfólio de projetos"
+    audience: ["humanos", "ias", "pipelines"]
+  
+  # Context Map (este arquivo)
+  context_map:
+    file: "CONTEXT_MAP_GOVERNANCA_v1.4.yaml"
+    purpose: "Mapa universal de contexto e estrutura"
+    audience: ["ias", "pipelines", "auditores"]
+  
+  # Protocolo Metodológico (como criar protocolos)
+  protocol_methodological:
+    file: "PROTOCOLO_METODOLOGICO_CORPORATIVO_IA_HUMANO_v1.0.md"
+    purpose: "Guia normativo para criação e execução de protocolos de projeto"
+    audience: ["orquestradores", "ia_architect", "juntas"]
+    compatibility: "v1.4"
+  
+  # Protocolo de Governança IA-Humano (regras universais)
+  protocol_governance:
+    file: "PROTOCOLO_GOVERNANCA_IA_HUMANO_v1.3.md"
+    purpose: "Regras, papéis, fluxos e SLAs para desenvolvimento colaborativo"
+    audience: ["todos os agentes IA", "orquestradores", "desenvolvedores"]
+    compatibility: "v1.4"
+  
+  # READMEs
+  readme_root:
+    file: "README_GOVERNANCE_ROOT_v1.4.md"
+    purpose: "Ponto de entrada para humanos, IAs e pipelines"
+    audience: ["novos usuários", "ias_inicializando", "pipelines"]
+  
+  readme_corporativa:
+    file: "README_GOVERNANCA_CORPORATIVA_v1.4.md"
+    purpose: "Documentação completa do framework corporativo"
+    audience: ["desenvolvedores", "arquitetos", "gestores"]
+  
+  # Histórico
+  readme_historico:
+    file: "README_HISTORICO_v1.4.md"
+    purpose: "Narrativa evolutiva do framework (v1.0 → v1.4)"
+    audience: ["auditores", "gestores", "novos membros"]
+
+# ===============================================================
+# PAPÉIS IA (GENÉRICOS - APLICÁVEIS A QUALQUER PROJETO)
+# ===============================================================
+ai_roles:
+  # Papéis UNIVERSAIS (obrigatórios em qualquer projeto)
+  ia_architect:
+    description: "Interpreta conceito master e gera blueprints técnicos"
+    context_scope: "CONCEITO_TECH.md (master completo)"
+    responsibility: "Estruturação arquitetural e tradução conceito → técnica"
+    applicable_to: "Todos os projetos"
+  
+  ia_developer:
+    description: "Executa codificação e integração de sistemas"
+    context_scope: "TECH.md (subset técnico) ou derivados específicos"
+    responsibility: "Implementação de código, testes, integrações"
+    applicable_to: "Todos os projetos de software"
+  
+  ia_auditor:
+    description: "Valida integridade, gera diffs e auditorias SHA256"
+    context_scope: "Todos os artefatos"
+    responsibility: "Auditoria contínua, hash validation, conformidade"
+    applicable_to: "Todos os projetos"
+  
+  human_orchestrator:
+    description: "Controla interações, valida entregas e aprova produção"
+    context_scope: "Visão completa do projeto"
+    responsibility: "Supervisão, decisões estratégicas, aprovação final"
+    applicable_to: "Todos os projetos"
+  
+  # Papéis OPCIONAIS (projeto-específico)
+  optional_roles:
+    note: |
+      Projetos podem definir papéis adicionais conforme necessidade:
+      - ia_fiscal (tributação, compliance fiscal)
+      - ia_negocios (análise de mercado, viabilidade)
+      - ia_infra (DevOps, containerização, monitoramento)
+      - ia_qa (testes automatizados, qualidade)
+      - ia_security (segurança, pentest, LGPD)
+      - ia_data (ciência de dados, ML, analytics)
+      - etc.
+    
+    definition_location: "Protocolo específico do projeto"
+
+# ===============================================================
+# ESTRUTURA DE PROJETO (PADRÃO GENÉRICO)
+# ===============================================================
+project_structure:
+  base_path: "/governance/projects"
+  
+  # Diretórios padrão (aplicáveis a qualquer projeto)
+  default_dirs:
+    - name: "conceito"
+      purpose: "Versões evolutivas do conceito (DOCX, MD, etc.)"
+    
+    - name: "documentos"
+      purpose: "Derivados (TECH, EXT_*, específicos por IA)"
+    
+    - name: "blueprints"
+      purpose: "Planos técnicos executáveis (por fase ou módulo)"
+    
+    - name: "protocolos"
+      purpose: "Protocolo específico do projeto (herda do corporativo)"
+    
+    - name: "auditoria"
+      purpose: "Relatórios, pareceres, logs de auditoria do projeto"
+  
+  # Arquivos obrigatórios
+  required_files:
+    - name: "README_<PROJETO>.md"
+      purpose: "Documentação SSoT e hierarquia do projeto"
+    
+    - name: "<PROJETO>_CONCEITO_TECH.md"
+      purpose: "Documento master (SSoT) do projeto"
+    
+    - name: "PROTOCOLO_GOVERNANCA_IA_HUMANO_<PROJETO>.md"
+      purpose: "Protocolo específico (herda do corporativo)"
+    
+    - name: "MANIFESTO_<PROJETO>.yaml (opcional)"
+      purpose: "Manifesto do projeto (se necessário registro independente)"
+
+# ===============================================================
+# TEMPLATES DISPONÍVEIS
+# ===============================================================
+templates:
+  location: "/governance/templates/"
+  version: "1.4"
+  
+  available:
+    - file: "modelo_blueprint.md"
+      purpose: "Template genérico para criação de blueprints técnicos"
+      based_on: "Exemplos de projetos reais (consultar /projects/)"
+    
+    - file: "modelo_protocolo_projeto.md"
+      purpose: "Template para protocolo específico de projeto"
+      based_on: "PROTOCOLO_GOVERNANCA_IA_HUMANO corporativo"
+    
+    - file: "modelo_manifesto_projeto.yaml"
+      purpose: "Template para manifesto de projeto (se necessário)"
+      based_on: "MANIFESTO_GOVERNANCA corporativo"
+    
+    - file: "PROTOCOLO_GOVERNANCA_IA_HUMANO_TEMPLATE_v1.4.md"
+      purpose: "Template bilíngue completo (PT/EN) para protocolo de projeto"
+      status: "Completo e validado"
+    
+    - file: "PROTOCOLO_GOVERNANCA_IA_HUMANO_TEMPLATE_v1.4.yaml"
+      purpose: "Metadados estruturados do template de protocolo"
+      status: "Completo e validado"
+  
+  usage_note: |
+    Templates são GENÉRICOS e não contêm detalhes técnicos específicos (stacks, tecnologias).
+    Para exemplos práticos com implementações reais, consultar /projects/.
+
+# ===============================================================
+# PROJETOS DE REFERÊNCIA
+# ===============================================================
+reference_projects:
+  - name: "DockManager v13"
+    purpose: "Projeto piloto que validou o framework completo de ponta a ponta"
+    location: "/governance/projects/dockmanager/"
+    status: "Homologado (100% integridade)"
+    framework_version: "v1.3"
+    framework_compatibility: "v1.4"
+    
+    what_to_learn:
+      - "Implementação real da hierarquia SSoT (Master → Tech → Fiscal)"
+      - "Uso de context packs (40-85% economia de tokens)"
+      - "Blueprints técnicos executáveis"
+      - "Junta Validadora multidisciplinar em ação"
+      - "Auditoria contínua com SHA256"
+    
+    key_documents:
+      - "README_DOCKMANAGER_v13.md (estrutura SSoT)"
+      - "DOCK_MANAGER_v13_CONCEITO_TECH.md (master)"
+      - "Blueprint_Fase1_Motor_Workflows_v1_0.md (blueprint real)"
+      - "PROTOCOLO_GOVERNANCA_IA_HUMANO_DOCKMANAGER_v1_3.md (protocolo específico)"
+      - "MEMORANDO_HOMOLOGACAO_V13.md (homologação)"
+    
+    note: |
+      Consulte os documentos do DockManager para exemplos práticos,
+      MAS lembre-se: o framework é GENÉRICO e aplicável a qualquer stack.
+      DockManager usa Node.js/React/PostgreSQL, mas seu projeto pode usar
+      Python/Django/MySQL, Go/Vue/MongoDB, Rust/Svelte/Redis, etc.
+
+# ===============================================================
+# GESTÃO DE CONTEXTO E INGESTÃO DE IA
+# ===============================================================
+context_management:
+  ingestion_scope:
+    - "/governance/meta"
+    - "/governance/ssot_registry"
+    - "/governance/projects/<active_project>/documentos"
+  
+  context_pack_limit: 500  # palavras por agente IA
+  
+  derived_from_header: true
+  
+  ssot_hierarchy:
+    master: "<PROJETO>_CONCEITO_TECH.md"
+    derived:
+      - "<PROJETO>_TECH.md"
+      - "<PROJETO>_EXT_<ESPECIALIDADE>.md"
+      - "outros derivados projeto-específicos"
+  
+  context_refresh_policy: "on_commit"  # recarrega contexto após cada merge
+
+# ===============================================================
+# AUTOMAÇÃO E PIPELINES
+# ===============================================================
+automation_hooks:
+  ci_cd_provider: "gitlab"  # ou github, jenkins, etc.
+  
+  on_commit:
+    - "trigger_auditor_validation"
+    - "sync_ssot_registry"
+    - "rebuild_markdown_derivatives"
+    - "update_hash_index"
+  
+  on_approval:
+    - "archive_to_ssot_registry"
+    - "notify_human_orchestrator"
+    - "tag_release_version"
+
+# ===============================================================
+# AUDITORIA E RASTREABILIDADE
+# ===============================================================
+audit_trail:
+  enabled: true
+  mechanism: "SHA256_diff_log"
+  retention_years: 5
+  output_dir: "/governance/auditoria"
+  traceability_level: "document + context + pipeline"
+  
+  ssot_registry_integration:
+    automatic: true
+    on_event: "commit"
+    registered_by: "IA_Auditor"
+
+# ===============================================================
+# POLÍTICAS DE COMPLIANCE
+# ===============================================================
+compliance_policies:
+  - "SSoT (Single Source of Truth)"
+  - "Traceable Governance (via SHA256 logs)"
+  - "AI-Human Collaborative Control"
+  - "Iterative Validation and Correction Loop"
+  - "Dynamic Role Assignment per Project"
+  - "Backward Compatibility (v1.0 → v1.4)"
+  - "Universal Portability (any domain, any stack)"
+
+# ===============================================================
+# COMPATIBILIDADE E VERSIONAMENTO
+# ===============================================================
+version_info:
+  current_version: "1.4"
+  previous_versions: ["1.3", "1.2", "1.1", "1.0"]
+  
+  changes_from_v1_1:
+    - "Atualização de versões de core_documents"
+    - "Adição de reference_projects (DockManager v13)"
+    - "Clarificação de templates genéricos vs. projetos específicos"
+    - "Expansão de ai_roles com papéis opcionais"
+    - "Referência ao README_HISTORICO_v1.4.md"
+    - "Remoção de hardcode de detalhes técnicos específicos"
+  
+  backward_compatible: true
+  breaking_changes: false
+
+# ===============================================================
+# NOTAS DE USO
+# ===============================================================
+usage_notes: |
+  Este arquivo é o ponto de entrada da estrutura de governança corporativa.
+  Ele permite que uma IA, pipeline CI/CD ou auditor leia e compreenda toda a topologia
+  sem necessidade de busca adicional.
+  
+  IMPORTANTE:
+  - Este mapa é GENÉRICO e PORTÁVEL
+  - Não contém detalhes técnicos específicos de projetos individuais
+  - Para exemplos práticos, consulte /governance/projects/
+  - Para criar novo projeto, use os templates em /governance/templates/
+  - Para entender a evolução, leia README_HISTORICO_v1.4.md
+
+# ===============================================================
+# CHECKSUMS E VALIDAÇÃO
+# ===============================================================
+checksum: "pending_commit_sha256"
+validated_by: "Orquestrador_Humano + IA_Auditor"
+next_review_date: "2026-05-02"

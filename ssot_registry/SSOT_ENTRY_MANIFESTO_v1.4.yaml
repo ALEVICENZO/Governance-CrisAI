@@ -1,0 +1,24 @@
+ssot_entry:
+  artifact: "MANIFESTO_GOVERNANCA_v1.4.yaml"
+  version: "1.4"
+  sha256: "dfb9433d0f9c27f75257aba05359096167876888f4ce5d46210c98e328fab20c"
+  registered_at: "2025-11-03T00:41:30Z"
+  registry_path: "/governance/meta/"
+  maintainer: "Orquestrador_Humano"
+  organization: "Vicenzo_Corp"
+  validated_by:
+    - "IA_Auditor"
+    - "IA_Governance"
+    - "Junta_Validadora"
+    - "Orquestrador_Humano"
+  notes: |
+    Manifesto consolidado v1.4 - Correção de encoding UTF-8.
+    Registro central da governança, changelog estruturado e portfólio de projetos.
+    Integra projeto piloto DockManager v13 homologado.
+  previous_version:
+    version: "1.3"
+    note: "Atualizado para v1.4 com templates completos e integração DockManager"
+  framework_version: "1.4"
+  document_type: "manifesto_corporativo"
+  audit_level: "critical"
+  scope: "corporate_universal"

@@ -1,0 +1,35 @@
+contextualizacao_projetos:
+  descricao: "Mapa de projetos ativos no framework CrisAI"
+  
+  instrucao: |
+    Você acabou de ler este Manifesto e entende o framework CrisAI.
+    Para trabalhar em um projeto específico:
+    1. Identifique o projeto na lista abaixo
+    2. Leia o README_QUICK_START do projeto
+    3. Leia o PROTOCOLO do projeto
+    4. Assuma seu papel e comece a trabalhar
+  
+  projetos_ativos:
+    - id: "PGIAH"
+      nome: "Plataforma de Governança IA-Humana"
+      proposito: "Implementar e executar o framework CrisAI"
+      fase: "0_fundacao"
+      contextualizacao:
+        quickstart: "/governance/projects/pgiah/README_QUICK_START_PGIAH.md"
+        protocolo: "/governance/projects/pgiah/PROTOCOLO_GOVERNANCA_IA_HUMANO_PGIAH_v1.0.md"
+    
+    - id: "DOCKMANAGER"
+      nome: "ERP e Base Operacional"
+      proposito: "Gerenciar operações e recursos"
+      fase: "desenvolvimento"
+      contextualizacao:
+        quickstart: "/governance/projects/dockmanager/README_QUICK_START_DOCKMANAGER.md"
+        protocolo: "/governance/projects/dockmanager/PROTOCOLO_DOCKMANAGER_v1.0.md"
+  
+  adicionar_projeto:
+    template: "/governance/templates/modelo_readme_quick_start_projeto.md"
+    passos:
+      - "Criar README_QUICK_START usando template"
+      - "Adicionar entrada em projetos_ativos"
+      - "Validar com IA_Governance"
+      - "Registrar no SSoT"

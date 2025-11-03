@@ -1,0 +1,33 @@
+version: '1.3'
+title: PROTOCOLO DE GOVERNANÇA IA-HUMANO (TEMPLATE CORPORATIVO)
+scope: Corporate
+status: Aprovado
+derived_from: PROTOCOLO_GOVERNANCA_IA_HUMANO_v1.2.md
+maintainer: Orquestrador_Humano
+organization: Vicenzo_Corp
+last_review: '2025-11-02'
+ssot_hierarchy:
+  master: /governance/meta/PROTOCOLO_GOVERNANCA_IA_HUMANO_TEMPLATE_v1.3.md
+  derived:
+  - /governance/projects/{{project_name}}/protocolos/PROTOCOLO_GOVERNANCA_IA_HUMANO_{{project_name}}_v1.0.md
+  registry: /governance/ssot_registry/
+roles:
+  default:
+  - Orquestrador_Humano
+  - IA_Architect
+  - IA_Developer
+  - IA_Auditor
+  optional:
+  - IA_Fiscal
+  - IA_QA
+context:
+  description: Define o modelo universal de governança IA↔Humano para todos os projetos
+    corporativos.
+  context_scope: governance
+audit:
+  hash_method: SHA256
+  audit_frequency: per commit
+  validated_by: Junta_Validadora_Corporativa
+location:
+  path: /governance/templates/
+  archive_path: /governance/templates/historico/v1.0/
