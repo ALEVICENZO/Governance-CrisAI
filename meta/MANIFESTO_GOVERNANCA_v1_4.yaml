@@ -15,6 +15,73 @@ governance_root:
   version: '1.4'
   registered_by: Orquestrador_Humano
   manifest_path: /governance/README_GOVERNANCE_ROOT.md
+
+  # ===============================================================
+  # REPOSITÓRIO GITHUB E URLS DE ACESSO
+  # ===============================================================
+  repositorio_github:
+    url_base: "https://github.com/ALEVICENZO/Governance-CrisAI"
+    url_raw_base: "https://raw.githubusercontent.com/ALEVICENZO/Governance-CrisAI/refs/heads/main"
+    branch_principal: "main"
+    visibilidade: "public"
+    acesso_ias: "direto_via_url"
+    
+    instrucoes_para_ias: |
+      Para ler qualquer arquivo do framework:
+      1. Use a URL: {url_raw_base}/{caminho_arquivo}
+      2. Exemplo: https://raw.githubusercontent.com/ALEVICENZO/Governance-CrisAI/refs/heads/main/meta/MANIFESTO_GOVERNANCA_v1_4.yaml
+      3. Substitua espaços e pontos por underscores nos nomes de arquivos
+      
+    documentos_principais:
+      manifesto:
+        nome: "MANIFESTO_GOVERNANCA_v1_4.yaml"
+        url: "https://raw.githubusercontent.com/ALEVICENZO/Governance-CrisAI/refs/heads/main/meta/MANIFESTO_GOVERNANCA_v1_4.yaml"
+        funcao: "Ponto de entrada - Roteador universal"
+        
+      readme_root:
+        nome: "README_GOVERNANCE_ROOT_v1.4.md"
+        url: "https://raw.githubusercontent.com/ALEVICENZO/Governance-CrisAI/refs/heads/main/README_GOVERNANCE_ROOT_v1.4.md"
+        funcao: "Ponto de entrada humano - Visão estrutural"
+      
+      protocolo_universal:
+        nome: "PROTOCOLO_GOVERNANCA_IA_HUMANO_v1_3.md"
+        url: "https://raw.githubusercontent.com/ALEVICENZO/Governance-CrisAI/refs/heads/main/meta/protocolos/PROTOCOLO_GOVERNANCA_IA_HUMANO_v1_3.md"
+        funcao: "Regras universais de governança"
+    
+    contextualizacao_via_github:
+      exemplo_pgiah: |
+        Para se contextualizar no projeto PGIAH:
+        
+        Passo 1 - Leia o Manifesto:
+        https://raw.githubusercontent.com/ALEVICENZO/Governance-CrisAI/refs/heads/main/meta/MANIFESTO_GOVERNANCA_v1_4.yaml
+        
+        Passo 2 - Leia o QuickStart do projeto:
+        https://raw.githubusercontent.com/ALEVICENZO/Governance-CrisAI/refs/heads/main/projects/pgiah/README_QUICK_START_PGIAH.md
+        
+        Passo 3 - Leia o Protocolo do projeto:
+        https://raw.githubusercontent.com/ALEVICENZO/Governance-CrisAI/refs/heads/main/projects/pgiah/protocolos/PROTOCOLO_GOVERNANCA_IA_HUMANO_PGIAH_v1_1.md
+        
+        Pronto! Você está 100% contextualizado.
+      
+      exemplo_dockmanager: |
+        Para se contextualizar no projeto DockManager:
+        
+        Passo 1 - Leia o Manifesto (já feito acima)
+        
+        Passo 2 - Leia o QuickStart:
+        https://raw.githubusercontent.com/ALEVICENZO/Governance-CrisAI/refs/heads/main/projects/dockmanager/README_QUICK_START_DOCKMANAGER.md
+        
+        Passo 3 - Leia o Protocolo:
+        https://raw.githubusercontent.com/ALEVICENZO/Governance-CrisAI/refs/heads/main/projects/dockmanager/protocolos/PROTOCOLO_GOVERNANCA_IA_HUMANO_DOCKMANAGER_v1_3.md
+    
+    beneficios_github:
+      - "IAs se auto-contextualizam via URL (sem copy/paste manual)"
+      - "Versionamento Git nativo (commits = rastreabilidade)"
+      - "Commit hash = SHA256 automático"
+      - "Diff automático entre versões"
+      - "Rollback trivial (git revert)"
+      - "Colaboração facilitada (branches, PRs)"
+      - "Economia de 95% do tempo de contextualização"
   
   # ===============================================================
   # INSTRUÇÕES DE CONTEXTUALIZAÇÃO
