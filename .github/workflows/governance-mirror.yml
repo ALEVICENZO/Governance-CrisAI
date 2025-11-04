@@ -30,9 +30,10 @@ jobs:
           mkdir -p public/meta
       
           echo "Copying all governance files (recursively)..."
-          find meta -type f -exec cp --parents {} public/ \;
+          find meta -type f -exec cp --parents {} public/ ';'
       
           echo "✅ Governance files copied successfully."
+
 
       - name: Upload to GitHub Pages
         uses: actions/upload-pages-artifact@v3
