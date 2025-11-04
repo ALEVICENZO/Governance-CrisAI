@@ -267,7 +267,7 @@ governance_root:
       - "Manifesto NÃO lista detalhes de projetos (evita explosão de tokens)"
       - "Projetos são descobertos dinamicamente quando necessário"
       - "Quickstart está na raiz do projeto"
-      - "Protocolo está em /protocolos/ dentro do projeto"
+      - "Protocolo está em governance/projects/<nome do projeto>/protocolos/ dentro do projeto"
   
   # ===============================================================
   # REGRAS DE VERSIONAMENTO E REGRESSÃO (OBRIGATÓRIAS)
@@ -324,6 +324,56 @@ governance_root:
         - Mudanças em qualquer artefato de governança
         
         Violação desta regra compromete integridade do framework CrisAI.
+
+    # ===============================================================
+    # DOCUMENTOS DO FRAMEWORK 
+    # ===============================================================
+    framework_documents:
+      # Meta
+      manifesto_url: "https://raw.githubusercontent.com/ALEVICENZO/Governance-CrisAI/refs/heads/main/meta/MANIFESTO_GOVERNANCA_v1_4.yaml"
+      context_map_url: "https://raw.githubusercontent.com/ALEVICENZO/Governance-CrisAI/refs/heads/main/meta/CONTEXT_MAP_GOVERNANCA_v1_4.yaml"
+      protocolo_governanca_url: "https://raw.githubusercontent.com/ALEVICENZO/Governance-CrisAI/refs/heads/main/meta/PROTOCOLO_GOVERNANCA_IA_HUMANO_v1_3.md"
+      protocolo_metodologico_url: "https://raw.githubusercontent.com/ALEVICENZO/Governance-CrisAI/refs/heads/main/meta/PROTOCOLO_METODOLOGICO_CORPORATIVO_IA_HUMANO_v1_0.md"
+      
+      # Governance
+      readme_root_url: "https://raw.githubusercontent.com/ALEVICENZO/Governance-CrisAI/refs/heads/main/governance/README_GOVERNANCE_ROOT.md"
+      readme_corporativa_url: "https://raw.githubusercontent.com/ALEVICENZO/Governance-CrisAI/refs/heads/main/governance/README_GOVERNANCA_CORPORATIVA.md"
+      readme_historico_url: "https://raw.githubusercontent.com/ALEVICENZO/Governance-CrisAI/refs/heads/main/governance/README_HISTORICO.md"
+      
+      # Templates
+      template_blueprint_md_url: "https://raw.githubusercontent.com/ALEVICENZO/Governance-CrisAI/refs/heads/main/governance/templates/modelo_blueprint.md"
+      template_blueprint_yaml_url: "https://raw.githubusercontent.com/ALEVICENZO/Governance-CrisAI/refs/heads/main/governance/templates/modelo_blueprint.yaml"
+      template_manifesto_projeto_url: "https://raw.githubusercontent.com/ALEVICENZO/Governance-CrisAI/refs/heads/main/governance/templates/modelo_manifesto_projeto.yaml"
+      template_protocolo_projeto_url: "https://raw.githubusercontent.com/ALEVICENZO/Governance-CrisAI/refs/heads/main/governance/templates/modelo_protocolo_projeto.md"
+      template_quickstart_projeto_url: "https://raw.githubusercontent.com/ALEVICENZO/Governance-CrisAI/refs/heads/main/governance/templates/modelo_readme_quick_start_projeto.md"
+      template_protocolo_ia_humano_md_url: "https://raw.githubusercontent.com/ALEVICENZO/Governance-CrisAI/refs/heads/main/governance/templates/PROTOCOLO_GOVERNANCA_IA_HUMANO_TEMPLATE_v1_4.md"
+      template_protocolo_ia_humano_yaml_url: "https://raw.githubusercontent.com/ALEVICENZO/Governance-CrisAI/refs/heads/main/governance/templates/PROTOCOLO_GOVERNANCA_IA_HUMANO_TEMPLATE_v1_4.yaml"
+      readme_templates_url: "https://raw.githubusercontent.com/ALEVICENZO/Governance-CrisAI/refs/heads/main/governance/templates/README_TEMPLATES_v1_4.md"     
+  
+  # ===============================================================
+  # REGISTRO DE PROJETOS (apenas quickstart)
+  # ===============================================================
+  project_registry:
+    dockmanager:
+      name: "DockManager v13"
+      status: "homologado"
+      quickstart_url: "https://raw.githubusercontent.com/ALEVICENZO/Governance-CrisAI/refs/heads/main/governance/projects/dockmanager/README_QUICK_START_DOCKMANAGER.md"
+      note: "Demais documentos estão no quickstart do projeto"
+    
+    pgiah:
+      name: "PGIAH v1.0"
+      status: "desenvolvimento"
+      quickstart_url: "https://raw.githubusercontent.com/ALEVICENZO/Governance-CrisAI/refs/heads/main/governance/projects/pgiah/README_QUICK_START_PGIAH.md"
+      note: "Demais documentos estão no quickstart do projeto"
+  
+  # ===============================================================
+  # REGRAS DE VERSIONAMENTO E REGRESSÃO
+  # ===============================================================
+  versioning_rules:
+    general_policy: "Artefatos na mesma versão durante fundação. Versionamento explícito."
+    regression_protocol:
+      mandatory: true
+      steps: ["Consultar via web_fetch", "Modificar", "Teste regressivo", "Reportar"]
   
   # ===============================================================
   # CHANGELOG DO FRAMEWORK (Histórico Estruturado)
