@@ -27,7 +27,7 @@ jobs:
       - name: Copy governance files
         run: |
           mkdir -p public/meta
-          cp -v meta/* public/meta/ || echo "Nenhum arquivo copiado, mas continuando..."
+          cp -vr meta/* public/meta/ || echo "Nenhum arquivo copiado, mas continuando..."
           echo "Governance files copiados para /public/meta"
 
       - name: Upload to GitHub Pages
