@@ -5,155 +5,352 @@ framework_meaning: "Cognitive Responsible Innovation System"
 framework_tagline: "Inovação Cognitiva com Responsabilidade e Propósito"
 framework_version: "1.4"
 framework_named_for: "Cris Vicenzo"
-issued: '2025-11-02T20:00:00Z'
+issued: '2025-11-03T21:30:00Z'
 description: |
   Manifesto de Governança Corporativa IA-Humano – versão consolidada v1.4
-  Integra o projeto piloto DockManager v13, templates completos e versionamento unificado.
+  Sistema de papéis flexíveis com descoberta dinâmica de projetos.
+  Framework CrisAI - trigger "crisai" para contextualização.
   
 governance_root:
   org_id: vicenzo_corp
   version: '1.4'
   registered_by: Orquestrador_Humano
   manifest_path: /governance/README_GOVERNANCE_ROOT.md
-
+  
   # ===============================================================
-  # REPOSITÓRIO GITHUB E URLS DE ACESSO
+  # NOMENCLATURA CRÍTICA
   # ===============================================================
-  repositorio_github:
-    url_base: "https://github.com/ALEVICENZO/Governance-CrisAI"
-    url_raw_base: "https://raw.githubusercontent.com/ALEVICENZO/Governance-CrisAI/refs/heads/main"
-    branch_principal: "main"
-    visibilidade: "public"
-    acesso_ias: "direto_via_url"
-    
-    instrucoes_para_ias: |
-      Para ler qualquer arquivo do framework:
-      1. Use a URL: {url_raw_base}/{caminho_arquivo}
-      2. Exemplo: https://raw.githubusercontent.com/ALEVICENZO/Governance-CrisAI/refs/heads/main/meta/MANIFESTO_GOVERNANCA_v1_4.yaml
-      3. Substitua espaços e pontos por underscores nos nomes de arquivos
+  nomenclatura:
+    framework_name: "CrisAI"
+    note: |
+      TODAS as IAs devem referir-se ao framework como "CrisAI" (com maiúsculas corretas).
+      O trigger "crisai" (minúsculas) é apenas o comando que o usuário digita para ativar.
+      Nunca confundir: Framework = CrisAI | Trigger = crisai
+  
+  # ===============================================================
+  # REGRAS COMPORTAMENTAIS OBRIGATÓRIAS
+  # ===============================================================
+  behavioral_rules:
+    mandatory:
+      - rule: "NUNCA gerar documentos não solicitados"
+        description: "Gere APENAS o que foi explicitamente pedido. Sem templates, relatórios ou arquivos extras."
       
-    documentos_principais:
-      manifesto:
-        nome: "MANIFESTO_GOVERNANCA_v1_4.yaml"
-        url: "https://raw.githubusercontent.com/ALEVICENZO/Governance-CrisAI/refs/heads/main/meta/MANIFESTO_GOVERNANCA_v1_4.yaml"
-        funcao: "Ponto de entrada - Roteador universal"
-        
-      readme_root:
-        nome: "README_GOVERNANCE_ROOT_v1.4.md"
-        url: "https://raw.githubusercontent.com/ALEVICENZO/Governance-CrisAI/refs/heads/main/README_GOVERNANCE_ROOT_v1.4.md"
-        funcao: "Ponto de entrada humano - Visão estrutural"
+      - rule: "NUNCA ser prolixo"
+        description: "Respostas sucintas. Comente apenas o necessário e solicitado. Evite postambles desnecessários."
       
-      protocolo_universal:
-        nome: "PROTOCOLO_GOVERNANCA_IA_HUMANO_v1_3.md"
-        url: "https://raw.githubusercontent.com/ALEVICENZO/Governance-CrisAI/refs/heads/main/meta/protocolos/PROTOCOLO_GOVERNANCA_IA_HUMANO_v1_3.md"
-        funcao: "Regras universais de governança"
-    
-    contextualizacao_via_github:
-      exemplo_pgiah: |
-        Para se contextualizar no projeto PGIAH:
-        
-        Passo 1 - Leia o Manifesto:
-        https://raw.githubusercontent.com/ALEVICENZO/Governance-CrisAI/refs/heads/main/meta/MANIFESTO_GOVERNANCA_v1_4.yaml
-        
-        Passo 2 - Leia o QuickStart do projeto:
-        https://raw.githubusercontent.com/ALEVICENZO/Governance-CrisAI/refs/heads/main/projects/pgiah/README_QUICK_START_PGIAH.md
-        
-        Passo 3 - Leia o Protocolo do projeto:
-        https://raw.githubusercontent.com/ALEVICENZO/Governance-CrisAI/refs/heads/main/projects/pgiah/protocolos/PROTOCOLO_GOVERNANCA_IA_HUMANO_PGIAH_v1_1.md
-        
-        Pronto! Você está 100% contextualizado.
+      - rule: "SEMPRE consultar versão atual antes de modificar"
+        description: "Use web_fetch para buscar a versão atual do GitHub. NUNCA confie em memória de conversas anteriores."
       
-      exemplo_dockmanager: |
-        Para se contextualizar no projeto DockManager:
-        
-        Passo 1 - Leia o Manifesto (já feito acima)
-        
-        Passo 2 - Leia o QuickStart:
-        https://raw.githubusercontent.com/ALEVICENZO/Governance-CrisAI/refs/heads/main/projects/dockmanager/README_QUICK_START_DOCKMANAGER.md
-        
-        Passo 3 - Leia o Protocolo:
-        https://raw.githubusercontent.com/ALEVICENZO/Governance-CrisAI/refs/heads/main/projects/dockmanager/protocolos/PROTOCOLO_GOVERNANCA_IA_HUMANO_DOCKMANAGER_v1_3.md
-    
-    beneficios_github:
-      - "IAs se auto-contextualizam via URL (sem copy/paste manual)"
-      - "Versionamento Git nativo (commits = rastreabilidade)"
-      - "Commit hash = SHA256 automático"
-      - "Diff automático entre versões"
-      - "Rollback trivial (git revert)"
-      - "Colaboração facilitada (branches, PRs)"
-      - "Economia de 95% do tempo de contextualização"
+      - rule: "SEMPRE fazer teste regressivo após modificações"
+        description: "Valide que nenhum conteúdo foi perdido. Compare estruturas antes/depois."
   
   # ===============================================================
   # INSTRUÇÕES DE CONTEXTUALIZAÇÃO
   # ===============================================================
   contextualizacao:
-    como_usar: |
-      Você acabou de ler este Manifesto e entende o framework CrisAI.
-      Para trabalhar em um projeto específico:
+    trigger: "crisai"
+    
+    fluxo_3_perguntas: |
+      Quando o usuário digitar "crisai":
       
-      1. Consulte a seção "projects" abaixo para ver projetos ativos
-      2. Cada projeto tem um campo "contextualizacao" com:
-         - quickstart: README de recontextualização rápida do projeto
-         - protocolo: Protocolo específico daquele projeto
-      3. Leia o quickstart do projeto (visão geral rápida)
-      4. Leia o protocolo do projeto (regras operacionais detalhadas)
-      5. Assuma seu papel e comece a trabalhar
+      PASSO 1: Consultar este manifesto
+        - URL: https://raw.githubusercontent.com/ALEVICENZO/Governance-CrisAI/refs/heads/main/meta/MANIFESTO_GOVERNANCA_v1_4.yaml
+        - Use web_fetch (NUNCA memória)
+      
+      PASSO 2: Perguntar papel
+        - "Qual papel deseja que eu assuma?"
+        - Listar papéis de available_roles (abaixo)
+        - Aguardar escolha
+      
+      PASSO 3: Perguntar escopo
+        - "Framework CrisAI ou projeto específico?"
+        - Se "framework": trabalhar na governança
+        - Se "projeto": ir para PASSO 4
+      
+      PASSO 4: Perguntar projeto (se aplicável)
+        - "Qual projeto?"
+        - Descobrir dinamicamente: listar /governance/projects/ ou GitHub API
+        - Listar apenas nomes (ex: dockmanager, pgiah)
+        - Aguardar escolha
+      
+      PASSO 5: Contextualizar projeto
+        - Quickstart: /governance/projects/{projeto}/README_QUICK_START_{PROJETO}.md
+        - Protocolo: /governance/projects/{projeto}/protocolos/PROTOCOLO_GOVERNANCA_IA_HUMANO_{PROJETO}_v*.md
+        - Ler ambos documentos
+      
+      PASSO 6: Confirmar
+        - "Pronto!" (sucinto, sem prolixidade)
     
     template_novos_projetos:
       arquivo: "/governance/templates/modelo_readme_quick_start_projeto.md"
       instrucao: "Use este template ao criar README_QUICK_START de novos projetos"
   
   # ===============================================================
+  # SISTEMA DE PAPÉIS FLEXÍVEIS
+  # ===============================================================
+  available_roles:
+    IA_Architect:
+      description: "Design de arquitetura, conceitos técnicos, blueprints"
+      capabilities:
+        - "Criar documentos conceituais master"
+        - "Desenhar arquiteturas de sistema"
+        - "Definir padrões e convenções"
+        - "Criar blueprints detalhados"
+      context_requirements:
+        - "Documentos SSoT master do projeto"
+        - "Protocolos de governança"
+        - "Histórico de decisões arquiteturais"
+    
+    IA_Developer:
+      description: "Implementação de código, debugging, otimização"
+      capabilities:
+        - "Escrever código funcional"
+        - "Implementar blueprints"
+        - "Debugging e correções"
+        - "Otimização de performance"
+      context_requirements:
+        - "Documentos técnicos (subsets)"
+        - "Blueprints aprovados"
+        - "Stack tecnológico do projeto"
+    
+    IA_Tester:
+      description: "Testes, QA, validação funcional, cobertura"
+      capabilities:
+        - "Criar planos de teste"
+        - "Escrever casos de teste"
+        - "Testes automatizados"
+        - "Validação de requisitos"
+        - "Relatórios de QA"
+      context_requirements:
+        - "Requisitos funcionais"
+        - "Blueprints implementados"
+        - "Documentação técnica"
+    
+    IA_Auditor:
+      description: "Validação de integridade, auditoria, compliance"
+      capabilities:
+        - "Auditar estrutura de documentos"
+        - "Validar integridade SSoT"
+        - "Verificar compliance com protocolo"
+        - "Gerar relatórios de auditoria"
+      context_requirements:
+        - "TODOS os documentos do projeto"
+        - "Protocolos completos"
+        - "Histórico de mudanças"
+    
+    IA_Governance:
+      description: "Validação de conformidade, semântica, governança"
+      capabilities:
+        - "Validar conformidade com framework CrisAI"
+        - "Revisar semântica e coerência"
+        - "Garantir aderência a políticas"
+        - "Sugerir melhorias de governança"
+      context_requirements:
+        - "Manifesto de Governança"
+        - "Protocolos do framework"
+        - "Artefatos a serem validados"
+    
+    IA_Infra:
+      description: "Infraestrutura, DevOps, observabilidade, segurança"
+      capabilities:
+        - "Configuração de ambientes"
+        - "CI/CD pipelines"
+        - "Monitoramento e observabilidade"
+        - "Segurança e compliance infra"
+      context_requirements:
+        - "Blueprints de infraestrutura"
+        - "Requisitos não-funcionais"
+        - "Políticas de segurança"
+    
+    IA_Product_Owner:
+      description: "Backlog, user stories, priorização, refinamento"
+      capabilities:
+        - "Gerenciar product backlog"
+        - "Escrever user stories"
+        - "Priorizar funcionalidades"
+        - "Refinamento de requisitos"
+        - "Critérios de aceitação"
+      context_requirements:
+        - "Visão de produto"
+        - "Feedback de stakeholders"
+        - "Métricas de valor"
+    
+    IA_Product_Manager:
+      description: "Visão de produto, roadmap, estratégia, mercado"
+      capabilities:
+        - "Definir visão de produto"
+        - "Criar roadmap estratégico"
+        - "Análise de mercado"
+        - "Estratégia de produto"
+        - "OKRs e métricas"
+      context_requirements:
+        - "Contexto de negócio"
+        - "Análise competitiva"
+        - "Dados de mercado"
+    
+    IA_Specialist:
+      description: "Especialista em área específica nomeada pelo orquestrador"
+      format: "IA_Specialist_{Area}"
+      examples:
+        - "IA_Specialist_DevOps"
+        - "IA_Specialist_Logistica"
+        - "IA_Specialist_Fiscal"
+        - "IA_Specialist_Seguranca"
+        - "IA_Specialist_ML"
+      capabilities:
+        - "Expertise profunda em domínio específico"
+        - "Consultoria especializada"
+        - "Implementação de best practices da área"
+      context_requirements:
+        - "Documentação específica do domínio"
+        - "Requisitos e constraints da área"
+        - "Standards e normas aplicáveis"
+  
+  role_assignment:
+    mode: "dynamic"
+    strategy: "human_orchestrated"
+    
+    flexibility_rules:
+      - "Papéis são atribuídos por sessão/chat, não fixos"
+      - "Mesma IA pode assumir diferentes papéis em chats diferentes"
+      - "IAs diferentes podem assumir mesmo papel em projetos diferentes"
+      - "Orquestrador_Humano decide atribuição em tempo real"
+      - "Liberdade total de escolha, sem recomendações de modelo específico"
+    
+    traceability:
+      header_template: |
+        ---
+        created_by: [Nome do Modelo IA - ex: Claude 3.5 Sonnet, GPT-4, Gemini 2.0]
+        role_assumed: [Papel assumido - ex: IA_Architect, IA_Specialist_Logistica]
+        created_at: [Data ISO - ex: 2025-11-03T21:30:00Z]
+        project: [Nome do Projeto - ex: DockManager, PGIAH]
+        framework_version: 1.4
+        ---
+      
+      rules:
+        - "APENAS artefatos NOVOS devem incluir este header"
+        - "Artefatos existentes mantêm seus headers originais"
+        - "Header documenta autoria, papel e contexto temporal"
+        - "Rastreabilidade é prospectiva, não retroativa"
+  
+  # ===============================================================
+  # DESCOBERTA DINÂMICA DE PROJETOS
+  # ===============================================================
+  projects_path: "/governance/projects/"
+  
+  project_discovery:
+    how_to_list: |
+      Para listar projetos disponíveis:
+      1. Use bash: ls /governance/projects/
+      2. Ou GitHub API: listar diretórios em /governance/projects/
+      3. Retorne apenas nomes (ex: dockmanager, pgiah)
+    
+    how_to_get_status: |
+      Para verificar status de projeto específico:
+      1. Leia: /governance/projects/{projeto}/README_QUICK_START_{PROJETO}.md
+      2. Procure campo "status" no header YAML
+    
+    path_structure:
+      quickstart: "/governance/projects/{projeto}/README_QUICK_START_{PROJETO}.md"
+      protocolo: "/governance/projects/{projeto}/protocolos/PROTOCOLO_GOVERNANCA_IA_HUMANO_{PROJETO}_v*.md"
+      
+      examples:
+        dockmanager:
+          quickstart: "/governance/projects/dockmanager/README_QUICK_START_DOCKMANAGER.md"
+          protocolo: "/governance/projects/dockmanager/protocolos/PROTOCOLO_GOVERNANCA_IA_HUMANO_DOCKMANAGER_v1_3.md"
+        
+        pgiah:
+          quickstart: "/governance/projects/pgiah/README_QUICK_START_PGIAH.md"
+          protocolo: "/governance/projects/pgiah/protocolos/PROTOCOLO_GOVERNANCA_IA_HUMANO_PGIAH_v1_0.md"
+    
+    notes:
+      - "Manifesto NÃO lista detalhes de projetos (evita explosão de tokens)"
+      - "Projetos são descobertos dinamicamente quando necessário"
+      - "Quickstart está na raiz do projeto"
+      - "Protocolo está em /protocolos/ dentro do projeto"
+  
+  # ===============================================================
+  # REGRAS DE VERSIONAMENTO E REGRESSÃO (OBRIGATÓRIAS)
+  # ===============================================================
+  versioning_rules:
+    general_policy: |
+      Artefatos permanecem na mesma versão durante fase de fundação,
+      mesmo com alterações de conteúdo. Versionamento é explícito e
+      controlado pelo Orquestrador_Humano.
+    
+    when_to_version:
+      - "APENAS quando Orquestrador_Humano autorizar explicitamente"
+      - "Nunca versionar automaticamente"
+      - "Durante fundação: conteúdo muda, versão não"
+      - "Após homologação: versionamento semântico rigoroso"
+    
+    regression_protocol:
+      mandatory: true
+      description: |
+        PROTOCOLO OBRIGATÓRIO para qualquer modificação de artefato:
+        
+        1. CONSULTAR versão atual via web_fetch
+           - URL do repositório GitHub
+           - NUNCA usar memória de conversas anteriores
+           - Garantir fonte fresca e atualizada
+        
+        2. MODIFICAR o conteúdo
+           - Aplicar mudanças solicitadas
+           - Manter estrutura e integridade
+        
+        3. TESTE REGRESSIVO (obrigatório)
+           - Comparar v_anterior vs v_modificada
+           - Validar que NENHUM conteúdo foi perdido
+           - Verificar que novas seções foram adicionadas corretamente
+           - Documentar diferenças estruturais
+        
+        4. REPORTAR ao Orquestrador_Humano
+           - Resumo das mudanças (sucinto)
+           - Resultado do teste regressivo
+           - Confirmação de integridade
+      
+      failure_handling: |
+        Se teste regressivo falhar:
+        - NÃO prosseguir com modificação
+        - Reportar divergências encontradas
+        - Aguardar instrução do Orquestrador_Humano
+        - Corrigir e repetir processo
+      
+      enforcement: |
+        Esta regra é IRREVOGÁVEL e se aplica a:
+        - Modificações no Manifesto
+        - Alterações em Protocolos
+        - Updates em Templates
+        - Mudanças em qualquer artefato de governança
+        
+        Violação desta regra compromete integridade do framework CrisAI.
+  
+  # ===============================================================
   # CHANGELOG DO FRAMEWORK (Histórico Estruturado)
   # ===============================================================
   framework_changelog:
     v1.4:
-      date: '2025-11-02'
-      milestone: 'Consolidação DockManager + Templates Completos'
+      date: '2025-11-03'
+      milestone: 'Sistema de Papéis Flexíveis + Descoberta Dinâmica'
       status: 'release'
       breaking_changes: false
       changes:
+        - 'Sistema de papéis dinâmicos (9 papéis: Architect, Developer, Tester, Auditor, Governance, Infra, Product_Owner, Product_Manager, Specialist)'
+        - 'Descoberta dinâmica de projetos (elimina explosão de tokens no manifesto)'
+        - 'Fluxo "crisai" com 3 perguntas sequenciais'
+        - 'Nomenclatura clara: CrisAI (framework) vs crisai (trigger)'
+        - 'Regras comportamentais obrigatórias (nunca gerar docs não pedidos, nunca ser prolixo)'
+        - 'Protocolo de regressão obrigatório'
+        - 'Estrutura de paths corrigida (quickstart na raiz, protocolo em /protocolos/)'
+        - 'Remoção de IA_Fiscal (agora é IA_Specialist_Fiscal)'
         - 'Templates preenchidos com base no projeto piloto DockManager v13'
         - 'Versionamento unificado de todos os artefatos corporativos'
-        - 'Integração completa do projeto piloto DockManager v13 no framework'
-        - 'Clarificação de propósitos: README_ROOT (entrada) vs README_CORPORATIVA (framework)'
-        - 'Expansão do README_HISTORICO com narrativa evolutiva completa'
-        - 'Contextualização proativa de projetos integrada'
         - 'Projeto PGIAH adicionado ao portfólio'
       documents_updated:
-        - artifact: 'CONTEXT_MAP_GOVERNANCA'
-          from_version: 'v1.1'
-          to_version: 'v1.4'
-          changes: 'Referências atualizadas, integração DockManager'
-        
         - artifact: 'MANIFESTO_GOVERNANCA'
-          from_version: 'v1.3'
-          to_version: 'v1.4'
-          changes: 'Changelog estruturado, compatibilidade, registro de projetos, contextualização proativa'
-        
-        - artifact: 'README_GOVERNANCE_ROOT'
-          from_version: 'não versionado'
-          to_version: 'v1.4'
-          changes: 'Adição de versionamento YAML, clarificação de propósito'
-        
-        - artifact: 'README_GOVERNANCA_CORPORATIVA'
-          from_version: 'não versionado'
-          to_version: 'v1.4'
-          changes: 'Adição de versionamento YAML, exemplos DockManager'
-        
-        - artifact: 'Templates'
-          from_version: 'v1.3.2 (incompleto)'
-          to_version: 'v1.4'
-          changes: 'Preenchidos com conteúdo baseado no DockManager v13'
-      
-      projects_integrated:
-        - name: 'DockManager v13'
-          status: 'homologado'
-          contribution: 'Projeto piloto que validou o framework completo'
-        
-        - name: 'PGIAH v1.0'
-          status: 'desenvolvimento'
-          contribution: 'Implementação operacional do framework CrisAI'
+          from_version: 'v1.4 (2025-11-02)'
+          to_version: 'v1.4 (2025-11-03)'
+          changes: 'Sistema de papéis flexíveis, descoberta dinâmica, regras comportamentais'
     
     v1.3:
       date: '2025-11'
@@ -229,7 +426,7 @@ governance_root:
       compatible_with: ['v1.3', 'v1.2', 'v1.1', 'v1.0']
       breaking_changes: false
       migration_required: false
-      notes: 'Retrocompatível com todas as versões anteriores'
+      notes: 'Retrocompatível. Sistema de papéis flexíveis e descoberta dinâmica não afetam projetos existentes.'
     
     v1.3:
       compatible_with: ['v1.2', 'v1.1', 'v1.0']
@@ -251,199 +448,6 @@ governance_root:
     v1.0:
       base_version: true
       breaking_changes: false
-  
-  # ===============================================================
-  # PORTFÓLIO DE PROJETOS
-  # ===============================================================
-  projects:
-    dockmanager:
-      project_name: 'DockManager'
-      version: 'v13'
-      status: 'homologado'
-      framework_version: 'v1.3'
-      framework_compatibility: ['v1.3', 'v1.4']
-      created_at: '2025-11'
-      homologated_at: '2025-11-02'
-      
-      purpose: |
-        Plataforma Low-Code de Gestão Logística com motor de workflows,
-        integração ERP/WMS/TMS e módulo fiscal especializado.
-        Projeto piloto que validou todo o framework de governança IA-Humano.
-      
-      contextualizacao:
-        quickstart: "/governance/projects/dockmanager/README_QUICK_START_DOCKMANAGER.md"
-        protocolo: "/governance/projects/dockmanager/PROTOCOLO_GOVERNANCA_IA_HUMANO_DOCKMANAGER_v1_3.md"
-        instrucao: "Leia o quickstart primeiro para visão geral, depois o protocolo para detalhes operacionais"
-      
-      documents:
-        master:
-          file: 'DOCK_MANAGER_v13_CONCEITO_TECH.md'
-          role: 'SSoT - Single Source of Truth'
-          sections: '1-15 completas'
-          size: '797 linhas, 41.262 caracteres'
-        
-        derived:
-          - file: 'DOCK_MANAGER_v13_TECH.md'
-            role: 'Subset técnico para IA Developer'
-            scope: 'Seções 2-11'
-            token_economy: '40%'
-          
-          - file: 'DOCK_MANAGER_v13_EXT_FISCAL.md'
-            role: 'Subset fiscal para IA Fiscal'
-            scope: 'Módulo tributário especializado'
-            token_economy: '85%'
-        
-        blueprint:
-          - file: 'Blueprint_Fase1_Motor_Workflows_v1_0.md'
-            phase: 'Fase 1'
-            component: 'Motor de Workflows'
-            status: 'approved'
-        
-        protocol:
-          file: 'PROTOCOLO_GOVERNANCA_IA_HUMANO_DOCKMANAGER_v1_3.md'
-          scope: 'project_specific'
-          inherits_from: 'PROTOCOLO_GOVERNANCA_IA_HUMANO_v1.3.md'
-        
-        governance:
-          - file: 'README_DOCKMANAGER_v13.md'
-            role: 'Documentação SSoT e hierarquia'
-          
-          - file: 'MEMORANDO_HOMOLOGACAO_V13.md'
-            role: 'Atestado de integridade e prontidão'
-            approval_status: '100% integrity'
-            signed_by:
-              - 'Junta Técnica de Validação'
-              - 'Junta de Sistemas, Logística, Contábil e Compliance'
-      
-      ai_agents:
-        - role: 'IA_Architect'
-          context: 'DOCK_MANAGER_v13_CONCEITO_TECH.md'
-        - role: 'IA_Developer'
-          context: 'DOCK_MANAGER_v13_TECH.md'
-        - role: 'IA_Fiscal'
-          context: 'DOCK_MANAGER_v13_EXT_FISCAL.md'
-        - role: 'IA_Auditor'
-          context: 'Todos os documentos'
-        - role: 'IA_Infra'
-          context: 'Blueprint Fase 1'
-      
-      lessons_learned:
-        - 'Hierarquia SSoT Master → Derived funciona perfeitamente'
-        - 'Context packs de 500 palavras são eficientes (40-85% economia tokens)'
-        - 'Junta Validadora multidisciplinar essencial para integridade'
-        - 'Templates genéricos devem ser derivados de casos reais'
-    
-    pgiah:
-      project_name: 'PGIAH'
-      full_name: 'Plataforma de Governança IA-Humana'
-      version: 'v1.0'
-      status: 'desenvolvimento'
-      framework_version: 'v1.4'
-      framework_compatibility: ['v1.4']
-      created_at: '2025-11-03'
-      phase: '0_fundacao'
-      
-      purpose: |
-        Plataforma que implementa e executa o framework CrisAI.
-        Materializa os conceitos de governança IA-Humana em sistema operacional,
-        permitindo orquestração de múltiplas IAs com supervisão humana consciente.
-        Inclui MCP Server, pipeline CI/CD de governança e dashboard de auditoria.
-      
-      contextualizacao:
-        quickstart: "/governance/projects/pgiah/README_QUICK_START_PGIAH.md"
-        protocolo: "/governance/projects/pgiah/PROTOCOLO_GOVERNANCA_IA_HUMANO_PGIAH_v1.0.md"
-        instrucao: "Leia o quickstart primeiro para visão geral, depois o protocolo para detalhes operacionais"
-      
-      documents:
-        master:
-          file: 'PGIAH_CONCEITO_TECH.md'
-          role: 'SSoT - Single Source of Truth'
-          status: 'em_desenvolvimento'
-        
-        protocol:
-          file: 'PROTOCOLO_GOVERNANCA_IA_HUMANO_PGIAH_v1.0.md'
-          scope: 'project_specific'
-          inherits_from: 'PROTOCOLO_GOVERNANCA_IA_HUMANO_v1.3.md'
-          status: 'pendente'
-        
-        governance:
-          - file: 'README_QUICK_START_PGIAH.md'
-            role: 'Contextualização rápida do projeto'
-            status: 'aprovado'
-            registered_at: '2025-11-03'
-        
-        blueprints:
-          - file: 'Blueprint_Pipeline_CI_CD_v1_0.md'
-            phase: 'Fase 0'
-            component: 'Pipeline de governança manual'
-            status: 'planejado'
-          
-          - file: 'Blueprint_MCP_Server_Minimal_v1_0.md'
-            phase: 'Fase 1'
-            component: 'Servidor MCP para orquestração'
-            status: 'planejado'
-          
-          - file: 'Blueprint_UI_Dashboard_Basic_v1_0.md'
-            phase: 'Fase 1'
-            component: 'Dashboard de auditoria'
-            status: 'planejado'
-      
-      ai_agents:
-        - role: 'IA_Architect'
-          implementation: 'GPT-4'
-          context: 'Gera blueprints, artefatos e código'
-        
-        - role: 'IA_Governance'
-          implementation: 'Claude 3.5 Sonnet'
-          context: 'Valida conformidade e semântica'
-        
-        - role: 'IA_Auditor'
-          implementation: 'Gemini 2.0'
-          context: 'Audita integridade e estrutura'
-        
-        - role: 'Orquestrador_Humano'
-          name: 'Alexandre Vicenzo'
-          context: 'Direção, aprovação e registro SSoT'
-      
-      operation_mode:
-        current_phase: 'Fase 0 - Fundação Manual'
-        orchestration: 'manual_sequential'
-        workflow:
-          - 'IA_Architect gera artefato'
-          - 'IA_Governance valida conformidade'
-          - 'IA_Auditor audita integridade'
-          - 'Orquestrador_Humano aprova e registra'
-        
-        future_phases:
-          fase_1: 'MCP Server + Automação básica'
-          fase_2: 'Dashboard + Orquestração avançada'
-          fase_3: 'Plataforma completa operacional'
-      
-      stack_tecnologico:
-        backend:
-          - 'FastAPI'
-          - 'Celery'
-          - 'Redis'
-        
-        frontend:
-          - 'Next.js'
-          - 'shadcn/ui'
-          - 'TailwindCSS'
-        
-        ai_orchestration:
-          - 'LangChain / LlamaIndex'
-          - 'MCP (Model Context Protocol)'
-        
-        models:
-          - 'GPT-4 (OpenAI)'
-          - 'Claude 3.5 Sonnet (Anthropic)'
-          - 'Gemini 2.0 (Google)'
-      
-      lessons_learned:
-        - 'Framework CrisAI validado em operação real (este projeto)'
-        - 'Contextualização em cascata (Manifesto → Projeto) funciona'
-        - 'Template de README_QUICK_START garante consistência'
-        - 'Orquestração manual é viável para Fase 0'
   
   # ===============================================================
   # SSOT REGISTRY (Referência ao Diretório Operacional)
@@ -501,22 +505,25 @@ governance_root:
   - traceability_hash
   - iterative_correction_loop
   - ai_human_collaborative_control
+  - mandatory_regression_testing
+  - dynamic_role_traceability
+  - behavioral_rules_enforcement
   
   # ===============================================================
   # METADADOS FINAIS
   # ===============================================================
   description: |
     Manifesto de governança raiz da organização vicenzo_corp v1.4.
-    Este registro estabelece o ponto de partida universal da governança 
-    corporativa IA-Humano e habilita a rastreabilidade completa de todos 
-    os protocolos e projetos ativos.
+    Framework CrisAI com sistema de papéis flexíveis e descoberta dinâmica de projetos.
     
-    Versão v1.4 consolida:
+    Versão v1.4 (atualizada 2025-11-03) consolida:
+    - Sistema de 9 papéis dinâmicos e flexíveis
+    - Descoberta dinâmica de projetos (evita explosão de tokens)
+    - Fluxo "crisai" com 3 perguntas sequenciais
+    - Nomenclatura clara: CrisAI (framework) vs crisai (trigger)
+    - Regras comportamentais obrigatórias
+    - Protocolo de regressão obrigatório
     - Projeto piloto DockManager v13 homologado
-    - Templates completos baseados em casos reais
-    - Versionamento unificado do framework
-    - Changelog estruturado e matriz de compatibilidade
-    - Contextualização proativa de projetos (Framework CrisAI)
     - Projeto PGIAH em desenvolvimento
 
 # ===============================================================
