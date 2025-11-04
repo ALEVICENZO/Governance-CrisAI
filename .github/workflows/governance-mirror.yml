@@ -27,8 +27,9 @@ jobs:
       - name: Copy governance files
         run: |
           mkdir -p public/meta
-          cp -vr meta/* public/meta/ || echo "Nenhum arquivo copiado, mas continuando..."
-          echo "Governance files copiados para /public/meta"
+          echo "Copying governance files (recursive)..."
+          cp -vr meta/* public/meta/ || echo "No files copied, continuing workflow."
+          echo "Governance files copied to /public/meta"
 
       - name: Upload to GitHub Pages
         uses: actions/upload-pages-artifact@v3
